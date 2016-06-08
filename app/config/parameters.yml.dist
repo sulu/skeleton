@@ -1,0 +1,34 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     sulu
+    database_user:     root
+    database_password: ~
+    database_version:  5.5
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.var_dir%/database.sqlite"
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    sulu_admin.name:    Sulu
+    sulu_admin.email:   ~
+
+    websocket_port: 9876
+    websocket_url: 'sulu.lo'
+
+    # phpcr_backend:
+    #        type: jackrabbit
+    #        url: http://localhost:8080/server/
+    phpcr_backend:
+        type: doctrinedbal
+    phpcr_workspace: default
+    phpcr_user: admin
+    phpcr_pass: admin
+    phpcr_cache: file_system
