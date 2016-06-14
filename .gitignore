@@ -1,0 +1,44 @@
+# app
+/app/bootstrap.php.cache
+/app/config/parameters.yml
+app/maintenance.php
+
+# bin
+/bin/*
+!/bin/console
+!/bin/console.php
+!/bin/websiteconsole
+!/bin/adminconsole
+!/bin/symfony_requirements
+
+# var
+/var/cache/*
+/var/indexes/*
+/var/logs/*
+/var/sessions/*
+/var/uploads/*
+!/var/cache/.gitkeep
+!/var/indexes/.gitkeep
+!/var/logs/.gitkeep
+!/var/sessions/.gitkeep
+!/var/uploads/.gitkeep
+
+# web
+/web/css
+/web/js
+/web/bundles
+/web/uploads
+/web/bootstrap.php.cache
+/web/SymfonyRequirements.php
+
+# composer
+/composer.phar
+/vendor
+
+# IDEs
+/.idea
+*.iml
+*~
+
+# System files
+.DS_Store

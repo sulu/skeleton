@@ -1,0 +1,66 @@
+# Doctrine Configuration
+doctrine:
+    orm:
+        dql:
+            string_functions:
+                CAST: Sulu\Component\Rest\DQL\Cast
+
+doctrine_cache:
+    providers:
+        sulu_collaboration_entity:
+            file_system:
+                directory: "%sulu.cache_dir%/collaboration/entity"
+        sulu_collaboration_connection:
+            file_system:
+                directory: "%sulu.cache_dir%/collaboration/connection"
+
+# FOS REST Configuration
+fos_rest:
+    view:
+        formats:
+            json: ~
+            csv: ~
+
+# Massive Build Configuration
+massive_build:
+    targets:
+        prod:
+            dependencies:
+                database: ~
+                phpcr: ~
+                fixtures: ~
+                phpcr_migrations: ~
+                system_collections: ~
+        dev:
+            dependencies:
+                database: ~
+                fixtures: ~
+                phpcr: ~
+                user: ~
+                phpcr_migrations: ~
+                system_collections: ~
+        maintain:
+            dependencies:
+                node_order:
+                search_index:
+                phpcr_migrations: ~
+
+# Sulu Bundles
+sulu_admin:
+    name: "%sulu_admin.name%"
+    email: "%sulu_admin.email%"
+
+sulu_contact:
+    form_of_address:
+        male:
+            id: 0
+            name: male
+            translation: contact.contacts.formOfAddress.male
+        female:
+            id: 1
+            name: female
+            translation: contact.contacts.formOfAddress.female
+
+sulu_collaboration:
+    entity_cache: doctrine_cache.providers.sulu_collaboration_entity
+    connection_cache: doctrine_cache.providers.sulu_collaboration_connection
