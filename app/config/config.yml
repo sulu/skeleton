@@ -1,7 +1,6 @@
 imports:
     - { resource: parameters.yml }
     - { resource: services.yml }
-    - { resource: sulu.yml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -10,10 +9,10 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
-    secret:          "%secret%"
+    translator: { fallbacks: ["%locale%"] }
+    secret: "%secret%"
     router:
-        resource: "%kernel.root_dir%/config/%sulu.context%/routing.yml"
+        resource: "%kernel.root_dir%/config/%sulu.context%/routing_%kernel.environment%.yml"
         strict_requirements: ~
     form:            ~
     csrf_protection: ~
@@ -53,6 +52,14 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+# DoctrineCache Configuration
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: "%phpcr_cache%"
+        phpcr_nodes:
+            type: "%phpcr_cache%"
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
@@ -66,6 +73,31 @@ massive_search:
     adapters:
         zend_lucene:
             basepath: "%kernel.var_dir%/indexes"
+
+# JMS Serializer Configuration
+jms_serializer:
+    metadata:
+        debug: "%kernel.debug%"
+
+# SuluCore Configuration
+sulu_core:
+    phpcr:
+        backend:    "%phpcr_backend%"
+        workspace:  "%phpcr_workspace%"
+        username:   "%phpcr_user%"
+        password:   "%phpcr_pass%"
+
+# SuluWebsocket Configuration
+sulu_websocket:
+    server:
+        http_host: "%websocket_url%"
+        port: "%websocket_port%"
+
+# SuluHttpCache Configuration
+sulu_http_cache:
+    handlers:
+        debug:
+            enabled: %kernel.debug%
 
 # SuluMedia Configuration
 sulu_media:

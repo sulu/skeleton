@@ -1,11 +1,11 @@
 imports:
     - { resource: config.yml }
 
-framework:
-    router:
-        resource: "%kernel.root_dir%/config/admin/routing_prod.yml"
-    # validation:
-    #     cache: apc
+#framework:
+#    validation:
+#        cache: validator.mapping.cache.doctrine.apc
+#    serializer:
+#        cache: serializer.mapping.cache.apc
 
 #doctrine:
 #    orm:
