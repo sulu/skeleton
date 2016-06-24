@@ -3353,16 +3353,16 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v5.0.6",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "ffe306d09c1f2bad721237f63b2169d1b78253d0"
+                "reference": "a9c4723cbdbc6cf7fbfdfde3c639cb1943f0293a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/ffe306d09c1f2bad721237f63b2169d1b78253d0",
-                "reference": "ffe306d09c1f2bad721237f63b2169d1b78253d0",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/a9c4723cbdbc6cf7fbfdfde3c639cb1943f0293a",
+                "reference": "a9c4723cbdbc6cf7fbfdfde3c639cb1943f0293a",
                 "shasum": ""
             },
             "require": {
@@ -3401,7 +3401,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2016-04-25 20:50:31"
+            "time": "2016-06-23 16:11:33"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -3624,12 +3624,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sulu/sulu.git",
-                "reference": "fb91c579fe611ad4bb2171d12442b68596c112b8"
+                "reference": "ebecc67926bbcb85326beb9d63a0af33b32bc532"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sulu/sulu/zipball/fb91c579fe611ad4bb2171d12442b68596c112b8",
-                "reference": "fb91c579fe611ad4bb2171d12442b68596c112b8",
+                "url": "https://api.github.com/repos/sulu/sulu/zipball/ebecc67926bbcb85326beb9d63a0af33b32bc532",
+                "reference": "ebecc67926bbcb85326beb9d63a0af33b32bc532",
                 "shasum": ""
             },
             "require": {
@@ -3723,7 +3723,7 @@
                 "core",
                 "sulu"
             ],
-            "time": "2016-06-20 11:07:11"
+            "time": "2016-06-24 11:34:16"
         },
         {
             "name": "swiftmailer/swiftmailer",
