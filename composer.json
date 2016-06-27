@@ -24,6 +24,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "sulu/sulu": "dev-develop",
         "sulu/document-manager": "@dev",
+        "massive/search-bundle": "@dev",
         "symfony-cmf/core-bundle": "1.2.*",
         "dantleech/phpcr-migrations-bundle": "0.1.*",
         "zendframework/zend-stdlib": "^2.3",
