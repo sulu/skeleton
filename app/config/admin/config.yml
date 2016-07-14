@@ -7,3 +7,8 @@ sulu_admin:
     name: "%sulu_admin.name%"
     email: "%sulu_admin.email%"
 
+# SuluDocumentManager Configuration
+sulu_document_manager:
+    default_session: default
+    live_session: live
+
