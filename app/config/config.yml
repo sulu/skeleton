@@ -96,11 +96,20 @@ sulu_core:
                 snippet:
                     path: "%kernel.root_dir%/Resources/templates/snippets"
                     type: "snippet"
-    phpcr:
-        backend:    "%phpcr_backend%"
-        workspace:  "%phpcr_workspace%"
-        username:   "%phpcr_user%"
-        password:   "%phpcr_pass%"
+
+# SuluDocumentManager Configuration
+sulu_document_manager:
+    sessions:
+        default:
+            backend: "%phpcr_backend%"
+            workspace: "%phpcr_workspace%"
+            username: "%phpcr_user%"
+            password: "%phpcr_pass%"
+        live:
+            backend: "%phpcr_backend%"
+            workspace: "%phpcr_workspace%_live"
+            username: "%phpcr_user%"
+            password: "%phpcr_pass%"
 
 # SuluWebsocket Configuration
 sulu_websocket:
