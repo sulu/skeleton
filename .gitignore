@@ -30,6 +30,8 @@ app/maintenance.php
 /web/uploads
 /web/bootstrap.php.cache
 /web/SymfonyRequirements.php
+/web/admin/translations/*
+!/web/admin/translations/.gitkeep
 
 # composer
 /composer.phar
