@@ -15,10 +15,10 @@
         <default-template type="home">homepage</default-template>
     </default-templates>
 
-    <error-templates>
-        <error-template default="true">error/default.html.twig</error-template>
-        <error-template code="404">error/404.html.twig</error-template>
-    </error-templates>
+    <templates>
+        <template type="error">error/default.html.twig</template>
+        <template type="error-404">error/404.html.twig</template>
+    </templates>
 
     <navigation>
         <contexts>
