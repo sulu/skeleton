@@ -5,10 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {% autoescape false %}
-            {{ sulu_seo(extension.seo, content, urls, shadowBaseLocale) }}
-        {% endautoescape %}
-
         {% block meta %}{% endblock %}
 
         {% block style %}{% endblock %}
@@ -29,6 +25,11 @@
                 </nav>
             {% endblock %}
         </header>
+
+        <form action="{{ path('sulu_search.website_search') }}" method="GET">
+            <input name="q" type="text" placeholder="Search" />
+            <input type="submit" value="Go" />
+        </form>
 
         <section id="content" vocab="http://schema.org/" typeof="Content">
             {% block content %}{% endblock %}
