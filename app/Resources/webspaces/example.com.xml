@@ -36,9 +36,6 @@
         <portal>
             <name>example.com</name>
             <key>example</key>
-            <resource-locator>
-                <strategy>tree</strategy>
-            </resource-locator>
 
             <environments>
                 <environment type="prod">
