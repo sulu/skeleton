@@ -25,7 +25,7 @@
         <contexts>
             <context key="main">
                 <meta>
-                    <title lang="en">Mainnavigation</title>
+                    <title lang="en">Main Navigation</title>
                     <title lang="de">Hauptnavigation</title>
                 </meta>
             </context>
