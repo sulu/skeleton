@@ -69,6 +69,9 @@ swiftmailer:
 
 # MassiveSearch Configuration
 massive_search:
+    persistence:
+        doctrine_orm:
+            enabled: true
     adapters:
         zend_lucene:
             basepath: "%kernel.var_dir%/indexes"
