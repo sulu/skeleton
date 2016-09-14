@@ -17,11 +17,13 @@ app/maintenance.php
 /var/logs/*
 /var/sessions/*
 /var/uploads/*
+/var/sitemaps/*
 !/var/cache/.gitkeep
 !/var/indexes/.gitkeep
 !/var/logs/.gitkeep
 !/var/sessions/.gitkeep
 !/var/uploads/.gitkeep
+!/var/sitemaps/.gitkeep
 
 # web
 /web/css
