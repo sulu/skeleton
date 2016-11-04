@@ -15,7 +15,3 @@ cmf_routing:
     dynamic:
         enabled: true
         route_provider_service_id: sulu_website.provider.content
-
-# SuluDocumentManager Configuration
-sulu_document_manager:
-    default_session: live
