@@ -30,8 +30,8 @@ app/maintenance.php
 /web/js
 /web/bundles
 /web/uploads
-/web/bootstrap.php.cache
-/web/SymfonyRequirements.php
+/var/bootstrap.php.cache
+/var/SymfonyRequirements.php
 /web/admin/translations/*
 !/web/admin/translations/.gitkeep
 

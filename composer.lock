@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b81cfca5ab53d5170c45efc7615083f3",
-    "content-hash": "fe22cf2f03c9d2874cb100caee758d48",
+    "hash": "2f649e704cb4af16d8d1b0fb85c24e6f",
+    "content-hash": "9e93467ccdc8f8f3b4c4addb16e7af13",
     "packages": [
         {
             "name": "aferrandini/urlizer",
@@ -2328,16 +2328,16 @@
         },
         {
             "name": "layershifter/tld-database",
-            "version": "1.0.20",
+            "version": "1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/layershifter/TLDDatabase.git",
-                "reference": "70f9ab3c25ef96d5abda62514d226f8e4df0bdd5"
+                "reference": "257d85fa57f04cca601af9134cc493cd65f686e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/layershifter/TLDDatabase/zipball/70f9ab3c25ef96d5abda62514d226f8e4df0bdd5",
-                "reference": "70f9ab3c25ef96d5abda62514d226f8e4df0bdd5",
+                "url": "https://api.github.com/repos/layershifter/TLDDatabase/zipball/257d85fa57f04cca601af9134cc493cd65f686e8",
+                "reference": "257d85fa57f04cca601af9134cc493cd65f686e8",
                 "shasum": ""
             },
             "require": {
@@ -2375,7 +2375,7 @@
                 "domain database",
                 "tld database"
             ],
-            "time": "2016-10-31 15:59:50"
+            "time": "2016-11-05 19:09:44"
         },
         {
             "name": "layershifter/tld-extract",
@@ -2929,16 +2929,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c0125896dbb151380ab47e96c621741e79623beb"
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c0125896dbb151380ab47e96c621741e79623beb",
-                "reference": "c0125896dbb151380ab47e96c621741e79623beb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
                 "shasum": ""
             },
             "require": {
@@ -2973,7 +2973,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-10-17 15:23:22"
+            "time": "2016-11-07 23:38:38"
         },
         {
             "name": "php-ffmpeg/php-ffmpeg",
@@ -3822,12 +3822,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sulu/sulu.git",
-                "reference": "01392a2cf4009edaacd9171e72da946215d02847"
+                "reference": "b81a56e6357924d1ba8fd060bacdf5571ef6a8d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sulu/sulu/zipball/01392a2cf4009edaacd9171e72da946215d02847",
-                "reference": "01392a2cf4009edaacd9171e72da946215d02847",
+                "url": "https://api.github.com/repos/sulu/sulu/zipball/b81a56e6357924d1ba8fd060bacdf5571ef6a8d6",
+                "reference": "b81a56e6357924d1ba8fd060bacdf5571ef6a8d6",
                 "shasum": ""
             },
             "require": {
@@ -3924,7 +3924,7 @@
                 "core",
                 "sulu"
             ],
-            "time": "2016-11-03 14:54:47"
+            "time": "2016-11-07 14:15:53"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4165,16 +4165,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "2.11.1",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00"
+                "reference": "6acef3bd201c4f35e42e52dedf1fe088f30e07e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00",
-                "reference": "e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/6acef3bd201c4f35e42e52dedf1fe088f30e07e8",
+                "reference": "6acef3bd201c4f35e42e52dedf1fe088f30e07e8",
                 "shasum": ""
             },
             "require": {
@@ -4221,7 +4221,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2016-04-13 16:21:01"
+            "time": "2016-11-06 18:54:50"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -5624,16 +5624,16 @@
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.0.11",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c"
+                "reference": "0d3c9c4864142dc6a368fa0d952a8b83215e8740"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c",
-                "reference": "b9be7f1b3b2e8bcfc1debefc901b71da923a5e5c",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/0d3c9c4864142dc6a368fa0d952a8b83215e8740",
+                "reference": "0d3c9c4864142dc6a368fa0d952a8b83215e8740",
                 "shasum": ""
             },
             "require": {
@@ -5650,7 +5650,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -5672,7 +5672,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-10-10 14:17:42"
+            "time": "2016-11-07 19:48:31"
         }
     ],
     "aliases": [],

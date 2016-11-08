@@ -71,7 +71,7 @@
         "symfony-app-dir": "app",
         "symfony-bin-dir": "bin",
         "symfony-web-dir": "web",
-        "symfony-var-dir": "web",
+        "symfony-var-dir": "var",
         "symfony-assets-install": "relative",
         "incenteev-parameters": [
             {
