@@ -121,7 +121,7 @@ sulu_websocket:
 sulu_http_cache:
     handlers:
         debug:
-            enabled: %kernel.debug%
+            enabled: "%kernel.debug%"
 
 # SuluMedia Configuration
 sulu_media:
