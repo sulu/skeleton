@@ -16,11 +16,3 @@ cmf_routing:
         enabled: true
         route_provider_service_id: sulu_website.provider.content
 
-# SuluDocumentManager Configuration
-sulu_document_manager:
-    default_session: live
-
-# FOS REST Configuration
-fos_rest:
-    exception:
-        enabled: false

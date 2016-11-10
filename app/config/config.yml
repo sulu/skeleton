@@ -117,6 +117,10 @@ sulu_websocket:
         http_host: "%websocket_url%"
         port: "%websocket_port%"
 
+sulu_website:
+    sitemap:
+        dump_dir: %kernel.var_dir%/sitemaps
+
 # SuluHttpCache Configuration
 sulu_http_cache:
     handlers:
