@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "The sulu content management framework",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "autoload": {
         "psr-0": {
             "": "src/"
@@ -23,7 +23,6 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "sulu/sulu": "1.4.*",
-        "massive/search-bundle": "@dev",
         "symfony-cmf/core-bundle": "1.2.*",
         "dantleech/phpcr-migrations-bundle": "0.1.*",
         "zendframework/zend-stdlib": "^2.3",
