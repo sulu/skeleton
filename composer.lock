@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03f3e1923a18b301b64a82ffa3a3fd8d",
-    "content-hash": "78210c3e790da2ee71c0f6ec78c0fd84",
+    "hash": "fed423f6ab5ac5929b865e8f8cedd132",
+    "content-hash": "a592c8eb2499441a25e69f804173cb9b",
     "packages": [
         {
             "name": "aferrandini/urlizer",
@@ -3627,16 +3627,16 @@
         },
         {
             "name": "sulu/sulu",
-            "version": "1.3.4",
+            "version": "1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sulu/sulu.git",
-                "reference": "11c56743dca75d8d91c6c6b0ef67c8f0f56501a6"
+                "reference": "0839f3055cbfbabef8779b8217a4f1e18ca481c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sulu/sulu/zipball/11c56743dca75d8d91c6c6b0ef67c8f0f56501a6",
-                "reference": "11c56743dca75d8d91c6c6b0ef67c8f0f56501a6",
+                "url": "https://api.github.com/repos/sulu/sulu/zipball/0839f3055cbfbabef8779b8217a4f1e18ca481c8",
+                "reference": "0839f3055cbfbabef8779b8217a4f1e18ca481c8",
                 "shasum": ""
             },
             "require": {
@@ -3731,20 +3731,20 @@
                 "core",
                 "sulu"
             ],
-            "time": "2016-11-14 13:06:30"
+            "time": "2016-11-24 10:49:56"
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.3",
+            "version": "v5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153"
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
-                "reference": "4cc92842069c2bbc1f28daaaf1d2576ec4dfe153",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/545ce9136690cea74f98f86fbb9c92dd9ab1a756",
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756",
                 "shasum": ""
             },
             "require": {
@@ -3784,7 +3784,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-07-08 11:51:25"
+            "time": "2016-11-24 01:01:23"
         },
         {
             "name": "symfony-cmf/core-bundle",
@@ -4603,16 +4603,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.13",
+            "version": "v2.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "d04e2eb13ae63068fc8862530b403756e3702896"
+                "reference": "6ceca5b4154c80839270c38aa65373de76127df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/d04e2eb13ae63068fc8862530b403756e3702896",
-                "reference": "d04e2eb13ae63068fc8862530b403756e3702896",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/6ceca5b4154c80839270c38aa65373de76127df7",
+                "reference": "6ceca5b4154c80839270c38aa65373de76127df7",
                 "shasum": ""
             },
             "require": {
@@ -4628,7 +4628,7 @@
                 "symfony/polyfill-php70": "~1.0",
                 "symfony/polyfill-util": "~1.0",
                 "symfony/security-acl": "~2.7|~3.0.0",
-                "twig/twig": "~1.27|~2.0"
+                "twig/twig": "~1.28|~2.0"
             },
             "conflict": {
                 "phpdocumentor/reflection": "<1.0.7"
@@ -4734,7 +4734,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-10-27 02:18:45"
+            "time": "2016-11-21 02:24:51"
         },
         {
             "name": "twig/extensions",
@@ -4790,16 +4790,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.27.0",
+            "version": "v1.28.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97"
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97",
-                "reference": "3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b22ce0eb070e41f7cba65d78fe216de29726459c",
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c",
                 "shasum": ""
             },
             "require": {
@@ -4807,12 +4807,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.27-dev"
+                    "dev-master": "1.28-dev"
                 }
             },
             "autoload": {
@@ -4847,7 +4847,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-10-25 19:17:17"
+            "time": "2016-11-23 18:41:40"
         },
         {
             "name": "willdurand/hateoas",
