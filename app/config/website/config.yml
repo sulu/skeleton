@@ -16,3 +16,8 @@ cmf_routing:
         enabled: true
         route_provider_service_id: sulu_website.provider.content
 
+# Exception Controller
+fos_rest:
+    exception:
+        enabled: false # temporary fix for the exception controller until FOSRestBundle is updated to 2.0
+
