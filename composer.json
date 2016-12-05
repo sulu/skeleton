@@ -34,7 +34,10 @@
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "doctrine/doctrine-bundle": "^1.0",
         "doctrine/doctrine-cache-bundle": "^1.0",
-        "oro/doctrine-extensions": "^1.0"
+        "oro/doctrine-extensions": "^1.0",
+
+        "php-task/task-bundle": "@dev",
+        "php-task/php-task": "@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

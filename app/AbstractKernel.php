@@ -50,6 +50,9 @@ abstract class AbstractKernel extends SuluKernel
             // massive
             new Massive\Bundle\SearchBundle\MassiveSearchBundle(),
 
+            // php-task
+            new Task\TaskBundle\TaskBundle(),
+
             // sulu
             new Sulu\Bundle\SearchBundle\SuluSearchBundle(),
             new Sulu\Bundle\PersistenceBundle\SuluPersistenceBundle(),
@@ -70,6 +73,7 @@ abstract class AbstractKernel extends SuluKernel
             new Sulu\Bundle\CustomUrlBundle\SuluCustomUrlBundle(),
             new Sulu\Bundle\RouteBundle\SuluRouteBundle(),
             new Sulu\Bundle\MarkupBundle\SuluMarkupBundle(),
+            new Sulu\Bundle\AutomationBundle\SuluAutomationBundle(),
             new DTL\Bundle\PhpcrMigrations\PhpcrMigrationsBundle(),
             new Dubture\FFmpegBundle\DubtureFFmpegBundle(),
 
