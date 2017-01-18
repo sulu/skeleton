@@ -37,6 +37,7 @@ app/maintenance.php
 
 # composer
 /composer.phar
+composer.lock
 /vendor
 
 # IDEs
