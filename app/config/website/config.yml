@@ -2,10 +2,6 @@ imports:
     - { resource: security.yml }
     - { resource: ../config.yml }
 
-# Twig Configuration
-twig:
-    exception_controller: sulu_website.exception.controller:showAction
-
 # SymfonyCMF Configuration
 cmf_routing:
     chain:
@@ -15,4 +11,9 @@ cmf_routing:
     dynamic:
         enabled: true
         route_provider_service_id: sulu_website.provider.content
+
+# Exception Controller
+fos_rest:
+    exception:
+        enabled: false # temporary fix for the exception controller until FOSRestBundle is updated to 2.0
 
