@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "The sulu content management framework",
-    "version": "dev-develop",
+    "version": "1.5.0",
     "autoload": {
         "psr-0": {
             "": "src/"
@@ -22,7 +22,7 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "sulu/sulu": "1.5.*@RC",
+        "sulu/sulu": "1.5.*",
         "dantleech/phpcr-migrations-bundle": "0.1.*",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
@@ -32,9 +32,7 @@
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "doctrine/doctrine-bundle": "^1.0",
         "doctrine/doctrine-cache-bundle": "^1.0",
-        "oro/doctrine-extensions": "^1.0",
-
-        "sulu/document-manager": "@RC"
+        "oro/doctrine-extensions": "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
