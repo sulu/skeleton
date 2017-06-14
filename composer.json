@@ -62,7 +62,8 @@
             "Massive\\Bundle\\SearchBundle\\Composer\\SearchScriptHandler::initBundle"
         ],
         "post-create-project-cmd": [
-            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore"
+            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore",
+            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removePackageLockJsonFromGitIgnore"
         ]
     },
     "config": {
