@@ -40,6 +40,10 @@ app/maintenance.php
 composer.lock
 /vendor
 
+# npm
+package-lock.json
+/node_modules
+
 # IDEs
 /.idea
 *.iml
