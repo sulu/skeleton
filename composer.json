@@ -15,14 +15,14 @@
         ]
     },
     "require": {
-        "php": "^5.5.9 || ~7.0",
+        "php": "^7.1",
         "twig/extensions": "^1.0",
         "symfony/symfony": "^3.3",
         "symfony/monolog-bundle": "^2.8.7 || ^3.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "sulu/sulu": "~1.6.0",
+        "sulu/sulu": "dev-develop",
         "dantleech/phpcr-migrations-bundle": "~1.0",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
@@ -62,7 +62,8 @@
             "Massive\\Bundle\\SearchBundle\\Composer\\SearchScriptHandler::initBundle"
         ],
         "post-create-project-cmd": [
-            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore"
+            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore",
+            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removePackageLockJsonFromGitIgnore"
         ]
     },
     "config": {
