@@ -3,7 +3,6 @@
     "license": "MIT",
     "type": "project",
     "description": "The sulu content management framework",
-    "version": "1.5.5",
     "autoload": {
         "psr-0": {
             "": "src/"
@@ -16,27 +15,29 @@
         ]
     },
     "require": {
-        "php": ">=5.5",
+        "php": "^5.5.9 || ~7.0",
         "twig/extensions": "^1.0",
-        "symfony/monolog-bundle": "^2.4",
+        "symfony/symfony": "^3.3",
+        "symfony/monolog-bundle": "^2.8.7 || ^3.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "sulu/sulu": "1.5.*",
-        "dantleech/phpcr-migrations-bundle": "0.1.*",
+        "sulu/sulu": "1.6.0-RC1",
+        "sulu/document-manager": "@dev",
+        "dantleech/phpcr-migrations-bundle": "~1.0",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
-        "massive/build-bundle": "0.2.*",
+        "massive/build-bundle": "0.3.*",
         "jackalope/jackalope-doctrine-dbal": "^1.2.5",
         "jackalope/jackalope-jackrabbit": "^1.2.0",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+        "doctrine/doctrine-fixtures-bundle": "~2.3",
         "doctrine/doctrine-bundle": "^1.0",
         "doctrine/doctrine-cache-bundle": "^1.0",
         "oro/doctrine-extensions": "^1.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
-        "phpcr/phpcr-shell": "@beta"
+        "sensio/generator-bundle": "~2.8 || ~3.0",
+        "phpcr/phpcr-shell": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
