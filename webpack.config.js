@@ -22,6 +22,26 @@ module.exports = {
                     plugins: ['transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread'],
                 },
             },
+            {
+                test: /\.(scss|css)$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                        },
+                    },
+                    'postcss-loader',
+                ],
+            },
+            {
+                test:/\.(svg|ttf|woff|woff2|eot)$/,
+                use: [
+                    'url-loader',
+                ],
+            }
         ],
     },
     plugins: [
