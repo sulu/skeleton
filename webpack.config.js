@@ -4,12 +4,13 @@ const CleanObsoleteChunksPlugin = require('webpack-clean-obsolete-chunks');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 const entries = glob.sync('./vendor/**/Resources/js/index.js');
+const basePath = 'adminV2';
 
 module.exports = {
     entry: entries,
     output: {
         path: path.resolve(__dirname, 'web'),
-        filename: '[name].[chunkhash].js',
+        filename: basePath + '/[name].[chunkhash].js',
     },
     module: {
         loaders: [
@@ -23,7 +24,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(scss|css)$/,
+                test: /\.(scss)$/,
                 use: [
                     'style-loader',
                     {
@@ -37,15 +38,34 @@ module.exports = {
                 ],
             },
             {
-                test:/\.(svg|ttf|woff|woff2|eot)$/,
+                test: /\.css/,
                 use: [
-                    'url-loader',
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: false,
+                        },
+                    },
                 ],
-            }
+            },
+            {
+                test:/\.(svg|ttf|woff|woff2|eot)(\?.*$|$)/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '/' + basePath + '/fonts/[name].[hash].[ext]',
+                        },
+                    },
+                ],
+            },
         ],
     },
     plugins: [
         new CleanObsoleteChunksPlugin(),
-        new ManifestPlugin(),
+        new ManifestPlugin({
+            fileName: basePath + '/manifest.json',
+        }),
     ],
 }
