@@ -1,6 +1,7 @@
 const glob = require('glob');
 const path = require('path');
 const CleanObsoleteChunksPlugin = require('webpack-clean-obsolete-chunks');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 const entries = glob.sync('./vendor/**/Resources/js/index.js');
@@ -25,29 +26,31 @@ module.exports = {
             },
             {
                 test: /\.(scss)$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                importLoaders: 1,
+                            },
                         },
-                    },
-                    'postcss-loader',
-                ],
+                        'postcss-loader',
+                    ],
+                }),
             },
             {
                 test: /\.css/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: false,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: false,
+                            },
                         },
-                    },
-                ],
+                    ],
+                }),
             },
             {
                 test:/\.(svg|ttf|woff|woff2|eot)(\?.*$|$)/,
@@ -67,5 +70,6 @@ module.exports = {
         new ManifestPlugin({
             fileName: basePath + '/manifest.json',
         }),
+        new ExtractTextPlugin(basePath + '/main.[hash].css'),
     ],
 }
