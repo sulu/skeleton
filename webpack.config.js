@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const glob = require('glob');
 const path = require('path');
 const CleanObsoleteChunksPlugin = require('webpack-clean-obsolete-chunks');
@@ -6,6 +7,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 const entries = glob.sync('./vendor/**/Resources/js/index.js');
 const basePath = 'adminV2';
+
+entries.unshift('whatwg-fetch');
 
 module.exports = {
     entry: entries,
@@ -71,5 +74,8 @@ module.exports = {
             fileName: basePath + '/manifest.json',
         }),
         new ExtractTextPlugin(basePath + '/main.[hash].css'),
+        new webpack.ProvidePlugin({
+            'Promise': 'promise-polyfill',
+        })
     ],
 }

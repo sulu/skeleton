@@ -4,6 +4,7 @@
         "watch": "webpack -d -w"
     },
     "dependencies": {
+        "imports-loader": "^0.7.1",
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js"
     },
     "devDependencies": {
