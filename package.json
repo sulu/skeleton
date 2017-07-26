@@ -8,6 +8,7 @@
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js"
     },
     "devDependencies": {
+        "autoprefixer": "^7.1.2",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.1",
         "babel-plugin-transform-class-properties": "^6.24.1",
@@ -19,6 +20,7 @@
         "extract-text-webpack-plugin": "^2.1.2",
         "file-loader": "^0.11.2",
         "glob": "^7.1.2",
+        "postcss-hexrgba": "^0.2.1",
         "postcss-import": "^10.0.0",
         "postcss-loader": "^2.0.6",
         "postcss-nested": "^2.0.2",

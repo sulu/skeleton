@@ -78,4 +78,4 @@ module.exports = {
             'Promise': 'promise-polyfill',
         })
     ],
-}
+};
