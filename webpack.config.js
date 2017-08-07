@@ -9,6 +9,7 @@ const entries = glob.sync('./vendor/**/Resources/js/index.js');
 const basePath = 'adminV2';
 
 entries.unshift('whatwg-fetch');
+entries.unshift('babel-polyfill');
 
 module.exports = {
     entry: entries,
@@ -76,8 +77,5 @@ module.exports = {
             fileName: basePath + '/manifest.json',
         }),
         new ExtractTextPlugin(basePath + '/main.[hash].css'),
-        new webpack.ProvidePlugin({
-            'Promise': 'promise-polyfill',
-        })
     ],
 };
