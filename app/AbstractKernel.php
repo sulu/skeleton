@@ -122,8 +122,7 @@ abstract class AbstractKernel extends SuluKernel
         return dirname($this->rootDir) . DIRECTORY_SEPARATOR
         . 'var' . DIRECTORY_SEPARATOR
         . 'logs' . DIRECTORY_SEPARATOR
-        . $this->getContext() . DIRECTORY_SEPARATOR
-        . $this->environment;
+        . $this->getContext();
     }
 
     protected function getKernelParameters()
