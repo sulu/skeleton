@@ -1,9 +1,13 @@
 {% extends "master.html.twig" %}
 
 {% block meta %}
-    {% autoescape false %}
-        {{ sulu_seo(extension.seo, content, urls, shadowBaseLocale) }}
-    {% endautoescape %}
+    {% include "SuluWebsiteBundle:Extension:seo.html.twig" with {
+        "seo": extension.seo|default([]),
+        "content": content|default([]),
+        "urls": urls|default([]),
+        "shadowBaseLocale": shadowBaseLocale|default(),
+        "defaultLocale": request.defaultLocale|default('de')
+    } %}
 {% endblock %}
 
 {% block content %}
