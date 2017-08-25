@@ -3,6 +3,7 @@ module.exports = {
         'postcss-import': {},
         'postcss-nested': {},
         'postcss-simple-vars': {},
+        'postcss-calc': {},
         'postcss-hexrgba': {},
         'autoprefixer': {},
     }
