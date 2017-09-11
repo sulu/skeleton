@@ -8,8 +8,10 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const entries = glob.sync('./vendor/**/Resources/js/index.js');
 const basePath = 'adminV2';
 
+entries.unshift('core-js/fn/array/includes');
+entries.unshift('core-js/fn/promise');
 entries.unshift('whatwg-fetch');
-entries.unshift('babel-polyfill');
+entries.unshift('url-search-params-polyfill');
 
 module.exports = {
     entry: entries,
