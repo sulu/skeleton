@@ -10,6 +10,7 @@ const basePath = 'adminV2';
 
 entries.unshift('core-js/fn/array/includes');
 entries.unshift('core-js/fn/promise');
+entries.unshift('core-js/fn/symbol');
 entries.unshift('whatwg-fetch');
 entries.unshift('url-search-params-polyfill');
 
