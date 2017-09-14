@@ -1,10 +1,14 @@
 {
+    "license": "MIT",
+    "repository": "https://github.com/sulu/sulu-minimal.git",
     "scripts": {
         "build": "webpack -p",
         "watch": "webpack -d -w"
     },
     "dependencies": {
-        "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js"
+        "mobx": "^3.2.2",
+        "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
+        "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",
