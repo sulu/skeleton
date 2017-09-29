@@ -1,5 +1,4 @@
 imports:
-    - { resource: security.yml }
     - { resource: ../config.yml }
 
 # SuluAdmin Configuration

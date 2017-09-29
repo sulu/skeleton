@@ -48,6 +48,11 @@
                         <url language="en">{host}</url>
                     </urls>
                 </environment>
+                <environment type="test">
+                    <urls>
+                        <url language="en">{host}</url>
+                    </urls>
+                </environment>
                 <environment type="dev">
                     <urls>
                         <url language="en">{host}</url>
