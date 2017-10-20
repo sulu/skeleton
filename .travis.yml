@@ -1,0 +1,10 @@
+language: php
+
+php: 7.1
+
+before_script:
+    - composer install
+    - nvm install node; npm install -g npm; npm install
+
+script:
+    - npm run build
