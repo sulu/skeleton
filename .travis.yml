@@ -4,7 +4,9 @@ php: 7.1
 
 before_script:
     - composer install
-    - nvm install node; npm install -g npm; npm install
+    - nvm install 8
+    - npm install -g npm
+    - npm install
 
 script:
     - npm run build
