@@ -1,0 +1,36 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    router:
+        resource: "%kernel.root_dir%/config/website/routing_dev.yml"
+        strict_requirements: true
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    profiler:
+        enabled: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+    transport: "null"
+
+doctrine:
+    dbal:
+        host: 127.0.0.1
+        dbname: "%database_name%_test"
+        user: root
+        password:
+
+monolog:
+    handlers:
+        console:
+            type:   console
+            bubble: false
+
+sulu_test:
+    enable_test_user_provider: true

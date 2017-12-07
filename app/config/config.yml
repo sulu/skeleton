@@ -118,7 +118,7 @@ sulu_websocket:
 
 sulu_website:
     sitemap:
-        dump_dir: %kernel.var_dir%/sitemaps
+        dump_dir: "%kernel.var_dir%/sitemaps"
 
 # SuluHttpCache Configuration
 sulu_http_cache:
