@@ -21,7 +21,7 @@ swiftmailer:
 
 doctrine:
     dbal:
-        host: 127.0.0.1
+        host: localhost
         dbname: "%database_name%_test"
         user: root
         password:
