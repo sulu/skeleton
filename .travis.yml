@@ -10,7 +10,7 @@ matrix:
   include:
     - php: 7.1
       env:
-        - COMPOSER_FLAGS="--prefer-dist --no-interaction"
+        - COMPOSER_FLAGS="--no-interaction"
 
 before_install:
   - composer self-update
