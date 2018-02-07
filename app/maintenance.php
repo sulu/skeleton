@@ -3,23 +3,23 @@
 define('DEFAULT_LOCALE', 'en');
 
 // allow acces for following ips
-$allowedIPs = array(
+$allowedIPs = [
   '127.0.0.1',
-);
+];
 
 // translations for maintenance
-$translations = array(
-    'en' => array(
+$translations = [
+    'en' => [
         'title' => 'Maintenance',
         'heading' => 'The page is currently down for maintenance',
         'description' => 'Sorry for any inconvenience caused. Please try again shortly.',
-    ),
-    'de' => array(
+    ],
+    'de' => [
         'title' => 'Wartungsarbeiten',
         'heading' => 'Die Seite wird derzeit gewartet',
         'description' => 'Wir bitten um Verständnis. Bitte versuche es in Kürze erneut.',
-    ),
-);
+    ],
+];
 
 // check if ip is within allowed range
 if (in_array($_SERVER['REMOTE_ADDR'], $allowedIPs)) {
