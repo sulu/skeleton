@@ -4,6 +4,10 @@
   "/adminV2/fonts/fontawesome-webfont.ttf?v=4.7.0": "/adminV2/fonts/fontawesome-webfont.b06871f281fee6b241d60582ae9369b9.ttf",
   "/adminV2/fonts/fontawesome-webfont.woff2?v=4.7.0": "/adminV2/fonts/fontawesome-webfont.af7ae505a9eed503f8b8e6982036873e.woff2",
   "/adminV2/fonts/fontawesome-webfont.woff?v=4.7.0": "/adminV2/fonts/fontawesome-webfont.fee66e712a8a08eef5805a46892932ad.woff",
+  "/adminV2/fonts/icomoon.eot?8fqek8": "/adminV2/fonts/icomoon.1e1862206751c6c68a31c6cb8399d553.eot",
+  "/adminV2/fonts/icomoon.svg?8fqek8": "/adminV2/fonts/icomoon.3122033d83f1762d760218a785822f27.svg",
+  "/adminV2/fonts/icomoon.ttf?8fqek8": "/adminV2/fonts/icomoon.3aad633608aa472bf8daeb4a30c8db6e.ttf",
+  "/adminV2/fonts/icomoon.woff?8fqek8": "/adminV2/fonts/icomoon.c28b3dcda5cc7c44e4cd6ec2a35a0467.woff",
   "/adminV2/fonts/open-sans-v15-latin-300.eot": "/adminV2/fonts/open-sans-v15-latin-300.76b56857ebbae3a5a689f213feb11af0.eot",
   "/adminV2/fonts/open-sans-v15-latin-300.svg": "/adminV2/fonts/open-sans-v15-latin-300.27ef0b062b2e221df16f3bbd97c2dca8.svg",
   "/adminV2/fonts/open-sans-v15-latin-300.ttf": "/adminV2/fonts/open-sans-v15-latin-300.177cc92d2e8027712a8c1724abd272cd.ttf",
@@ -55,6 +59,6 @@
   "/adminV2/fonts/open-sans-v15-latin-regular.woff": "/adminV2/fonts/open-sans-v15-latin-regular.bf2d0783515b7d75c35bde69e01b3135.woff",
   "/adminV2/fonts/open-sans-v15-latin-regular.woff2": "/adminV2/fonts/open-sans-v15-latin-regular.cffb686d7d2f4682df8342bd4d276e09.woff2",
   "/adminV2/images/checkerBackground.gif": "/adminV2/images/checkerBackground.559cbe83770ee9374e8f48407bd4c616.gif",
-  "main.css": "adminV2/main.8ba7bcf12e958a58af28.css",
-  "main.js": "adminV2/main.fb938c6f150341eb3c6f.js"
+  "main.css": "adminV2/main.e58df69a327550d0a59e.css",
+  "main.js": "adminV2/main.177b9e8c8e9a03b2d620.js"
 }
