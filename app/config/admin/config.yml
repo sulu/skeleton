@@ -5,7 +5,3 @@ imports:
 sulu_admin:
     name: "%sulu_admin.name%"
     email: "%sulu_admin.email%"
-
-framework:
-    assets:
-        json_manifest_path: "%kernel.project_dir%/web/admin/build/manifest.json"
