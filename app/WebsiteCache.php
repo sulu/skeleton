@@ -9,8 +9,8 @@
  * with this source code in the file LICENSE.
  */
 
-use Sulu\Component\HttpCache\HttpCache;
+use Sulu\Bundle\HttpCacheBundle\Cache\AbstractHttpCache;
 
-class WebsiteCache extends HttpCache
+class WebsiteCache extends AbstractHttpCache
 {
 }

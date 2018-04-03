@@ -122,9 +122,9 @@ sulu_website:
 
 # SuluHttpCache Configuration
 sulu_http_cache:
-    handlers:
-        debug:
-            enabled: "%kernel.debug%"
+    proxy_client:
+        symfony:
+            enabled: true
 
 # SuluMedia Configuration
 sulu_media:
@@ -136,4 +136,3 @@ sulu_media:
 # https://github.com/schmittjoh/JMSSerializerBundle/pull/270#issuecomment-21171800
 services:
     jms_serializer.cache_naming_strategy: "@sulu_core.serialize_caching_strategy"
-
