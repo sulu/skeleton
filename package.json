@@ -8,6 +8,7 @@
     "dependencies": {
         "mobx": "^4.0.0",
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
+        "sulu-content-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/ContentBundle/Resources/js",
         "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js"
     },
     "devDependencies": {
