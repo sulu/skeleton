@@ -19,8 +19,8 @@ defined('SYMFONY_DEBUG') ||
     define('SYMFONY_DEBUG', filter_var(getenv('SYMFONY_DEBUG') ?: SYMFONY_ENV === 'dev', FILTER_VALIDATE_BOOLEAN));
 
 // maintenance mode
-$maintenanceFilePath = __DIR__ . '/../app/maintenance.php';
-if (SULU_MAINTENANCE && file_exists($maintenanceFilePath)) {
+if (SULU_MAINTENANCE) {
+    $maintenanceFilePath = __DIR__ . '/../app/maintenance.php';
     // show maintenance mode and exit if no allowed IP is met
     if (require $maintenanceFilePath) {
         exit();
