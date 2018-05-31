@@ -7,7 +7,7 @@
 
     <view>templates/default</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
-    <cacheLifetime>2400</cacheLifetime>
+    <cacheLifetime>604800</cacheLifetime>
 
     <meta>
         <title lang="en">Default</title>
