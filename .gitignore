@@ -31,8 +31,6 @@
 /web/uploads
 /var/bootstrap.php.cache
 /var/SymfonyRequirements.php
-/web/admin/translations/*
-!/web/admin/translations/.gitkeep
 
 # composer
 /composer.phar
