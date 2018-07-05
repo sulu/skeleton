@@ -8,12 +8,15 @@
     },
     "dependencies": {
         "mobx": "^4.0.0",
+        "mobx-react": "^5.0.0",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
         "sulu-content-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/ContentBundle/Resources/js",
         "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js"
     },
     "devDependencies": {
-        "autoprefixer": "^7.1.5",
+        "autoprefixer": "^7.2.5",
         "babel-core": "^6.25.0",
         "babel-loader": "^7.1.1",
         "babel-plugin-transform-class-properties": "^6.24.1",
@@ -34,9 +37,11 @@
         "postcss-simple-vars": "^4.0.0",
         "raw-loader": "^0.5.1",
         "rimraf": "^2.6.2",
+        "url-search-params-polyfill": "^2.0.0",
         "webpack": "^4.0.0",
         "webpack-clean-obsolete-chunks": "^0.4.0",
         "webpack-cli": "^2.1.3",
-        "webpack-manifest-plugin": "^2.0.2"
+        "webpack-manifest-plugin": "^2.0.2",
+        "whatwg-fetch": "^2.0.3"
     }
 }
