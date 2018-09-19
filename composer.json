@@ -3,22 +3,9 @@
     "license": "MIT",
     "type": "project",
     "description": "The sulu content management framework",
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        },
-        "classmap": [
-            "app/AbstractKernel.php",
-            "app/AdminKernel.php",
-            "app/WebsiteCache.php",
-            "app/WebsiteKernel.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" }
-    },
     "require": {
-        "php": "^7.1",
+        "php": "^7.1.3",
+        "ext-iconv": "*",
         "twig/extensions": "^1.0",
         "symfony/config": "^3.4",
         "symfony/framework-bundle": "^3.4",
@@ -26,10 +13,8 @@
         "symfony/monolog-bundle": "^3.1",
         "symfony/swiftmailer-bundle": "^2.6.4",
         "symfony/twig-bundle": "^3.4",
-        "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^5.0",
-        "incenteev/composer-parameter-handler": "^2.0",
-        "sulu/sulu": "2.0.0-alpha3",
+        "sulu/sulu": "dev-develop",
         "dantleech/phpcr-migrations-bundle": "~1.0",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
@@ -46,51 +31,56 @@
         "phpcr/phpcr-shell": "~1.0",
         "symfony/debug": "^3.4",
         "symfony/debug-bundle": "^3.4",
+        "symfony/dotenv": "^3.4",
         "symfony/inflector": "^3.4",
         "symfony/phpunit-bridge": "^3.4",
         "symfony/var-dumper": "^3.4",
         "symfony/web-profiler-bundle": "^3.4",
         "symfony/web-server-bundle": "^3.4"
     },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
     "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
+        "auto-scripts": [
+            "@php bin/adminconsole cache:clear",
+            "@php bin/websiteconsole cache:clear",
+            "@php bin/adminconsole assets:install --symlink --relative",
             "Sulu\\Bundle\\MediaBundle\\Composer\\MediaScriptHandler::initBundle",
             "Massive\\Bundle\\SearchBundle\\Composer\\SearchScriptHandler::initBundle"
+        ],
+        "post-install-cmd": [
+            "@auto-scripts"
         ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "Sulu\\Bundle\\MediaBundle\\Composer\\MediaScriptHandler::initBundle",
-            "Massive\\Bundle\\SearchBundle\\Composer\\SearchScriptHandler::initBundle"
+            "@auto-scripts"
         ],
         "post-create-project-cmd": [
+            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::copyEnvDistFile",
             "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore",
             "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removePackageLockJsonFromGitIgnore"
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "sort-packages": true
     },
     "extra": {
-        "symfony-app-dir": "app",
-        "symfony-bin-dir": "bin",
-        "symfony-web-dir": "web",
-        "symfony-var-dir": "var",
-        "symfony-assets-install": "relative",
-        "incenteev-parameters": [
-            {
-                "file": "app/config/parameters.yml"
-            }
-        ]
+        "symfony-web-dir": "public",
+        "symfony-bin-dir": "bin"
     }
 }

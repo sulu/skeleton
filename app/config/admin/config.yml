@@ -1,7 +1,0 @@
-imports:
-    - { resource: ../config.yml }
-
-# SuluAdmin Configuration
-sulu_admin:
-    name: "%sulu_admin.name%"
-    email: "%sulu_admin.email%"

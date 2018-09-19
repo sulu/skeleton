@@ -6,6 +6,19 @@ cache:
   directories:
     - "$HOME/.composer/cache/files"
 
+env:
+  global:
+    - APP_ENV="test"
+    - APP_SECRET=a448d1dfcaa563fce56c2fd9981f662b
+    - MAILER_URL=null://localhost
+    - SULU_ADMIN_EMAIL=
+    - JACKRABBIT_VERSION=2.12.0
+    - PHPCR_TRANSPORT=doctrinedbal
+    - DATABASE_URL=mysql://root:@127.0.0.1/sulu_test
+    - DATABASE_VERSION=5.6
+    - DATABASE_CHARSET=utf8mb4
+    - DATABASE_COLLATE=utf8mb4_unicode_ci
+
 matrix:
   include:
     - php: 7.1
@@ -26,17 +39,15 @@ install:
   - npm install
   # Create database for build test
   - bin/adminconsole doctrine:database:create
-  # Create database for unit test
-  - bin/adminconsole doctrine:database:create --env=test
 
 script:
   # Test if installation works
   - bin/adminconsole sulu:build dev --no-interaction
   # Test if PHPUnit installation works
-  - SYMFONY_ENV=test bin/simple-phpunit
+  - bin/simple-phpunit
   # Lint Twig files
-  - bin/adminconsole lint:twig app/Resources/views
+  - bin/adminconsole lint:twig templates
   # Lint Yaml files
-  - bin/adminconsole lint:yaml app/config
+  - bin/adminconsole lint:yaml config
   # Test webpack build
   - npm run build

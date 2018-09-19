@@ -1,6 +1,21 @@
-# app
-/app/bootstrap.php.cache
-/app/config/parameters.yml
+
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
+
+
 
 # bin
 /bin/*
@@ -8,29 +23,16 @@
 !/bin/console.php
 !/bin/websiteconsole
 !/bin/adminconsole
-!/bin/symfony_requirements
 
 # var
-/var/cache/*
-/var/indexes/*
-/var/logs/*
-/var/sessions/*
-/var/uploads/*
-/var/sitemaps/*
-!/var/cache/.gitkeep
-!/var/indexes/.gitkeep
-!/var/logs/.gitkeep
-!/var/sessions/.gitkeep
-!/var/uploads/.gitkeep
-!/var/sitemaps/.gitkeep
+/var/*
+!/var/.gitkeep
 
 # web
-/web/css
-/web/js
-/web/bundles
-/web/uploads
-/var/bootstrap.php.cache
-/var/SymfonyRequirements.php
+/public/bundles
+/public/uploads
+/public/admin/translations/*
+!/public/admin/translations/.gitkeep
 
 # composer
 /composer.phar
@@ -40,6 +42,10 @@ composer.lock
 # npm
 package-lock.json
 /node_modules
+
+# phpunit
+.phpunit
+/phpunit.xml
 
 # IDEs
 /.idea

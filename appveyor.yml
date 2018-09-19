@@ -1,0 +1,73 @@
+build: false
+
+platform:
+  - x64
+
+environment:
+  APP_ENV: test
+  APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
+  MAILER_URL: null://localhost
+  SULU_ADMIN_EMAIL: example@localhost
+  PHPCR_TRANSPORT: doctrinedbal
+  DATABASE_URL: mysql://root:Password12!@127.0.0.1/sulu_test
+  DATABASE_CHARSET: utf8mb4
+  DATABASE_COLLATE: utf8mb4_unicode_ci
+  matrix:
+   - PHP_VERSION: 7.2.4
+
+services:
+  - mysql
+
+hosts:
+  localhost: 127.0.0.1
+
+init:
+  - SET PATH=C:\tools\php;%PATH%
+
+cache:
+  - '%APPDATA%\Composer'
+  - '%LOCALAPPDATA%\Composer'
+  # Redownload when appveyor.yml changed
+  - C:\tools\php -> appveyor.yml
+  - C:\tools\composer.phar -> appveyor.yml
+
+install:
+  # disable wuauserv service
+  - ps: Set-Service wuauserv -StartupType Manual
+
+  # install composer
+  - IF NOT EXIST C:\tools\composer.phar (
+        cd C:\tools
+        && appveyor DownloadFile https://getcomposer.org/composer.phar
+    )
+
+  # install php
+  - IF NOT EXIST C:\tools\php (
+        cinst --yes --allow-empty-checksums php --version %PHP_VERSION% --params '/InstallDir:C:\tools\php'
+    )
+
+  # configure PHP and enable extensions.
+  - cd C:\tools\php
+  - ps: cat php.ini-production | %{$_ -replace "memory_limit = 128M","memory_limit = -1"} | Out-File -Encoding "Default" php.ini
+  - echo date.timezone="UTC" >> php.ini
+  - echo extension_dir=ext >> php.ini
+  - echo extension=php_curl.dll >> php.ini
+  - echo extension=php_openssl.dll >> php.ini
+  - echo extension=php_mbstring.dll >> php.ini
+  - echo extension=php_gd2.dll >> php.ini
+  - echo extension=php_intl.dll >> php.ini
+  - echo extension=php_pdo_mysql.dll >> php.ini
+  - echo extension=php_pdo_sqlite.dll >> php.ini
+  - echo extension=php_fileinfo.dll >> php.ini
+  - php -i
+
+before_test:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - php -dmemory_limit=-1 C:\tools\composer.phar update --no-interaction --no-progress --prefer-dist --no-ansi
+
+test_script:
+   - cd %APPVEYOR_BUILD_FOLDER%
+   - php bin/adminconsole sulu:build dev --no-interaction
+   - php bin/simple-phpunit
+   - php bin/adminconsole lint:twig templates
+   - php bin/adminconsole lint:yaml config
