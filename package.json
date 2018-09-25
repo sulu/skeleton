@@ -13,7 +13,8 @@
         "react-dom": "^16.2.0",
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
         "sulu-content-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/ContentBundle/Resources/js",
-        "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js"
+        "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
+        "sulu-preview-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js"
     },
     "devDependencies": {
         "autoprefixer": "^7.2.5",

@@ -1,9 +1,7 @@
 {% extends "base.html.twig" %}
 
 {% block content %}
-    <h1 property="title">{{ content.title }}</h1>
+    <h1>{{ content.title }}</h1>
 
-    <div property="article">
-        {{ content.article|raw }}
-    </div>
+    {{ content.article|raw }}
 {% endblock %}
