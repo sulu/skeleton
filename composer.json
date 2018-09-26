@@ -7,18 +7,18 @@
         "php": "^7.1.3",
         "ext-iconv": "*",
         "twig/extensions": "^1.0",
-        "symfony/config": "^3.4",
-        "symfony/framework-bundle": "^3.4",
-        "symfony/monolog-bridge": "^3.4",
+        "symfony/config": "^3.4 || ^4.0",
+        "symfony/framework-bundle": "^3.4 || ^4.0",
+        "symfony/monolog-bridge": "^3.4 || ^4.0",
         "symfony/monolog-bundle": "^3.1",
-        "symfony/swiftmailer-bundle": "^2.6.4",
+        "symfony/swiftmailer-bundle": "^2.6.4 || ^3.0",
         "symfony/twig-bundle": "^3.4",
         "sensio/framework-extra-bundle": "^5.0",
+        "incenteev/composer-parameter-handler": "^2.0",
         "sulu/sulu": "dev-develop",
-        "dantleech/phpcr-migrations-bundle": "~1.0",
+        "dantleech/phpcr-migrations-bundle": "^1.1",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
-        "massive/build-bundle": "^0.3.0",
         "jackalope/jackalope-doctrine-dbal": "^1.2.5",
         "jackalope/jackalope-jackrabbit": "^1.2.0",
         "doctrine/doctrine-fixtures-bundle": "~2.4",
@@ -27,16 +27,15 @@
         "oro/doctrine-extensions": "^1.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.8 || ~3.0",
-        "phpcr/phpcr-shell": "~1.0",
-        "symfony/debug": "^3.4",
-        "symfony/debug-bundle": "^3.4",
-        "symfony/dotenv": "^3.4",
-        "symfony/inflector": "^3.4",
-        "symfony/phpunit-bridge": "^3.4",
-        "symfony/var-dumper": "^3.4",
-        "symfony/web-profiler-bundle": "^3.4",
-        "symfony/web-server-bundle": "^3.4"
+        "phpcr/phpcr-shell": "~1.1.1",
+        "symfony/debug": "^3.4 || ^4.0",
+        "symfony/debug-bundle": "^3.4 || ^4.0",
+        "symfony/dotenv": "^3.4 || ^4.0",
+        "symfony/inflector": "^3.4 || ^4.0",
+        "symfony/phpunit-bridge": "^3.4 || ^4.0",
+        "symfony/var-dumper": "^3.4 || ^4.0",
+        "symfony/web-profiler-bundle": "^3.4 || ^4.0",
+        "symfony/web-server-bundle": "^3.4 || ^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -60,8 +59,8 @@
             "@php bin/adminconsole cache:clear",
             "@php bin/websiteconsole cache:clear",
             "@php bin/adminconsole assets:install --symlink --relative",
-            "Sulu\\Bundle\\MediaBundle\\Composer\\MediaScriptHandler::initBundle",
-            "Massive\\Bundle\\SearchBundle\\Composer\\SearchScriptHandler::initBundle"
+            "@php bin/adminconsole sulu:media:init",
+            "@php bin/adminconsole massive:search:init"
         ],
         "post-install-cmd": [
             "@auto-scripts"
