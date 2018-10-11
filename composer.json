@@ -15,7 +15,7 @@
         "symfony/twig-bundle": "^3.4",
         "sensio/framework-extra-bundle": "^5.0",
         "incenteev/composer-parameter-handler": "^2.0",
-        "sulu/sulu": "dev-develop",
+        "sulu/sulu": "2.0.0-alpha4",
         "dantleech/phpcr-migrations-bundle": "^1.1",
         "zendframework/zend-stdlib": "^2.3",
         "zendframework/zendsearch": "@dev",
