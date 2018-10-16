@@ -5,7 +5,7 @@
 
     <key>default</key>
 
-    <view>templates/pages/default</view>
+    <view>pages/default</view>
     <controller>SuluWebsiteBundle:Default:index</controller>
     <cacheLifetime>604800</cacheLifetime>
 
