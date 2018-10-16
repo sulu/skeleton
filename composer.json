@@ -68,8 +68,10 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
+        "post-root-package-install": [
+            "php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env.dist')));\""
+        ],
         "post-create-project-cmd": [
-            "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::copyEnvDistFile",
             "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore",
             "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removePackageLockJsonFromGitIgnore"
         ]

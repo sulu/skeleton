@@ -6,48 +6,62 @@ cache:
   directories:
     - "$HOME/.composer/cache/files"
 
-env:
-  global:
-    - APP_ENV="test"
-    - APP_SECRET=a448d1dfcaa563fce56c2fd9981f662b
-    - MAILER_URL=null://localhost
-    - SULU_ADMIN_EMAIL=
-    - JACKRABBIT_VERSION=2.12.0
-    - PHPCR_TRANSPORT=doctrinedbal
-    - DATABASE_URL=mysql://root:@127.0.0.1/sulu_test
-    - DATABASE_VERSION=5.6
-    - DATABASE_CHARSET=utf8mb4
-    - DATABASE_COLLATE=utf8mb4_unicode_ci
-
-matrix:
-  include:
-    - php: 7.1
-      env:
-        - COMPOSER_FLAGS="--no-interaction"
-
 before_install:
   - composer self-update
   - phpenv config-add tests/travis.php.ini
 
-install:
-  # Install dependencies
-  - travis_retry composer update $COMPOSER_FLAGS
-  - composer info -i
-  # Install node
-  - nvm install 8
-  - npm install -g npm
-  - npm install
-  # Create database for build test
-  - bin/adminconsole doctrine:database:create
+matrix:
+  include:
+    # With ENVIRONMENT variables
+    - php: 7.1
+      install:
+        # Install dependencies
+        - travis_retry composer update $COMPOSER_FLAGS
+        - composer info -i
+        # Create database for build test
+        - bin/adminconsole doctrine:database:create
+      env:
+        - APP_ENV=test
+        - APP_SECRET=a448d1dfcaa563fce56c2fd9981f662b
+        - MAILER_URL=null://localhost
+        - SULU_ADMIN_EMAIL=
+        - DATABASE_URL=mysql://root:@127.0.0.1/sulu_test
+        - COMPOSER_FLAGS="--no-interaction"
+
+    # Without ENVIRONMENT variables
+    - php: 7.2
+      env:
+        - COMPOSER_CREATE: true
+        - NPM_BUILD: true
 
 script:
+  # Install project over composer create and set env variables in .env file
+  - |
+    if [[ $COMPOSER_CREATE = true ]]; then
+        composer create-project sulu/sulu-minimal ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
+        cd ../test-create-project-dir
+        php -r "file_put_contents('.env', str_replace('DATABASE_URL=#mysql://db_user:db_password@127.0.0.1:3306/db_name', 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test', file_get_contents('.env')));"
+        php -r "file_put_contents('.env', str_replace('APP_ENV=dev', 'APP_ENV=test', file_get_contents('.env')));"
+    fi
+  # Install NPM
+  - |
+    if [[ $NPM_BUILD = true ]]; then
+        nvm install 8
+        npm install -g npm
+        npm install
+    fi
+  # Test NPM build
+  - |
+    if [[ $NPM_BUILD = true ]]; then
+        npm run build
+    fi
   # Test if installation works
   - bin/adminconsole sulu:build dev --no-interaction
+  # Validate database schema
+  - bin/adminconsole doctrine:schema:validate
   # Test if PHPUnit installation works
   - bin/simple-phpunit
   # Lint Twig files
   - bin/adminconsole lint:twig templates
   # Lint Yaml files
   - bin/adminconsole lint:yaml config
-  # Test webpack build
-  - npm run build

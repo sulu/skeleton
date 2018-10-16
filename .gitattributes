@@ -1,0 +1,5 @@
+.gitattributes export-ignore
+.travis.yml export-ignore
+/tests/travis.php.ini export-ignore
+appveyor.yml export-ignore
+/.circleci export-ignore
