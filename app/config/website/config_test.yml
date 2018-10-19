@@ -31,3 +31,7 @@ monolog:
 
 sulu_test:
     enable_test_user_provider: true
+
+massive_search:
+    metadata:
+        prefix: test
