@@ -59,13 +59,13 @@ $kernel = new Kernel($env, $debug, SuluKernel::CONTEXT_WEBSITE);
 // Comment this line if you want to use the "varnish" http
 // caching strategy. See http://sulu.readthedocs.org/en/latest/cookbook/caching-with-varnish.html
 if ($env !== 'dev') {
-    $kernel = new SuluHttpCache($kernel);
-
-    // When using the HttpCache, you need to call the method in your front controller
-    // instead of relying on the configuration parameter
-    Request::enableHttpMethodParameterOverride();
+    $kernel = $kernel->getHttpCache();
 }
 
+// When using the HttpCache, you need to call the method in your front controller
+// instead of relying on the configuration parameter
+// https://symfony.com/doc/3.4/reference/configuration/framework.html#http-method-override
+Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();

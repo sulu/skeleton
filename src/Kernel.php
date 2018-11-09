@@ -11,12 +11,24 @@ namespace App;
  * with this source code in the file LICENSE.
  */
 
+use FOS\HttpCache\SymfonyCache\HttpCacheAware;
+use FOS\HttpCache\SymfonyCache\HttpCacheProvider;
+use Sulu\Bundle\HttpCacheBundle\Cache\SuluHttpCache;
 use Sulu\Component\HttpKernel\SuluKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class Kernel extends SuluKernel
+class Kernel extends SuluKernel implements HttpCacheProvider
 {
+    use HttpCacheAware;
+
+    public function __construct(string $environment, bool $debug, string $suluContext)
+    {
+        parent::__construct($environment, $debug, $suluContext);
+        // HttpCache and HttpCacheProvider is not needed when using varnish
+        $this->setHttpCache(new SuluHttpCache($this));
+    }
+
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
         // Feel free to remove the "container.autowiring.strict_mode" parameter
