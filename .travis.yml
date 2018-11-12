@@ -55,6 +55,8 @@ script:
     if [[ $NPM_BUILD = true ]]; then
         npm run build
     fi
+  # Validate composer
+  - composer validate --strict
   # Test if installation works
   - bin/adminconsole sulu:build dev --no-interaction
   # Validate database schema
