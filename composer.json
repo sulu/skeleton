@@ -55,7 +55,7 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
-        "auto-scripts": [
+        "sulu-auto-scripts": [
             "@php bin/adminconsole cache:clear",
             "@php bin/websiteconsole cache:clear",
             "@php bin/adminconsole assets:install --symlink --relative",
@@ -63,10 +63,10 @@
             "@php bin/adminconsole massive:search:init"
         ],
         "post-install-cmd": [
-            "@auto-scripts"
+            "@sulu-auto-scripts"
         ],
         "post-update-cmd": [
-            "@auto-scripts"
+            "@sulu-auto-scripts"
         ],
         "post-root-package-install": [
             "php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env.dist')));\""
