@@ -31,9 +31,9 @@ install:
 script:
   # Test if installation works
   - bin/adminconsole sulu:build dev --no-interaction
-  # Test if PHPUnit installation works
-  - SYMFONY_ENV=test bin/simple-phpunit
   # Lint Twig files
   - bin/adminconsole lint:twig app/Resources/views
   # Lint Yaml files
   - bin/adminconsole lint:yaml app/config
+  # Test if PHPUnit installation works
+  - bin/simple-phpunit
