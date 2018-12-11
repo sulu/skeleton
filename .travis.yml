@@ -62,7 +62,7 @@ script:
   # Validate database schema
   - bin/adminconsole doctrine:schema:validate
   # Test if PHPUnit installation works
-  - bin/simple-phpunit
+  - vendor/bin/simple-phpunit
   # Lint Twig files
   - bin/adminconsole lint:twig templates
   # Lint Yaml files
