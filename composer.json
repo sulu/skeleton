@@ -15,7 +15,7 @@
         "jackalope/jackalope-jackrabbit": "^1.2.0",
         "oro/doctrine-extensions": "^1.0",
         "sensio/framework-extra-bundle": "^5.0",
-        "sulu/sulu": "~2.0.0-alpha4",
+        "sulu/sulu": "dev-develop",
         "symfony/config": "^3.4 || ^4.0",
         "symfony/framework-bundle": "^3.4 || ^4.0",
         "symfony/monolog-bridge": "^3.4 || ^4.0",
