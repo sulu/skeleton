@@ -1,28 +1,16 @@
 # Sulu Minimal Edition
 
-Welcome to the Sulu Minimal Edition - a fully-functional Sulu application that you can use as the skeleton for your new
-applications.
+[![GitHub license](https://img.shields.io/github/license/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/blob/master/LICENSE)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/releases)
+[![GitHub tag (latest by date)](https://img.shields.io/github/tag-date/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/releases)
+[![Travis](https://travis-ci.org/sulu/sulu-minimal.png?branch=master)](https://travis-ci.org/sulu/sulu-minimal)
 
-## Installation
+Welcome to the Sulu Minimal Edition - the recommended skeleton to start a new [Sulu](https://github.com/sulu/sulu) project.
 
-__Mac:__
+## Getting started
 
-```
-rm -rf var/cache/*
-rm -rf var/logs/*
-rm -rf var/sessions/*
-HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
-sudo chmod +a "$HTTPDUSER allow delete,write,append,file_inherit,directory_inherit" var/cache var/logs var/uploads var/uploads/* public/uploads public/uploads/* var/indexes var/sessions
-sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" var/cache var/logs var/uploads var/uploads/* public/uploads public/uploads/* var/indexes var/sessions
-```
+Starting a new Sulu project is explained in our [documentation](http://docs.sulu.io/en/latest/book/getting-started.html).
 
-__Linux:__
+## Issues
 
-```
-rm -rf var/cache/*
-rm -rf var/logs/*
-rm -rf var/sessions/*
-HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
-sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache var/logs var/uploads var/uploads/* public/uploads public/uploads/* var/indexes var/sessions
-sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var/cache var/logs var/uploads var/uploads/* public/uploads public/uploads/* var/indexes var/sessions
-```
+Submit any sulu related issues to the [sulu/sulu](https://github.com/sulu/sulu/issues) repository.

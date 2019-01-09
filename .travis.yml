@@ -35,7 +35,6 @@ matrix:
         - NPM_BUILD: true
 
 script:
-  # Install project over composer create and set env variables in .env file
   - |
     if [[ $COMPOSER_CREATE = true ]]; then
         composer create-project sulu/sulu-minimal ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
@@ -43,27 +42,19 @@ script:
         php -r "file_put_contents('.env', str_replace('DATABASE_URL=#mysql://db_user:db_password@127.0.0.1:3306/db_name', 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test', file_get_contents('.env')));"
         php -r "file_put_contents('.env', str_replace('APP_ENV=dev', 'APP_ENV=test', file_get_contents('.env')));"
     fi
-  # Install NPM
   - |
     if [[ $NPM_BUILD = true ]]; then
         nvm install 8
         npm install -g npm
         npm install
     fi
-  # Test NPM build
   - |
     if [[ $NPM_BUILD = true ]]; then
         npm run build
     fi
-  # Validate composer
   - composer validate --strict
-  # Test if installation works
   - bin/adminconsole sulu:build dev --no-interaction
-  # Validate database schema
   - bin/adminconsole doctrine:schema:validate
-  # Test if PHPUnit installation works
   - vendor/bin/simple-phpunit
-  # Lint Twig files
   - bin/adminconsole lint:twig templates
-  # Lint Yaml files
   - bin/adminconsole lint:yaml config
