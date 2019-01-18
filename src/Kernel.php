@@ -22,7 +22,7 @@ class Kernel extends SuluKernel implements HttpCacheProvider
 {
     use HttpCacheAware;
 
-    public function __construct(string $environment, bool $debug, string $suluContext)
+    public function __construct(string $environment, bool $debug, string $suluContext = self::CONTEXT_ADMIN)
     {
         parent::__construct($environment, $debug, $suluContext);
         // HttpCache and HttpCacheProvider is not needed when using varnish
