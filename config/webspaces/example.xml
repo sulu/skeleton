@@ -16,8 +16,8 @@
     </default-templates>
 
     <templates>
-        <template type="search">search/search.html.twig</template>
-        <template type="error">error/error.html.twig</template>
+        <template type="search">search/search</template>
+        <template type="error">error/error</template>
     </templates>
 
     <navigation>
