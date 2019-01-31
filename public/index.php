@@ -63,7 +63,7 @@ $kernel = new Kernel($env, $debug, $suluContext);
 
 // Comment this line if you want to use the "varnish" http
 // caching strategy. See http://sulu.readthedocs.org/en/latest/cookbook/caching-with-varnish.html
-if ($env !== 'dev') {
+if ($env !== 'dev' && SuluKernel::CONTEXT_WEBSITE === $suluContext) {
     $kernel = $kernel->getHttpCache();
 }
 
