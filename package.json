@@ -11,6 +11,7 @@
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
         "sulu-admin-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
+        "sulu-contact-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/ContactBundle/Resources/js",
         "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
         "sulu-page-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
         "sulu-preview-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
