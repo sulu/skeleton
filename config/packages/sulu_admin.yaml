@@ -3,6 +3,6 @@ sulu_admin:
     forms:
         directories:
             - "%kernel.project_dir%/config/forms"
-    datagrids:
+    lists:
         directories:
-            - "%kernel.project_dir%/config/datagrids"
+            - "%kernel.project_dir%/config/lists"
