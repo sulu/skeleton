@@ -1,10 +1,11 @@
 {
-  "main.css": "build/admin/main.1d98e010dfb50561ce37.css",
-  "main.js": "build/admin/main.1d98e010dfb50561ce37.js",
-  "main.css.map": "build/admin/main.1d98e010dfb50561ce37.css.map",
-  "main.js.map": "build/admin/main.1d98e010dfb50561ce37.js.map",
+  "main.css": "build/admin/main.6a748c637ffd3c3aa8dc.css",
+  "main.js": "build/admin/main.6a748c637ffd3c3aa8dc.js",
+  "main.css.map": "build/admin/main.6a748c637ffd3c3aa8dc.css.map",
+  "main.js.map": "build/admin/main.6a748c637ffd3c3aa8dc.js.map",
   "/build/admin/fonts/font-awesome.min.css": "/build/admin/fonts/fontawesome-webfont.fee66e712a8a08eef5805a46892932ad.woff",
   "/build/admin/fonts/global.scss": "/build/admin/fonts/open-sans-v15-latin-regular.cffb686d7d2f4682df8342bd4d276e09.woff2",
   "/build/admin/fonts/sulu-icon.css": "/build/admin/fonts/sulu.591bdd46f7b26ea1fb687e0ca9c0bb2c.eot",
-  "/build/admin/images/singleMediaDropzone.scss": "/build/admin/images/checkerBackground.559cbe83770ee9374e8f48407bd4c616.gif"
+  "/build/admin/images/singleMediaDropzone.scss": "/build/admin/images/checkerBackground.559cbe83770ee9374e8f48407bd4c616.gif",
+  "/build/admin/images/preview.scss": "/build/admin/images/tablet.759814f6b7461568f9147e9b47d768d1.png"
 }
