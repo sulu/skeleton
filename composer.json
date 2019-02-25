@@ -15,7 +15,7 @@
         "jackalope/jackalope-jackrabbit": "^1.2.0",
         "oro/doctrine-extensions": "^1.0",
         "sensio/framework-extra-bundle": "^5.0",
-        "sulu/sulu": "2.0.0-alpha5",
+        "sulu/sulu": "dev-develop",
         "symfony/config": "^3.4 || ^4.0",
         "symfony/framework-bundle": "^3.4 || ^4.0",
         "symfony/monolog-bridge": "^3.4 || ^4.0",
@@ -69,7 +69,7 @@
             "@sulu-auto-scripts"
         ],
         "post-root-package-install": [
-            "php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env.dist')));\""
+            "php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env')));\""
         ],
         "post-create-project-cmd": [
             "Sulu\\Bundle\\CoreBundle\\Composer\\ScriptHandler::removeComposerLockFromGitIgnore",
