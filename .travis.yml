@@ -29,7 +29,7 @@ matrix:
         - COMPOSER_FLAGS="--no-interaction"
 
     # Without ENVIRONMENT variables
-    - php: 7.2
+    - php: 7.3
       env:
         - COMPOSER_CREATE: true
         - NPM_BUILD: true
@@ -39,8 +39,7 @@ script:
     if [[ $COMPOSER_CREATE = true ]]; then
         composer create-project sulu/sulu-minimal ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
         cd ../test-create-project-dir
-        php -r "file_put_contents('.env', str_replace('DATABASE_URL=#mysql://db_user:db_password@127.0.0.1:3306/db_name', 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test', file_get_contents('.env')));"
-        php -r "file_put_contents('.env', str_replace('APP_ENV=dev', 'APP_ENV=test', file_get_contents('.env')));"
+        echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test' >> .env.local
     fi
   - |
     if [[ $NPM_BUILD = true ]]; then

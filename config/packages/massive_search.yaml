@@ -1,0 +1,6 @@
+parameters:
+    env(MASSIVE_SEARCH_PREFIX): ''
+
+massive_search:
+    metadata:
+        prefix: '%env(resolve:MASSIVE_SEARCH_PREFIX)%'
