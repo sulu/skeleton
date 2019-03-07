@@ -1,5 +1,5 @@
 parameters:
-    env(MASSIVE_SEARCH_PREFIX): ''
+    env(MASSIVE_SEARCH_PREFIX): 'massive'
 
 massive_search:
     metadata:
