@@ -16,7 +16,8 @@
         "sulu-media-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
         "sulu-page-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
         "sulu-preview-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
-        "sulu-security-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js"
+        "sulu-security-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js",
+        "sulu-website-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/WebsiteBundle/Resources/js"
     },
     "devDependencies": {
         "autoprefixer": "^7.2.5",
