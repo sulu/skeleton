@@ -18,6 +18,7 @@
         "sulu-page-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
         "sulu-preview-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
         "sulu-security-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js",
+        "sulu-snippet-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/SnippetBundle/Resources/js",
         "sulu-website-bundle": "file:vendor/sulu/sulu/src/Sulu/Bundle/WebsiteBundle/Resources/js"
     },
     "devDependencies": {
