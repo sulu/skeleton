@@ -1,3 +1,7 @@
+/* eslint-disable flowtype/require-valid-file-annotation */
+/* eslint-disable import/no-nodejs-modules*/
+/* eslint-disable no-undef */
+const path = require('path');
 const webpackConfig = require('./vendor/sulu/sulu/webpack.config.js');
 
 module.exports = (env, argv) => {
@@ -7,9 +11,7 @@ module.exports = (env, argv) => {
     env.root_path = __dirname;
 
     const config = webpackConfig(env, argv);
-
-    // For adding custom admin js file uncomment the following line:
-    // config.entry.unshift(path.resolve(__dirname, 'assets/admin/index.js'));
+    config.entry = path.resolve(__dirname, 'assets/admin/index.js');
 
     return config;
 };
