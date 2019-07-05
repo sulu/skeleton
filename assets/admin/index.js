@@ -11,6 +11,7 @@ import 'core-js/fn/symbol';
 
 // Bundles
 import {startAdmin} from 'sulu-admin-bundle';
+import 'sulu-audience-targeting-bundle';
 import 'sulu-category-bundle';
 import 'sulu-contact-bundle';
 import 'sulu-custom-url-bundle';
