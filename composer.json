@@ -69,6 +69,7 @@
             "@sulu-auto-scripts"
         ],
         "post-root-package-install": [
+            "php -r \"file_put_contents('.env.local', 'APP_ENV=dev' . PHP_EOL);\"",
             "php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env')));\""
         ],
         "post-create-project-cmd": [
