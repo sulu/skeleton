@@ -16,7 +16,7 @@ before_install:
 matrix:
   include:
     # With ENVIRONMENT variables
-    - php: 7.1
+    - php: 7.2
       install:
         # Install dependencies
         - travis_retry composer update $COMPOSER_FLAGS
@@ -44,12 +44,8 @@ script:
   - pwd
   - |
     if [[ $NPM_BUILD = true ]]; then
-        nvm install 8
-        npm install -g npm
+        nvm install 12
         npm install
-    fi
-  - |
-    if [[ $NPM_BUILD = true ]]; then
         npm run build
     fi
   - composer validate --strict
