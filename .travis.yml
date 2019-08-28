@@ -45,9 +45,11 @@ script:
   - |
     if [[ $NPM_BUILD = true ]]; then
         nvm install 12
+        cd assets/admin
         npm install
         npm run build
     fi
+  - if [[ $NPM_BUILD = true ]]; then cd ../..; fi
   - composer validate --strict
   - bin/adminconsole sulu:build dev --no-interaction
   - bin/adminconsole doctrine:schema:validate
