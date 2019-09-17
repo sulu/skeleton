@@ -21,7 +21,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 class Kernel extends SuluKernel implements HttpCacheProvider
 {
     /**
-     * @var HttpKernelInterface
+     * @var HttpKernelInterface|null
      */
     private $httpCache;
 

@@ -1,0 +1,1 @@
+# Security should be configured for website in `security_website.yaml` and for admin in `security_admin.yaml`

@@ -13,6 +13,10 @@ before_install:
   - composer self-update
   - phpenv config-add tests/travis.php.ini
 
+env:
+  global:
+    - COMPOSER_VALIDATE_FLAGS="--strict"
+
 matrix:
   include:
     # With ENVIRONMENT variables
@@ -38,7 +42,8 @@ matrix:
         - cd ../test-create-project-dir
         - echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test' >> .env.local
       env:
-        - NPM_BUILD: true
+        - NPM_BUILD=true
+        - COMPOSER_VALIDATE_FLAGS="--strict --no-check-publish"
 
 script:
   - pwd
@@ -50,7 +55,7 @@ script:
         npm run build
     fi
   - if [[ $NPM_BUILD = true ]]; then cd ../..; fi
-  - composer validate --strict
+  - composer validate $COMPOSER_VALIDATE_FLAGS
   - bin/adminconsole sulu:build dev --no-interaction
   - bin/adminconsole doctrine:schema:validate
   - vendor/bin/simple-phpunit

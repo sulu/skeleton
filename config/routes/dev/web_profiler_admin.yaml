@@ -1,11 +1,3 @@
-_wdt:
-    defaults:
-        _requestAnalyzer: false
-    resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
-    prefix:   /admin/_wdt
-
-_profiler:
-    defaults:
-        _requestAnalyzer: false
-    resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
-    prefix:   /admin/_profiler
+web_profiler_admin:
+    resource: "web_profiler.yaml"
+    prefix: /admin
