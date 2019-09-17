@@ -56,7 +56,15 @@ script:
     fi
   - if [[ $NPM_BUILD = true ]]; then cd ../..; fi
   - composer validate $COMPOSER_VALIDATE_FLAGS
+  # Test Build
   - bin/adminconsole sulu:build dev --no-interaction
+  # Test container build in different environments
+  - bin/adminconsole cache:clear --env stage
+  - bin/websiteconsole cache:clear --env stage
+  - bin/adminconsole cache:clear --env prod
+  - bin/websiteconsole cache:clear --env prod
+  # Lint
+  - bin/adminconsole doctrine:ensure-production-settings --env prod
   - bin/adminconsole doctrine:schema:validate
   - vendor/bin/simple-phpunit
   - bin/adminconsole lint:twig templates
