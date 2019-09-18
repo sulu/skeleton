@@ -1,8 +1,9 @@
 {
-    "name": "sulu/sulu-minimal",
+    "name": "sulu/skeleton",
     "license": "MIT",
     "type": "project",
-    "description": "The sulu content management framework",
+    "description": "A skeleton to start your new Sulu CMS based website or web application.",    
+    "keywords": ["symfony", "sulu", "cms", "application", "admin"],
     "require": {
         "php": "^7.2",
         "ext-iconv": "*",
