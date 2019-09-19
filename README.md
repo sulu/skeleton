@@ -1,15 +1,22 @@
-# Sulu Minimal Edition
+# Sulu Skeleton
 
-[![GitHub license](https://img.shields.io/github/license/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/blob/master/LICENSE)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/releases)
-[![GitHub tag (latest pre-release)](https://img.shields.io/github/tag-pre/sulu/sulu-minimal.svg)](https://github.com/sulu/sulu-minimal/releases)
-[![Travis](https://travis-ci.org/sulu/sulu-minimal.png?branch=master)](https://travis-ci.org/sulu/sulu-minimal)
+[![GitHub license](https://img.shields.io/github/license/sulu/skeleton.svg)](https://github.com/sulu/skeleton/blob/master/LICENSE)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/sulu/skeleton.svg)](https://github.com/sulu/skeleton/releases)
+[![GitHub tag (latest pre-release)](https://img.shields.io/github/tag-pre/sulu/skeleton.svg)](https://github.com/sulu/skeleton/releases)
+[![Travis](https://travis-ci.org/sulu/skeleton.png?branch=master)](https://travis-ci.org/sulu/skeleton)
 
-Welcome to the Sulu Minimal Edition - the recommended skeleton to start a new [Sulu](https://github.com/sulu/sulu) project.
 
-## Getting started
+Welcome to the *Sulu Skeleton* - the recommended skeleton to start a new [Sulu](https://github.com/sulu/sulu) project.
 
-Starting a new Sulu project is explained in our [documentation](http://docs.sulu.io/en/latest/book/getting-started.html).
+## Start your project
+
+Start your new project using [composer](https://getcomposer.org/) with the following command:
+
+```bash
+composer create-project sulu/skeleton my-project
+```
+
+Follow the [Getting Started documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to configure sulu correctly.
 
 ## Issues
 
