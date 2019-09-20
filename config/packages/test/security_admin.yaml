@@ -3,6 +3,9 @@ security:
         testprovider:
             id: test_user_provider
 
+    encoders:
+        Sulu\Bundle\SecurityBundle\Entity\User: plaintext
+
     firewalls:
         admin:
             http_basic:

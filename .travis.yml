@@ -38,7 +38,7 @@ matrix:
     # Without ENVIRONMENT variables
     - php: 7.3
       install:
-        - composer create-project sulu/sulu-minimal ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
+        - composer create-project sulu/skeleton ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
         - cd ../test-create-project-dir
         - echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test' >> .env.local
       env:
