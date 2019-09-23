@@ -65,7 +65,7 @@ before_test:
 test_script:
     - cd %APPVEYOR_BUILD_FOLDER%
     - php bin/adminconsole sulu:build dev --no-interaction
-    - php vendor/bin/simple-phpunit
+    - php bin/phpunit
     - php bin/adminconsole lint:twig templates
     - php bin/adminconsole lint:yaml config
     - cd assets/admin

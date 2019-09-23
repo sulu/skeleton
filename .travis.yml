@@ -66,6 +66,6 @@ script:
   # Lint
   - bin/adminconsole doctrine:ensure-production-settings --env prod
   - bin/adminconsole doctrine:schema:validate
-  - vendor/bin/simple-phpunit
+  - bin/phpunit
   - bin/adminconsole lint:twig templates
   - bin/adminconsole lint:yaml config
