@@ -17,15 +17,6 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
-
-
-# bin
-/bin/*
-!/bin/console
-!/bin/console.php
-!/bin/websiteconsole
-!/bin/adminconsole
-
 # var
 /var/*
 !/var/.gitkeep
