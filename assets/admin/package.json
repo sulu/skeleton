@@ -16,6 +16,7 @@
         "sulu-category-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/CategoryBundle/Resources/js",
         "sulu-contact-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/ContactBundle/Resources/js",
         "sulu-custom-url-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/CustomUrlBundle/Resources/js",
+        "sulu-location-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/LocationBundle/Resources/js",
         "sulu-media-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
         "sulu-page-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
         "sulu-preview-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
