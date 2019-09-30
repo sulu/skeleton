@@ -23,20 +23,28 @@ hosts:
     localhost: 127.0.0.1
 
 init:
-    - SET PATH=C:\tools\php;%PATH%
+    - SET PATH=C:\tools\php;C:\tools\composer;%PATH%
 
 cache:
     - '%APPDATA%\Composer'
     - '%LOCALAPPDATA%\Composer'
     - C:\tools\php -> appveyor.yml
-    - C:\tools\composer.phar -> appveyor.yml
+    - C:\tools\composer\composer.phar -> appveyor.yml
 
 install:
     - ps: Set-Service wuauserv -StartupType Manual
     - ps: Install-Product node $env:NODEJS_VERSION
 
-    - IF NOT EXIST C:\tools\composer.phar (
-          cd C:\tools
+    - IF NOT EXIST C:\tools (
+          mkdir C:\tools
+      )
+
+    - IF NOT EXIST C:\tools\composer (
+          mkdir C:\tools\composer
+      )
+
+    - IF NOT EXIST C:\tools\composer\composer.phar (
+          cd C:\tools\composer
           && appveyor DownloadFile https://getcomposer.org/composer.phar
       )
 
@@ -60,7 +68,7 @@ install:
 
 before_test:
     - cd %APPVEYOR_BUILD_FOLDER%
-    - php -dmemory_limit=-1 C:\tools\composer.phar update --no-interaction --no-progress --prefer-dist --no-ansi
+    - php -dmemory_limit=-1 C:\tools\composer\composer.phar update --no-interaction --no-progress --prefer-dist --no-ansi
 
 test_script:
     - cd %APPVEYOR_BUILD_FOLDER%
