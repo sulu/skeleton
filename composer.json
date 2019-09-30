@@ -2,7 +2,7 @@
     "name": "sulu/skeleton",
     "license": "MIT",
     "type": "project",
-    "description": "A skeleton to start your new Sulu CMS based website or web application.",    
+    "description": "A skeleton to start your new Sulu CMS based website or web application.",
     "keywords": ["symfony", "sulu", "cms", "application", "admin"],
     "require": {
         "php": "^7.2",
@@ -13,7 +13,7 @@
         "doctrine/doctrine-fixtures-bundle": "~2.4",
         "friendsofsymfony/http-cache-bundle": "~2.3",
         "jackalope/jackalope-doctrine-dbal": "^1.3.0",
-        "sulu/sulu": "2.0.0-RC3",
+        "sulu/sulu": "dev-develop",
         "symfony/config": "^3.4 || ^4.0",
         "symfony/dotenv": "^3.4 || ^4.0",
         "symfony/flex": "^1.2",
