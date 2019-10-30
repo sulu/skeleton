@@ -21,5 +21,16 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+    # add controllers as services that are specific to a certain sulu context
+    # a sulu context is a different mode in the kernel allowing to have a different set of services
+    # because controllers might rely on services only existing in one of both contexts
+    App\Controller\Admin\:
+        resource: '../src/Controller/Admin'
+        tags: ['controller.service_arguments', {name: 'sulu.context', context: 'admin'}]
+
+    App\Controller\Website\:
+        resource: '../src/Controller/Website'
+        tags: ['controller.service_arguments', {name: 'sulu.context', context: 'website'}]
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
