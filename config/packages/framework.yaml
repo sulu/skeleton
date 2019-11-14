@@ -9,7 +9,7 @@ framework:
         handler_id: ~
         cookie_secure: auto
         cookie_samesite: lax
-        name: SULUSESSID # This avoid conflicts to other application feel free to remove this to set it to default
+        name: SULUSESSID # This avoids conflicts with other applications running on the same domain
 
     #esi: true
     #fragments: true
