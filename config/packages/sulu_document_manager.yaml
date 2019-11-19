@@ -2,7 +2,10 @@ parameters:
     env(PHPCR_WORKSPACE): 'default'
 
 sulu_document_manager:
+    versioning:
+        enabled: false # See https://docs.sulu.io/en/2.0/bundles/page/versioning.html if you want to enable versioning
     sessions:
+        # See https://docs.sulu.io/en/2.0/cookbook/jackrabbit.html if you want to use Jackrabbit
         default:
             backend:
                 type: doctrinedbal
