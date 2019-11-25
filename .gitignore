@@ -19,13 +19,11 @@
 
 # var
 /var/*
-!/var/.gitkeep
+!/var/.gitignore
 
 # web
 /public/bundles
 /public/uploads
-/public/admin/translations/*
-!/public/admin/translations/.gitkeep
 
 # composer
 /composer.phar
