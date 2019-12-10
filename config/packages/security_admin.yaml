@@ -21,9 +21,12 @@ security:
         - { path: ^/admin, roles: ROLE_USER }
 
     firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
         admin:
             pattern: ^/
-            anonymous: ~
+            anonymous: lazy
             provider: sulu
             entry_point: sulu_security.authentication_entry_point
             json_login:
