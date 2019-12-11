@@ -11,7 +11,7 @@
 
 use App\Kernel;
 use Sulu\Component\HttpKernel\SuluKernel;
-use Symfony\Component\Debug\Debug;
+use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
 defined('SULU_MAINTENANCE') || define('SULU_MAINTENANCE', getenv('SULU_MAINTENANCE') ?: false);
@@ -29,6 +29,7 @@ require dirname(__DIR__) . '/config/bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
+
     Debug::enable();
 }
 

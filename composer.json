@@ -42,6 +42,7 @@
         "symfony/framework-bundle": "^4.3",
         "symfony/monolog-bridge": "^4.3",
         "symfony/monolog-bundle": "^3.1",
+        "symfony/security-bundle": "^4.4",
         "symfony/swiftmailer-bundle": "^3.1.4",
         "symfony/twig-bundle": "^4.3",
         "zendframework/zend-stdlib": "^2.3",
@@ -49,8 +50,8 @@
     },
     "require-dev": {
         "phpcr/phpcr-shell": "^1.0",
-        "symfony/debug": "^4.3",
         "symfony/debug-bundle": "^4.3",
+        "symfony/error-handler": "^4.4",
         "symfony/phpunit-bridge": "^4.3",
         "symfony/thanks": "^1.1",
         "symfony/web-profiler-bundle": "^4.3",
