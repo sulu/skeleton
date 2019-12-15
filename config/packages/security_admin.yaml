@@ -4,7 +4,7 @@ security:
         allow_if_all_abstain: true
 
     encoders:
-        Sulu\Bundle\SecurityBundle\Entity\User: bcrypt
+        Sulu\Bundle\SecurityBundle\Entity\User: auto
 
     providers:
         sulu:
