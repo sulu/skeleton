@@ -36,7 +36,7 @@ matrix:
         - COMPOSER_FLAGS="--no-interaction"
 
     # Without ENVIRONMENT variables
-    - php: 7.3
+    - php: 7.4
       install:
         - composer create-project sulu/skeleton ../test-create-project-dir --repository="{\"type\":\"path\",\"url\":\"./\"}" --stability=dev -n
         - cd ../test-create-project-dir
