@@ -45,8 +45,7 @@
         "symfony/security-bundle": "^4.4",
         "symfony/swiftmailer-bundle": "^3.1.4",
         "symfony/twig-bundle": "^4.3",
-        "zendframework/zend-stdlib": "^2.3",
-        "zendframework/zendsearch": "^2.0.0rc6"
+        "handcraftedinthealps/zendsearch": "^2.0"
     },
     "require-dev": {
         "phpcr/phpcr-shell": "^1.0",

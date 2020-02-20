@@ -38,6 +38,7 @@ node_modules
 # phpunit
 .phpunit
 /phpunit.xml
+.phpunit.result.cache
 
 # IDEs
 /.idea
