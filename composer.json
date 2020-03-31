@@ -35,7 +35,7 @@
         "doctrine/doctrine-fixtures-bundle": "^3.0",
         "friendsofsymfony/http-cache-bundle": "^2.6",
         "jackalope/jackalope-doctrine-dbal": "^1.3",
-        "sulu/sulu": "dev-master",
+        "sulu/sulu": "^2.1@dev",
         "symfony/config": "^4.3",
         "symfony/dotenv": "^4.3",
         "symfony/flex": "^1.2",
