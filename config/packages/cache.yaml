@@ -1,6 +1,5 @@
 framework:
     cache:
-        directory: '%sulu.common_cache_dir%'
         # Put the unique name of your app here: the prefix seed
         # is used to compute stable namespaces for cache keys.
         #prefix_seed: your_vendor_name/app_name
