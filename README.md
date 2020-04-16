@@ -13,9 +13,6 @@
     <a href="https://github.com/sulu/skeleton/releases" target="_blank">
         <img src="https://img.shields.io/github/tag/sulu/skeleton.svg" alt="GitHub tag (latest SemVer)">
     </a>
-    <a href="https://github.com/sulu/skeleton/releases" target="_blank">
-        <img src="https://img.shields.io/github/tag-pre/sulu/skeleton.svg" alt="GitHub tag (latest pre-release)">
-    </a>
     <a href="https://travis-ci.org/sulu/skeleton" target="_blank">
         <img src="https://img.shields.io/travis/sulu/skeleton.svg?label=travis" alt="Travis build">
     </a>
