@@ -2,7 +2,7 @@
     "name": "sulu/skeleton",
     "license": "MIT",
     "type": "project",
-    "description": "Project template for starting your new project based on the Sulu content management system.",
+    "description": "Project template for starting your new project based on the Sulu content management system",
     "homepage": "https://sulu.io/",
     "keywords": [
         "symfony",
