@@ -26,7 +26,8 @@ security:
             security: false
         admin:
             pattern: ^/
-            anonymous: lazy
+            anonymous: true
+            lazy: true
             provider: sulu
             entry_point: sulu_security.authentication_entry_point
             json_login:
