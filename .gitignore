@@ -40,6 +40,10 @@ node_modules
 /phpunit.xml
 .phpunit.result.cache
 
+# phpcs
+.php_cs.cache
+.php_cs
+
 # IDEs
 /.idea
 *.iml
