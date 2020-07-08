@@ -78,7 +78,7 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "assets:install %PUBLIC_DIR% --symlink --relative": "symfony-cmd",
             "bin/websiteconsole cache:clear": "php-script",
             "bin/adminconsole sulu:media:init": "php-script",
             "bin/adminconsole massive:search:init": "php-script"
