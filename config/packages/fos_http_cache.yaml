@@ -2,3 +2,9 @@ fos_http_cache:
     proxy_client:
         symfony:
             use_kernel_dispatcher: true
+
+# activate the following for user context based caching
+#    user_context:
+#        enabled: true
+#        role_provider: true
+#        hash_cache_ttl: 3600 # should be increased
