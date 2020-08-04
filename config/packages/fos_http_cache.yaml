@@ -4,7 +4,8 @@ fos_http_cache:
             use_kernel_dispatcher: true
 
 # activate the following for user context based caching
+# see https://foshttpcachebundle.readthedocs.io/en/latest/features/user-context.html
+# for additional needed changes
 #    user_context:
 #        enabled: true
 #        role_provider: true
-#        hash_cache_ttl: 3600 # should be increased
