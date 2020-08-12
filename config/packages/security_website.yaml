@@ -8,11 +8,14 @@
 #            id: sulu_security.user_provider
 #
 #    firewalls:
-#        sulu-test:
+#        website:
 #            pattern: ^/
 #            anonymous: lazy
+#            # The login and logout routes need to be created.
+#            # For an advanced user management with registration and opt-in emails have a look at the:
+#            # https://github.com/sulu/SuluCommunityBundle
 #            form_login:
-#                login_path: login # this route need to exist be created
+#                login_path: login
 #                check_path: login
 #            logout:
 #                path: logout
