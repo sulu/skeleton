@@ -1,1 +1,27 @@
 # To enable security bundle for website you need to change `config/bundles.php` file
+#security:
+#    encoders:
+#        Sulu\Bundle\SecurityBundle\Entity\User: bcrypt
+#
+#    providers:
+#        sulu:
+#            id: sulu_security.user_provider
+#
+#    firewalls:
+#        sulu-test:
+#            pattern: ^/
+#            anonymous: lazy
+#            form_login:
+#                login_path: login # this route need to exist be created
+#                check_path: login
+#            logout:
+#                path: logout
+#                target: /
+#            remember_me:
+#                secret:   "%kernel.secret%"
+#                lifetime: 604800 # 1 week in seconds
+#                path:     /
+#
+#sulu_security:
+#    checker:
+#        enabled: true
