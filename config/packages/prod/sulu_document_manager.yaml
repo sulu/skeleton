@@ -32,3 +32,4 @@ framework:
 
             doctrine_phpcr.nodes_cache_pool:
                 adapter: cache.app
+                default_lifetime: 604800 # 1 week cache lifetime
