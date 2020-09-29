@@ -3,7 +3,6 @@
 /.env.local
 /.env.local.php
 /.env.*.local
-/src/.preload.php
 /public/bundles/
 /var/
 /vendor/
