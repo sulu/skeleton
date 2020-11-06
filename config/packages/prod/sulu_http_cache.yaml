@@ -1,8 +1,3 @@
-fos_http_cache:
-    proxy_client:
-        symfony:
-            use_kernel_dispatcher: true # disable this when varnish is used
-
 sulu_http_cache:
     proxy_client:
         symfony:
