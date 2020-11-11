@@ -1,5 +1,8 @@
+/* eslint-disable flowtype/require-valid-file-annotation */
+/* eslint-disable import/no-nodejs-modules */
 const path = require('path');
 
+// eslint-disable-next-line no-undef
 module.exports = {
     plugins: {
         'postcss-import': {
