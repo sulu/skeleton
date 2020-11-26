@@ -1,0 +1,158 @@
+name: Test application
+
+on:
+    pull_request:
+    push:
+        branches:
+            - master
+            - release/**
+
+jobs:
+    test:
+        name: "Test and build with php ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - php-version: '7.2'
+                      node-version: '10.x'
+                      create-project: true
+                      create-database: true
+                      checkout-directory: 'project'
+                      working-directory: 'create-project-test'
+                      php-extensions: 'ctype, iconv, mysql, gd'
+                      tools: 'composer:v1'
+                      env: {}
+
+                    - php-version: '7.4'
+                      node-version: '12.x'
+                      create-project: false
+                      create-database: false
+                      checkout-directory: 'project'
+                      working-directory: 'project'
+                      php-extensions: 'ctype, iconv, mysql, imagick'
+                      tools: 'composer:v2'
+                      env:
+                          APP_ENV: test
+                          APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
+                          MAILER_URL: null://localhost
+                          SULU_ADMIN_EMAIL:
+                          DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7"
+
+        services:
+            mysql:
+                image: mysql:5.7
+                env:
+                    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+                ports:
+                    - 3306:3306
+                options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=5
+
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v2
+              with:
+                  path: ${{ matrix.checkout-directory }}
+
+            - name: Install and configure PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  extensions: ${{ matrix.php-extensions }}
+                  tools: ${{ matrix.tools }}
+                  coverage: none
+
+            - name: Get composer cache directory
+              id: composer-cache-dir
+              run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+              working-directory: ${{ matrix.checkout-directory }}
+
+            - name: Cache dependencies
+              uses: actions/cache@v2
+              id: composer-cache
+              with:
+                  path: ${{ steps.composer-cache-dir.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-composer-
+
+            - name: Install dependencies
+              if: ${{ !matrix.create-project }}
+              run: |
+                  composer validate --strict
+                  composer update --prefer-dist --no-interaction
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Create project
+              if: ${{ matrix.create-project }}
+              run: |
+                  composer create-project sulu/skeleton ${{ matrix.working-directory }} --repository="{\"type\":\"path\",\"url\":\"./${{ matrix.checkout-directory }}/\"}" --stability=dev -n
+                  cd ${{ matrix.working-directory }}
+                  echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu?serverVersion=5.7' >> .env.local
+                  echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7' >> .env.test.local
+
+            - name: Create database
+              if: ${{ matrix.create-database }}
+              run: bin/adminconsole doctrine:database:create
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Build sulu
+              run: bin/adminconsole sulu:build dev --no-interaction
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Build container
+              run: |
+                  bin/adminconsole cache:clear --env dev
+                  bin/websiteconsole cache:clear --env dev
+                  bin/adminconsole cache:clear --env test
+                  bin/websiteconsole cache:clear --env test
+                  bin/adminconsole cache:clear --env stage
+                  bin/websiteconsole cache:clear --env stage
+                  bin/adminconsole cache:clear --env prod
+                  bin/websiteconsole cache:clear --env prod
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Lint container
+              run: |
+                  bin/adminconsole lint:container --env dev
+                  bin/websiteconsole lint:container --env dev
+                  bin/adminconsole lint:container --env test
+                  bin/websiteconsole lint:container --env test
+                  bin/adminconsole lint:container --env stage
+                  bin/websiteconsole lint:container --env stage
+                  bin/adminconsole lint:container --env prod
+                  bin/websiteconsole lint:container --env prod
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Lint
+              run: |
+                  bin/adminconsole doctrine:ensure-production-settings --env prod
+                  bin/adminconsole doctrine:schema:validate
+                  bin/adminconsole lint:twig templates
+                  bin/adminconsole lint:yaml config
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Run tests
+              run: bin/phpunit
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
+            - name: Install and configure Node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install npm dependencies
+              run: npm install
+              working-directory: ${{ matrix.working-directory }}/assets/admin
+
+            - name: Build admin ui
+              run: npm run build
+              working-directory: ${{ matrix.working-directory }}/assets/admin
