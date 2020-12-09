@@ -16,7 +16,7 @@
         <!-- Set "SYMFONY_PHPUNIT_VERSION" to use fixed phpunit version: https://symfony.com/doc/current/components/phpunit_bridge.html#modified-phpunit-script -->
         <!-- <server name="SYMFONY_PHPUNIT_VERSION" value="8.5" /> -->
         <!-- Set "SYMFONY_PHPUNIT_REMOVE" to "symfony/yaml" to install "prophecy": https://symfony.com/doc/current/components/phpunit_bridge.html#modified-phpunit-script -->
-        <!-- <server name="SYMFONY_PHPUNIT_REMOVE" value="symfony/yaml"/> -->
+        <server name="SYMFONY_PHPUNIT_REMOVE" value="symfony/yaml"/>
     </php>
 
     <testsuites>
@@ -31,4 +31,3 @@
         </whitelist>
     </filter>
 </phpunit>
-
