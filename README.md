@@ -7,14 +7,14 @@
 
 <br/>
 <p align="center">
-    <a href="https://github.com/sulu/skeleton/blob/master/LICENSE" target="_blank">
+    <a href="https://github.com/sulu/skeleton/blob/2.x/LICENSE" target="_blank">
         <img src="https://img.shields.io/github/license/sulu/skeleton.svg" alt="GitHub license">
     </a>
     <a href="https://github.com/sulu/skeleton/releases" target="_blank">
         <img src="https://img.shields.io/github/tag/sulu/skeleton.svg" alt="GitHub tag (latest SemVer)">
     </a>
     <a href="https://github.com/sulu/skeleton/actions" target="_blank">
-        <img src="https://img.shields.io/github/workflow/status/sulu/skeleton/Test%20application/master.svg?label=test-workflow" alt="Test workflow status">
+        <img src="https://img.shields.io/github/workflow/status/sulu/skeleton/Test%20application.svg?label=test-workflow" alt="Test workflow status">
     </a>
 </p>
 <br/>
@@ -63,7 +63,7 @@ Feel free to **file a new issue** with a respective title and description on the
 
 ## ✅&nbsp; Requirements
 
-Sulu requires a **PHP version higher or equal to 7.2** and is compatible with every **Symfony version starting from 4.3**. Have a look at the `require` section in the [composer.json](https://github.com/sulu/sulu/blob/master/composer.json) of the [sulu/sulu](https://github.com/sulu/sulu) core framework to find an **up-to-date list of the requirements** of Sulu content management system.
+Sulu requires a **PHP version higher or equal to 7.2** and is compatible with every **Symfony version starting from 4.3**. Have a look at the `require` section in the [composer.json](https://github.com/sulu/sulu/blob/2.x/composer.json) of the [sulu/sulu](https://github.com/sulu/sulu) core framework to find an **up-to-date list of the requirements** of Sulu content management system.
 
 
 ## 📘&nbsp; License
