@@ -69,16 +69,16 @@ jobs:
               run: echo "::set-output name=dir::$(composer config cache-files-dir)"
               working-directory: ${{ matrix.checkout-directory }}
 
-            - name: Cache dependencies
+            - name: Cache composer dependencies
               uses: actions/cache@v2
               id: composer-cache
               with:
                   path: ${{ steps.composer-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-composer-${{ hashFiles('composer.lock') }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('composer.json', 'composer.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-composer-
 
-            - name: Install dependencies
+            - name: Install composer dependencies
               if: ${{ !matrix.create-project }}
               run: |
                   composer validate --strict
@@ -130,7 +130,7 @@ jobs:
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
-            - name: Lint
+            - name: Lint code
               run: |
                   bin/adminconsole doctrine:ensure-production-settings --env prod
                   bin/adminconsole doctrine:schema:validate
@@ -139,15 +139,27 @@ jobs:
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
-            - name: Run tests
+            - name: Execute test cases
               run: bin/phpunit
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
-            - name: Install and configure Node.js
+            - name: Install and configure Node
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
+
+            - name: Get npm cache directory
+              id: npm-cache-dir
+              run: echo "::set-output name=dir::$(npm config get cache)"
+
+            - name: Cache npm dependencies
+              uses: actions/cache@v2
+              with:
+                  path: ${{ steps.npm-cache-dir.outputs.dir }}
+                  key: ${{ runner.os }}-npm-${{ hashFiles('**/package.json', '**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-npm-
 
             - name: Install npm dependencies
               run: npm install
