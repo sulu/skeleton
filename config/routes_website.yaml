@@ -13,7 +13,7 @@
 #    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
 #    defaults:
 #        # the following template need to be created:
-#        # see https://github.com/sulu/sulu/blob/master/templates/static/login.html.twig as example
+#        # see https://github.com/sulu/sulu/blob/2.x/templates/static/login.html.twig as example
 #        template: static/login.html.twig
 #
 #logout:
