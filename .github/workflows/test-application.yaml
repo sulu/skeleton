@@ -144,6 +144,11 @@ jobs:
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
+            - name: Test download-language script
+              run: bin/adminconsole sulu:admin:download-language nl
+              env: ${{ matrix.env }}
+              working-directory: ${{ matrix.working-directory }}
+
             - name: Install and configure Node
               uses: actions/setup-node@v1
               with:
