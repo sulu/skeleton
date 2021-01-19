@@ -9,7 +9,7 @@ on:
 
 jobs:
     test:
-        name: "Test and build with php ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
+        name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
         runs-on: ubuntu-latest
 
         strategy:
