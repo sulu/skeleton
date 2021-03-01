@@ -26,6 +26,7 @@ jobs:
                       working-directory: 'create-project-test'
                       php-extensions: 'ctype, iconv, mysql, gd'
                       tools: 'composer:v1'
+                      database-version: '5.7'
                       env: {}
 
                     - php-version: '7.4'
@@ -36,6 +37,23 @@ jobs:
                       working-directory: 'project'
                       php-extensions: 'ctype, iconv, mysql, imagick'
                       tools: 'composer:v2'
+                      database-version: '8.0'
+                      env:
+                          APP_ENV: test
+                          APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
+                          MAILER_URL: null://localhost
+                          SULU_ADMIN_EMAIL:
+                          DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.0"
+
+                    - php-version: '8.0'
+                      node-version: '14.x'
+                      create-project: false
+                      create-database: false
+                      checkout-directory: 'project'
+                      working-directory: 'project'
+                      php-extensions: 'ctype, iconv, mysql, gd'
+                      tools: 'composer:v2'
+                      database-version: '5.7'
                       env:
                           APP_ENV: test
                           APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
@@ -45,7 +63,7 @@ jobs:
 
         services:
             mysql:
-                image: mysql:5.7
+                image: mysql:${{ matrix.database-version }}
                 env:
                     MYSQL_ALLOW_EMPTY_PASSWORD: yes
                 ports:
