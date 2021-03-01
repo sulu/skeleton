@@ -63,7 +63,7 @@ jobs:
 
         services:
             mysql:
-                image: mysql:${{ matrix.database-version }}
+                image: mysql:${{ matrix.mysql-version }}
                 env:
                     MYSQL_ALLOW_EMPTY_PASSWORD: yes
                 ports:
