@@ -278,11 +278,6 @@ jobs:
               with:
                   dependency-versions: ${{ matrix.dependency-versions }}
 
-            - name: Install npm dependencies
-              uses: bahmutov/npm-install@v1
-              with:
-                  useLockFile: false
-
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
 
