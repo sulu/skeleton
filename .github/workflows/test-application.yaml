@@ -278,29 +278,13 @@ jobs:
               with:
                   dependency-versions: ${{ matrix.dependency-versions }}
 
-            - name: Bootstrap test environment
-              run: composer bootstrap-test-environment
-
-            - name: Execute test cases
-              run: composer test
-
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
               with:
                   useLockFile: false
 
-            - name: Build javascript
-              run: npm run build
-
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
-
-            - name: Lint code
-              run: |
-                  bin/adminconsole doctrine:ensure-production-settings --env prod
-                  bin/adminconsole doctrine:schema:validate
-                  bin/adminconsole lint:twig templates
-                  bin/adminconsole lint:yaml config
 
             - name: Execute test cases
               run: bin/phpunit
