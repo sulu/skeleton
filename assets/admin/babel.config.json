@@ -1,5 +1,4 @@
 {
-    "root": ".",
     "babelrcRoots": [
         ".",
         "./node_modules/@sulu/vendor/*",
