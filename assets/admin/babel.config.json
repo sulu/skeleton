@@ -1,4 +1,10 @@
 {
+    "root": ".",
+    "babelrcRoots": [
+        ".",
+        "./node_modules/@sulu/vendor/*",
+        "../../vendor/*"
+    ],
     "presets": ["@babel/preset-env", "@babel/preset-react"],
     "plugins": [
         ["@babel/plugin-proposal-decorators", {"legacy": true}],
