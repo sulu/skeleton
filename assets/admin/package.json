@@ -4,9 +4,9 @@
     "repository": "https://github.com/sulu/skeleton.git",
     "scripts": {
         "preinstall": "node ../../vendor/sulu/sulu/preinstall.js",
+        "postinstall": "node ../../vendor/sulu/sulu/postinstall.js",
         "build": "webpack --mode production",
-        "watch": "webpack --mode development -w",
-        "postinstall": "node ../../vendor/sulu/sulu/postinstall.js"
+        "watch": "webpack --mode development -w"
     },
     "dependencies": {
         "mobx": "^4.0.0",
