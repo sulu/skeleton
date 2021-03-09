@@ -281,6 +281,35 @@ jobs:
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
 
+            - name: Build container
+              run: |
+                  bin/adminconsole cache:clear --env dev
+                  bin/websiteconsole cache:clear --env dev
+                  bin/adminconsole cache:clear --env test
+                  bin/websiteconsole cache:clear --env test
+                  bin/adminconsole cache:clear --env stage
+                  bin/websiteconsole cache:clear --env stage
+                  bin/adminconsole cache:clear --env prod
+                  bin/websiteconsole cache:clear --env prod
+
+            - name: Lint container
+              run: |
+                  bin/adminconsole lint:container --env dev
+                  bin/websiteconsole lint:container --env dev
+                  bin/adminconsole lint:container --env test
+                  bin/websiteconsole lint:container --env test
+                  bin/adminconsole lint:container --env stage
+                  bin/websiteconsole lint:container --env stage
+                  bin/adminconsole lint:container --env prod
+                  bin/websiteconsole lint:container --env prod
+
+            - name: Lint code
+              run: |
+                  bin/adminconsole doctrine:ensure-production-settings --env prod
+                  bin/adminconsole doctrine:schema:validate
+                  bin/adminconsole lint:twig templates
+                  bin/adminconsole lint:yaml config
+
             - name: Execute test cases
               run: bin/phpunit
 
