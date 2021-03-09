@@ -258,7 +258,7 @@ jobs:
 
             - name: Run jackrabbit
               if: ${{ matrix.phpcr-transport == 'jackrabbit' }}
-              run: java -jar downloads/jackrabbit-standalone.jar > /dev/null &
+              run: powershell -command "Start-Process -FilePath java -ArgumentList '-jar downloads/jackrabbit-standalone.jar'"
 
             - name: Require jackrabbit dependencies
               if: ${{ matrix.phpcr-transport == 'jackrabbit' }}
