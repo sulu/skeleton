@@ -195,7 +195,8 @@ jobs:
               working-directory: ${{ matrix.working-directory }}/assets/admin
 
     php-windows:
-        name: "PHP ${{ matrix.php-version }} on Windows (mysql ${{ matrix.mysql-version }}, ${{ matrix.phpcr-transport }}, ${{ matrix.dependency-versions }})"
+        name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
+
         runs-on: windows-latest
 
         env:
@@ -215,6 +216,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '7.4'
+                    - node-version: '14.x'
                       mysql-version: '8.0'
                       phpcr-transport: 'jackrabbit'
                       dependency-versions: 'highest'
@@ -228,7 +230,7 @@ jobs:
             - name: Install and configure Node.js
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: ${{ matrix.node-version }}
 
             - name: Install and configure PHP
               uses: shivammathur/setup-php@v2
