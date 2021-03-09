@@ -216,7 +216,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '7.4'
-                      node-version: '14.x'
+                      node-version: '14'
                       mysql-version: '8.0'
                       phpcr-transport: 'jackrabbit'
                       dependency-versions: 'highest'
