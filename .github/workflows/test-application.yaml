@@ -219,7 +219,6 @@ jobs:
                       node-version: '14'
                       mysql-version: '8.0'
                       phpcr-transport: 'jackrabbit'
-                      dependency-versions: 'highest'
                       php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
                       tools: 'composer'
 
@@ -269,8 +268,6 @@ jobs:
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
-              with:
-                  dependency-versions: ${{ matrix.dependency-versions }}
 
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
