@@ -12,6 +12,7 @@ on:
 jobs:
     test:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
+
         runs-on: ubuntu-latest
 
         strategy:
@@ -19,25 +20,25 @@ jobs:
             matrix:
                 include:
                     - php-version: '7.2'
-                      node-version: '10.x'
+                      node-version: '10'
+                      mysql-version: '5.7'
                       create-project: true
                       create-database: true
                       checkout-directory: 'project'
                       working-directory: 'create-project-test'
                       php-extensions: 'ctype, iconv, mysql, gd'
                       tools: 'composer:v1'
-                      mysql-version: '5.7'
                       env: {}
 
                     - php-version: '7.4'
-                      node-version: '12.x'
+                      node-version: '12'
+                      mysql-version: '8.0'
                       create-project: false
                       create-database: false
                       checkout-directory: 'project'
                       working-directory: 'project'
                       php-extensions: 'ctype, iconv, mysql, imagick'
                       tools: 'composer:v2'
-                      mysql-version: '8.0'
                       env:
                           APP_ENV: test
                           APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
@@ -46,14 +47,14 @@ jobs:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.0"
 
                     - php-version: '8.0'
-                      node-version: '14.x'
+                      node-version: '14'
+                      mysql-version: '5.7'
                       create-project: false
                       create-database: false
                       checkout-directory: 'project'
                       working-directory: 'project'
                       php-extensions: 'ctype, iconv, mysql, gd'
                       tools: 'composer:v2'
-                      mysql-version: '5.7'
                       env:
                           APP_ENV: test
                           APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
@@ -84,26 +85,11 @@ jobs:
                   tools: ${{ matrix.tools }}
                   coverage: none
 
-            - name: Get composer cache directory
-              id: composer-cache-dir
-              run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-              working-directory: ${{ matrix.checkout-directory }}
-
-            - name: Cache composer dependencies
-              uses: actions/cache@v2
-              id: composer-cache
-              with:
-                  path: ${{ steps.composer-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-composer-${{ hashFiles('composer.json', 'composer.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-composer-
-
             - name: Install composer dependencies
               if: ${{ !matrix.create-project }}
-              run: |
-                  composer validate --strict
-                  composer update --prefer-dist --no-interaction
-              working-directory: ${{ matrix.working-directory }}
+              uses: ramsey/composer-install@v1
+              with:
+                  working-directory: ${{ matrix.working-directory }}
 
             - name: Create project
               if: ${{ matrix.create-project }}
@@ -152,6 +138,7 @@ jobs:
 
             - name: Lint code
               run: |
+                  ${{ matrix.create-project }} || composer validate --strict
                   bin/adminconsole doctrine:ensure-production-settings --env prod
                   bin/adminconsole doctrine:schema:validate
                   bin/adminconsole lint:twig templates
@@ -174,22 +161,112 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
 
-            - name: Get npm cache directory
-              id: npm-cache-dir
-              run: echo "::set-output name=dir::$(npm config get cache)"
-
-            - name: Cache npm dependencies
-              uses: actions/cache@v2
-              with:
-                  path: ${{ steps.npm-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-npm-${{ hashFiles('**/package.json', '**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-npm-
-
             - name: Install npm dependencies
-              run: npm install
-              working-directory: ${{ matrix.working-directory }}/assets/admin
+              uses: bahmutov/npm-install@v1
+              with:
+                  working-directory: ${{ matrix.working-directory }}/assets/admin
+                  useLockFile: false
 
-            - name: Build admin ui
+            - name: Build administration interface application
               run: npm run build
               working-directory: ${{ matrix.working-directory }}/assets/admin
+
+    php-windows:
+        name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
+
+        runs-on: windows-latest
+
+        env:
+            APP_ENV: test
+            APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
+            MAILER_URL: null://localhost
+            SULU_ADMIN_EMAIL:
+            DATABASE_URL: mysql://root:root@127.0.0.1:3306/sulu_test?serverVersion=${{ matrix.mysql-version }}
+
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - php-version: '7.4'
+                      node-version: '14'
+                      mysql-version: '8.0'
+                      php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
+                      tools: 'composer'
+
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v2
+
+            - name: Install and configure PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  extensions: ${{ matrix.php-extensions }}
+                  tools: ${{ matrix.tools }}
+                  ini-values: 'memory_limit=-1'
+
+            - name: Install and configure MySQL
+              uses: shogo82148/actions-setup-mysql@v1.0.1
+              with:
+                  mysql-version: ${{ matrix.mysql-version }}
+                  root-password: 'root'
+                  my-cnf: |
+                      [mysqld]
+                      default-authentication-plugin=mysql_native_password
+
+            - name: Install composer dependencies
+              uses: ramsey/composer-install@v1
+
+            - name: Build sulu
+              run: bin/adminconsole sulu:build dev --no-interaction
+
+            - name: Build container
+              run: |
+                  bin/adminconsole cache:clear --env dev
+                  bin/websiteconsole cache:clear --env dev
+                  bin/adminconsole cache:clear --env test
+                  bin/websiteconsole cache:clear --env test
+                  bin/adminconsole cache:clear --env stage
+                  bin/websiteconsole cache:clear --env stage
+                  bin/adminconsole cache:clear --env prod
+                  bin/websiteconsole cache:clear --env prod
+
+            - name: Lint container
+              run: |
+                  bin/adminconsole lint:container --env dev
+                  bin/websiteconsole lint:container --env dev
+                  bin/adminconsole lint:container --env test
+                  bin/websiteconsole lint:container --env test
+                  bin/adminconsole lint:container --env stage
+                  bin/websiteconsole lint:container --env stage
+                  bin/adminconsole lint:container --env prod
+                  bin/websiteconsole lint:container --env prod
+
+            - name: Lint code
+              run: |
+                  composer validate --strict
+                  bin/adminconsole doctrine:ensure-production-settings --env prod
+                  bin/adminconsole doctrine:schema:validate
+                  bin/adminconsole lint:twig templates
+                  bin/adminconsole lint:yaml config
+
+            - name: Execute test cases
+              run: bin/phpunit
+
+            - name: Test download-language script
+              run: bin/adminconsole sulu:admin:download-language nl
+
+            - name: Install and configure Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install npm dependencies
+              uses: bahmutov/npm-install@v1
+              with:
+                  working-directory: assets/admin
+                  useLockFile: false
+
+            - name: Build administration interface application
+              run: npm run build
+              working-directory: assets/admin
