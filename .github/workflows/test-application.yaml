@@ -35,8 +35,8 @@ jobs:
                       mysql-version: '8.0'
                       create-project: false
                       create-database: false
-                      checkout-directory: 'project'
-                      working-directory: 'project'
+                      checkout-directory: './'
+                      working-directory: './'
                       php-extensions: 'ctype, iconv, mysql, imagick'
                       tools: 'composer:v2'
                       env:
@@ -51,8 +51,8 @@ jobs:
                       mysql-version: '5.7'
                       create-project: false
                       create-database: false
-                      checkout-directory: 'project'
-                      working-directory: 'project'
+                      checkout-directory: './'
+                      working-directory: './'
                       php-extensions: 'ctype, iconv, mysql, gd'
                       tools: 'composer:v2'
                       env:
