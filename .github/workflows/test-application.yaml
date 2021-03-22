@@ -191,7 +191,7 @@ jobs:
                       node-version: '14'
                       mysql-version: '8.0'
                       php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
-                      tools: 'composer'
+                      tools: 'composer:v2'
 
         steps:
             - name: Checkout project
@@ -217,6 +217,7 @@ jobs:
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
               with:
+                  dependency-versions: 'highest'
                   composer-options: '--with-all-dependencies'
 
             - name: Build sulu
