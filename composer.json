@@ -23,7 +23,8 @@
     "support": {
         "issues": "https://github.com/sulu/skeleton/issues",
         "source": "https://github.com/sulu/skeleton",
-        "docs": "http://docs.sulu.io/"
+        "docs": "http://docs.sulu.io/",
+        "chat": "https://sulu.io/services-and-support#chat"
     },
     "require": {
         "php": "^7.2 || ^8.0",
@@ -35,7 +36,7 @@
         "friendsofsymfony/http-cache-bundle": "^2.8",
         "handcraftedinthealps/zendsearch": "^2.0",
         "jackalope/jackalope-doctrine-dbal": "^1.3",
-        "sulu/sulu": "~2.2.5 || 2.2.*@dev",
+        "sulu/sulu": "~2.2.6",
         "symfony/config": "^5.1",
         "symfony/dotenv": "^5.1",
         "symfony/flex": "^1.2",
