@@ -35,8 +35,8 @@ jobs:
                       mysql-version: '8.0'
                       create-project: false
                       create-database: false
-                      checkout-directory: './'
-                      working-directory: './'
+                      checkout-directory: 'project'
+                      working-directory: 'project'
                       php-extensions: 'ctype, iconv, mysql, imagick'
                       tools: 'composer:v2'
                       env:
@@ -51,8 +51,8 @@ jobs:
                       mysql-version: '5.7'
                       create-project: false
                       create-database: false
-                      checkout-directory: './'
-                      working-directory: './'
+                      checkout-directory: 'project'
+                      working-directory: 'project'
                       php-extensions: 'ctype, iconv, mysql, gd'
                       tools: 'composer:v2'
                       env:
@@ -89,7 +89,7 @@ jobs:
               if: ${{ !matrix.create-project }}
               uses: ramsey/composer-install@v1
               with:
-                  working-directory: ${{ matrix.working-directory }}
+                  composer-options: '--working-dir=${{ matrix.working-directory }}'
 
             - name: Create project
               if: ${{ matrix.create-project }}
