@@ -89,7 +89,7 @@ jobs:
               if: ${{ !matrix.create-project }}
               uses: ramsey/composer-install@v1
               with:
-                  working-directory: ${{ matrix.working-directory }}
+                  composer-options: '--working-dir=${{ matrix.working-directory }}'
 
             - name: Create project
               if: ${{ matrix.create-project }}
@@ -191,7 +191,7 @@ jobs:
                       node-version: '14'
                       mysql-version: '8.0'
                       php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
-                      tools: 'composer'
+                      tools: 'composer:v2'
 
         steps:
             - name: Checkout project
@@ -216,6 +216,9 @@ jobs:
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
+              with:
+                  dependency-versions: 'highest'
+                  composer-options: '--with-all-dependencies'
 
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
