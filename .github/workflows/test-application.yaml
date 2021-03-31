@@ -90,10 +90,6 @@ jobs:
               uses: ramsey/composer-install@v1
               with:
                   composer-options: '--working-dir=${{ matrix.working-directory }}'
-                  dependency-versions: 'highest'
-
-            - name: Clear Composer cache
-              run: composer clearcache
 
             - name: Create project
               if: ${{ matrix.create-project }}
@@ -222,9 +218,6 @@ jobs:
               uses: ramsey/composer-install@v1
               with:
                   dependency-versions: 'highest'
-
-            - name: Clear Composer cache
-              run: composer clearcache
 
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
