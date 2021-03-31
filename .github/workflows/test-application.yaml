@@ -89,7 +89,7 @@ jobs:
               if: ${{ !matrix.create-project }}
               uses: ramsey/composer-install@v1
               with:
-                  composer-options: '--no-cache --working-dir=${{ matrix.working-directory }}'
+                  composer-options: '--working-dir=${{ matrix.working-directory }}'
                   dependency-versions: 'highest'
 
             - name: Clear Composer cache
@@ -221,7 +221,6 @@ jobs:
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
               with:
-                  composer-options: '--no-cache'
                   dependency-versions: 'highest'
 
             - name: Clear Composer cache
