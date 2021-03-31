@@ -90,7 +90,6 @@ jobs:
               uses: ramsey/composer-install@v1
               with:
                   composer-options: '--working-dir=${{ matrix.working-directory }}'
-                  dependency-versions: 'highest'
 
             - name: Composer clear cache
               run: composer clearcache
@@ -220,8 +219,6 @@ jobs:
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
-              with:
-                  dependency-versions: 'highest'
 
             - name: Composer clear cache
               run: composer clearcache
