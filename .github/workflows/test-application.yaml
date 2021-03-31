@@ -20,7 +20,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '7.2'
-                      node-version: '10'
+                      node-version: '12'
                       mysql-version: '5.7'
                       create-project: true
                       create-database: true
