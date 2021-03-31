@@ -182,6 +182,7 @@ jobs:
             MAILER_URL: null://localhost
             SULU_ADMIN_EMAIL:
             DATABASE_URL: mysql://root:root@127.0.0.1:3306/sulu_test?serverVersion=${{ matrix.mysql-version }}
+            # test run
 
         strategy:
             fail-fast: false
