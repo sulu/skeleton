@@ -92,9 +92,7 @@ jobs:
               uses: ramsey/composer-install@v1
               with:
                   composer-options: '--working-dir=${{ matrix.working-directory }}'
-
-            - name: Composer clear cache
-              run: composer clearcache
+                  dependency-versions: 'highest'
 
             - name: Create project
               if: ${{ matrix.create-project }}
@@ -176,6 +174,9 @@ jobs:
               run: npm run build
               working-directory: ${{ matrix.working-directory }}/assets/admin
 
+            - name: Composer clear cache
+              run: composer clearcache
+
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
 
@@ -221,9 +222,8 @@ jobs:
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
-
-            - name: Composer clear cache
-              run: composer clearcache
+              with:
+                  dependency-versions: 'highest'
 
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
@@ -278,3 +278,6 @@ jobs:
             - name: Build administration interface application
               run: npm run build
               working-directory: assets/admin
+
+            - name: Composer clear cache
+              run: composer clearcache
