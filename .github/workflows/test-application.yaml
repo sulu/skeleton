@@ -175,6 +175,9 @@ jobs:
             - name: Composer clear cache
               run: composer clearcache
 
+            - name: Composer test
+              run: rm ${{ matrix.working-directory }}/composer.lock
+
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
 
@@ -279,3 +282,6 @@ jobs:
 
             - name: Composer clear cache
               run: composer clearcache
+
+            - name: Composer test
+              run: rm composer.lock
