@@ -219,6 +219,7 @@ jobs:
               uses: ramsey/composer-install@v1
               with:
                   dependency-versions: 'highest'
+                  composer-options: '--with-all-dependencies'
 
             - name: Build sulu
               run: bin/adminconsole sulu:build dev --no-interaction
@@ -273,3 +274,6 @@ jobs:
             - name: Build administration interface application
               run: npm run build
               working-directory: assets/admin
+
+            - name: Composer clear cache
+              run: composer clearcache
