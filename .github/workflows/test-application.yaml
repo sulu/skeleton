@@ -275,8 +275,5 @@ jobs:
               run: npm run build
               working-directory: assets/admin
 
-            - name: Composer test
-              run: rm composer.lock
-
             - name: Composer clear cache
               run: composer clearcache
