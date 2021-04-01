@@ -164,16 +164,13 @@ jobs:
 
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
-              with:
+              withcomposer:
                   working-directory: ${{ matrix.working-directory }}/assets/admin
                   useLockFile: false
 
             - name: Build administration interface application
               run: npm run build
               working-directory: ${{ matrix.working-directory }}/assets/admin
-
-            - name: Composer clear cache
-              run: composer clearcache
 
             - name: Composer test
               run: rm ${{ matrix.working-directory }}/composer.lock
@@ -279,9 +276,6 @@ jobs:
             - name: Build administration interface application
               run: npm run build
               working-directory: assets/admin
-
-            - name: Composer clear cache
-              run: composer clearcache
 
             - name: Composer test
               run: rm composer.lock
