@@ -164,7 +164,7 @@ jobs:
 
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
-              withcomposer:
+              with:
                   working-directory: ${{ matrix.working-directory }}/assets/admin
                   useLockFile: false
 
