@@ -172,9 +172,6 @@ jobs:
               run: npm run build
               working-directory: ${{ matrix.working-directory }}/assets/admin
 
-            - name: Composer clear cache
-              run: composer clearcache
-
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
 
@@ -276,6 +273,3 @@ jobs:
             - name: Build administration interface application
               run: npm run build
               working-directory: assets/admin
-
-            - name: Composer clear cache
-              run: composer clearcache
