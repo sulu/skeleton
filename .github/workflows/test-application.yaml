@@ -174,9 +174,6 @@ jobs:
               run: npm run build
               working-directory: ${{ matrix.working-directory }}/assets/admin
 
-            - name: Composer test
-              run: rm ${{ matrix.working-directory }}/composer.lock
-
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
 
@@ -278,6 +275,3 @@ jobs:
             - name: Build administration interface application
               run: npm run build
               working-directory: assets/admin
-
-            - name: Composer test
-              run: rm composer.lock
