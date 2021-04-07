@@ -18,6 +18,19 @@ import 'sulu-snippet-bundle';
 import 'sulu-website-bundle';
 
 // Implement custom extensions here
+import {listToolbarActionRegistry} from 'sulu-admin-bundle/views';
+import ExportToolbarAction from './listToolbarAction/ExportToolbarAction';
+import {ckeditorPluginRegistry, ckeditorConfigRegistry} from 'sulu-admin-bundle/containers';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+
+
+listToolbarActionRegistry.add('app.export', ExportToolbarAction);
+
+ckeditorPluginRegistry.add(Font);
+ckeditorConfigRegistry.add((config) => ({
+    toolbar: [...config.toolbar, 'fontColor', 'fontBackgroundColor'],
+}));
+
 
 // Start admin application
 startAdmin();
