@@ -25,7 +25,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         admin:
-            pattern: ^/
+            pattern: ^/admin(\/|$)
             anonymous: true
             lazy: true
             provider: sulu
