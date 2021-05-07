@@ -85,6 +85,9 @@ jobs:
                   tools: ${{ matrix.tools }}
                   coverage: none
 
+            - name: Set composer cache directory
+              run: composer global config cache-dir "/dev/null"
+
             - name: Install composer dependencies
               if: ${{ !matrix.create-project }}
               uses: ramsey/composer-install@v1
@@ -214,6 +217,9 @@ jobs:
                   my-cnf: |
                       [mysqld]
                       default-authentication-plugin=mysql_native_password
+
+            - name: Set composer cache directory
+              run: composer config cache-dir "c:\nul"
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
