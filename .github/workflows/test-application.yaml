@@ -85,20 +85,17 @@ jobs:
                   tools: ${{ matrix.tools }}
                   coverage: none
 
-            - name: Set composer cache directory
-              run: composer global config cache-dir "/dev/null"
-
             - name: Install composer dependencies
               if: ${{ !matrix.create-project }}
               uses: ramsey/composer-install@v1
               with:
-                  composer-options: '--working-dir=${{ matrix.working-directory }}'
+                  composer-options: '--no-cache --working-dir=${{ matrix.working-directory }}'
                   dependency-versions: 'highest'
 
             - name: Create project
               if: ${{ matrix.create-project }}
               run: |
-                  composer create-project sulu/skeleton ${{ matrix.working-directory }} --repository="{\"type\":\"path\",\"url\":\"./${{ matrix.checkout-directory }}/\"}" --stability=dev -n
+                  composer create-project sulu/skeleton ${{ matrix.working-directory }} --repository="{\"type\":\"path\",\"url\":\"./${{ matrix.checkout-directory }}/\"}" --stability=dev --no-cache -n
                   cd ${{ matrix.working-directory }}
                   echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu?serverVersion=5.7' >> .env.local
                   echo 'DATABASE_URL=mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7' >> .env.test.local
@@ -218,12 +215,10 @@ jobs:
                       [mysqld]
                       default-authentication-plugin=mysql_native_password
 
-            - name: Set composer cache directory
-              run: composer config cache-dir "c:\nul"
-
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
               with:
+                  composer-options: '--no-cache'
                   dependency-versions: 'highest'
 
             - name: Build sulu
