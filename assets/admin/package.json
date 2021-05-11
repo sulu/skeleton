@@ -6,7 +6,7 @@
         "preinstall": "node ../../vendor/sulu/sulu/preinstall.js",
         "postinstall": "node ../../vendor/sulu/sulu/postinstall.js",
         "build": "webpack --mode production",
-        "watch": "webpack --mode development -w"
+        "watch": "webpack --mode development --watch"
     },
     "dependencies": {
         "mobx": "^4.0.0",
