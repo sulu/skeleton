@@ -11,8 +11,8 @@
     "dependencies": {
         "mobx": "^4.0.0",
         "mobx-react": "^5.0.0",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
         "sulu-admin-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
         "sulu-audience-targeting-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/AudienceTargetingBundle/Resources/js",
         "sulu-category-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/CategoryBundle/Resources/js",
