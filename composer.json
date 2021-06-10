@@ -1,6 +1,8 @@
 {
-    "license": "proprietary",
+    "name": "sulu/skeleton",
+    "license": "MIT",
     "type": "project",
+    "description": "Project template for starting your new project based on the Sulu content management system",
     "homepage": "https://sulu.io/",
     "keywords": [
         "symfony",
@@ -34,7 +36,7 @@
         "friendsofsymfony/http-cache-bundle": "^2.8",
         "handcraftedinthealps/zendsearch": "^2.0",
         "jackalope/jackalope-doctrine-dbal": "^1.3",
-        "sulu/sulu": "~2.3.0",
+        "sulu/sulu": "~2.3.0@dev",
         "symfony/config": "^5.1",
         "symfony/dotenv": "^5.1",
         "symfony/flex": "^1.2",
