@@ -36,7 +36,7 @@
         "friendsofsymfony/http-cache-bundle": "^2.8",
         "handcraftedinthealps/zendsearch": "^2.0",
         "jackalope/jackalope-doctrine-dbal": "^1.3",
-        "sulu/sulu": "~2.3.0",
+        "sulu/sulu": "~2.3.0@dev",
         "symfony/config": "^5.1",
         "symfony/dotenv": "^5.1",
         "symfony/flex": "^1.2",
@@ -93,7 +93,8 @@
             "@php -r \"file_put_contents('.env', str_replace('APP_SECRET=', 'APP_SECRET=' . bin2hex(random_bytes(16)), file_get_contents('.env')));\""
         ],
         "post-create-project-cmd": [
-            "@php -r \"file_put_contents('.gitignore', str_replace(['composer.lock' . PHP_EOL, 'symfony.lock' . PHP_EOL, 'package-lock.json' . PHP_EOL], ['', '', ''], file_get_contents('.gitignore')));\""
+            "@php -r \"file_put_contents('.gitignore', str_replace(['composer.lock' . PHP_EOL, 'symfony.lock' . PHP_EOL, 'package-lock.json' . PHP_EOL], ['', '', ''], file_get_contents('.gitignore')));\"",
+            "@php bin/adminconsole sulu:admin:info --ansi"
         ]
     },
     "config": {
