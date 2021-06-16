@@ -28,6 +28,7 @@ symfony.lock
 # npm
 package-lock.json
 node_modules
+node_modules.bak
 
 # phpunit
 .phpunit
