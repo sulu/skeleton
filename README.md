@@ -7,7 +7,7 @@
 
 <br/>
 <p align="center">
-    <a href="https://github.com/sulu/skeleton/blob/2.x/LICENSE" target="_blank">
+    <a href="LICENSE" target="_blank">
         <img src="https://img.shields.io/github/license/sulu/skeleton.svg" alt="GitHub license">
     </a>
     <a href="https://github.com/sulu/skeleton/releases" target="_blank">
