@@ -3,30 +3,44 @@
     "license": "MIT",
     "repository": "https://github.com/sulu/skeleton.git",
     "scripts": {
-        "preinstall": "node ../../vendor/sulu/sulu/preinstall.js",
-        "postinstall": "node ../../vendor/sulu/sulu/postinstall.js",
         "build": "webpack --mode production",
         "watch": "webpack --mode development --watch"
     },
+    "workspaces": [
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/AudienceTargetingBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/CategoryBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/ContactBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/CustomUrlBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/LocationBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/RouteBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/SearchBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/SnippetBundle/Resources/js",
+        "../../vendor/sulu/sulu/src/Sulu/Bundle/WebsiteBundle/Resources/js"
+    ],
     "dependencies": {
         "mobx": "^4.0.0",
         "mobx-react": "^5.0.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "sulu-admin-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
-        "sulu-audience-targeting-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/AudienceTargetingBundle/Resources/js",
-        "sulu-category-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/CategoryBundle/Resources/js",
-        "sulu-contact-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/ContactBundle/Resources/js",
-        "sulu-custom-url-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/CustomUrlBundle/Resources/js",
-        "sulu-location-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/LocationBundle/Resources/js",
-        "sulu-media-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
-        "sulu-page-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/PageBundle/Resources/js",
-        "sulu-preview-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
-        "sulu-route-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/RouteBundle/Resources/js",
-        "sulu-search-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/SearchBundle/Resources/js",
-        "sulu-security-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js",
-        "sulu-snippet-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/SnippetBundle/Resources/js",
-        "sulu-website-bundle": "file:node_modules/@sulu/vendor/sulu/sulu/src/Sulu/Bundle/WebsiteBundle/Resources/js"
+        "sulu-admin-bundle": "*",
+        "sulu-audience-targeting-bundle": "*",
+        "sulu-category-bundle": "*",
+        "sulu-contact-bundle": "*",
+        "sulu-custom-url-bundle": "*",
+        "sulu-location-bundle": "*",
+        "sulu-media-bundle": "*",
+        "sulu-page-bundle": "*",
+        "sulu-preview-bundle": "*",
+        "sulu-route-bundle": "*",
+        "sulu-search-bundle": "*",
+        "sulu-security-bundle": "*",
+        "sulu-snippet-bundle": "*",
+        "sulu-website-bundle": "*"
     },
     "devDependencies": {
         "@babel/core": "^7.5.5",
@@ -61,6 +75,6 @@
     },
     "engines": {
         "node": ">=12",
-        "npm": ">=6 <7"
+        "npm": ">=7"
     }
 }
