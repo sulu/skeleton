@@ -17,7 +17,8 @@ import 'sulu-security-bundle';
 import 'sulu-snippet-bundle';
 import 'sulu-website-bundle';
 
-// Implement custom extensions here
+// Add custom code to the following file:
+import './app.js';
 
 // Start admin application
 startAdmin();
