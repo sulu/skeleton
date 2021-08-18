@@ -17,7 +17,7 @@ import 'sulu-security-bundle';
 import 'sulu-snippet-bundle';
 import 'sulu-website-bundle';
 
-// Add custom code to the following file:
+// Add project specific javascript code to the following file:
 import './app.js';
 
 // Start admin application

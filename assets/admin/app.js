@@ -1,3 +1,1 @@
-// Add additional extensions here:
-
-// Implement custom extensions here:
+// Add project specific javascript code here:
