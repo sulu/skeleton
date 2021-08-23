@@ -65,6 +65,9 @@
             "App\\Tests\\": "tests/"
         }
     },
+    "conflict": {
+        "symfony/flex": "1.14.0"
+    },
     "replace": {
         "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
