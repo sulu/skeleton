@@ -1,6 +1,3 @@
-// Polyfills
-import 'regenerator-runtime/runtime';
-
 // Bundles
 import {startAdmin} from 'sulu-admin-bundle';
 import 'sulu-audience-targeting-bundle';
