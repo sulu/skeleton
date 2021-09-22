@@ -1,6 +1,6 @@
 {
     "presets": [
-        ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": "3.18", "debug": true}],
+        ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": "3.18"}],
         "@babel/preset-react"
     ],
     "plugins": [
