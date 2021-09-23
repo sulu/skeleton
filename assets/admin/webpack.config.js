@@ -12,7 +12,8 @@ module.exports = (env, argv) => {
     env.node_modules_path = path.resolve(__dirname, 'node_modules');
 
     const config = webpackConfig(env, argv);
-    config.entry = path.resolve(__dirname, 'index.js');
+    config.entry.main = path.resolve(__dirname, 'index.js');
+    config.entry.preview = path.resolve(__dirname, 'preview.js');
 
     return config;
 };
