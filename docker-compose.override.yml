@@ -2,7 +2,7 @@ version: '3'
 
 services:
 ###> doctrine/doctrine-bundle ###
-  database:
-    ports:
-      - "5432"
+    database:
+        ports:
+            - "3306:3306"
 ###< doctrine/doctrine-bundle ###
