@@ -1,4 +1,7 @@
-// Bundles
+// This file should only be changed by the `bin/adminconsole sulu:admin:update-build` command:
+// See https://docs.sulu.io/en/latest/upgrades/upgrade-2.x.html
+
+// Sulu Core Bundles
 import {startAdmin} from 'sulu-admin-bundle';
 import 'sulu-audience-targeting-bundle';
 import 'sulu-category-bundle';
@@ -14,7 +17,7 @@ import 'sulu-security-bundle';
 import 'sulu-snippet-bundle';
 import 'sulu-website-bundle';
 
-// Add project specific javascript code to the following file:
+// Add project specific javascript code and import of additional bundles to the following file:
 import './app.js';
 
 // Start admin application
