@@ -1,4 +1,4 @@
-// This file should only be changed by the `bin/adminconsole sulu:admin:update-build` command:
+// This file should only be changed by the `bin/console sulu:admin:update-build` command:
 // See https://docs.sulu.io/en/latest/upgrades/upgrade-2.x.html
 
 // Sulu Core Bundles
