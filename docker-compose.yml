@@ -3,11 +3,13 @@ version: '3'
 services:
 ###> doctrine/doctrine-bundle ###
     database:
-        image: mysql:${MYSQL_VERSION:-8}
+        # arm compatible mysql docker image
+        image: mysql/mysql-server:${MYSQL_VERSION:-8.0} # arm and x86/x64 compatible mysql image
         environment:
             MYSQL_DATABASE: ${MYSQL_DATABASE:-su_myapp}
             # You should definitely change the password in production
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-ChangeMe}
+            MYSQL_ROOT_HOST: '%'
         volumes:
             - db-data:/var/lib/mysql
             # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
