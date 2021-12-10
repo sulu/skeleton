@@ -10,3 +10,8 @@ when@prod:
     framework:
         router:
             strict_requirements: null
+
+when@stage:
+    framework:
+        router:
+            strict_requirements: null
