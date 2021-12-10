@@ -33,7 +33,7 @@
         "dantleech/phpcr-migrations-bundle": "^1.2",
         "doctrine/doctrine-bundle": "^2.5",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
-        "friendsofsymfony/http-cache-bundle": "^2.11",
+        "friendsofsymfony/http-cache-bundle": "^2.9",
         "handcraftedinthealps/zendsearch": "^2.1",
         "jackalope/jackalope-doctrine-dbal": "^1.7",
         "sulu/sulu": "~2.4.0-RC1",
