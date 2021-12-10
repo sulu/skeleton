@@ -27,7 +27,7 @@ jobs:
                       checkout-directory: 'project'
                       working-directory: 'create-project-test'
                       php-extensions: 'ctype, iconv, mysql, gd'
-                      tools: 'composer:v1'
+                      tools: 'composer:v2'
                       env: {}
 
                     - php-version: '7.4'
