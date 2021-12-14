@@ -13,3 +13,7 @@ massive_search:
 #        elastic:
 #            version: 5.6
 #            hosts: ['%env(ELASTICSEARCH_HOST)%']
+
+when@test:
+    massive_search:
+        adapter: test
