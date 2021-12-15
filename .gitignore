@@ -2,18 +2,21 @@
 /.env.local
 /.env.local.php
 /.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
-.phpunit
+.phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
-# var
-/var/*
-!/var/.gitignore
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
 
 # web
 /public/bundles
@@ -23,16 +26,10 @@
 /composer.phar
 composer.lock
 symfony.lock
-/vendor
 
 # npm
 package-lock.json
 node_modules
-
-# phpunit
-.phpunit
-/phpunit.xml
-.phpunit.result.cache
 
 # phpcs
 .php_cs.cache
