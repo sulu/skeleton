@@ -98,6 +98,13 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "symfony/flex": true,
+            "symfony/runtime": true,
+            "symfony/thanks": true
+        },
+        "optimize-autoloader": true,
         "sort-packages": true
     },
     "extra": {
