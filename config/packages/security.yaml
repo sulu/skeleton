@@ -60,3 +60,17 @@ security:
 sulu_security:
     checker:
         enabled: true
+
+when@test:
+    security:
+        providers:
+            sulu:
+                id: test_user_provider
+
+        firewalls:
+            admin:
+                http_basic:
+                    provider: sulu
+
+    sulu_test:
+        enable_test_user_provider: true

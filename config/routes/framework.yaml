@@ -1,1 +1,4 @@
-# Custom error route is in sulu_website.yaml configured
+when@dev:
+    _errors:
+        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
+        prefix: /_error
