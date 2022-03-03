@@ -55,9 +55,9 @@ when@prod: &prod
                 type: console
                 process_psr_3_messages: false
                 channels: ["!event", "!doctrine"]
-            deprecation:
-                type: stream
-                channels: [deprecation]
-                path: php://stderr
+#            deprecation:
+#                type: stream
+#                channels: [deprecation]
+#                path: "%kernel.logs_dir%/%kernel.environment%.deprecations.log"
 
 when@stage: *prod
