@@ -43,6 +43,7 @@
         "symfony/framework-bundle": "^5.4",
         "symfony/monolog-bridge": "^5.4",
         "symfony/monolog-bundle": "^3.4",
+        "symfony/runtime": "^5.4",
         "symfony/security-bundle": "^5.4",
         "symfony/swiftmailer-bundle": "^3.5",
         "symfony/twig-bundle": "^5.4"
