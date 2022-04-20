@@ -1,0 +1,9 @@
+sulu_security:
+    password_policy:
+        enabled: false
+
+# By default sulu provides a simple password_policy pattern of ".{8,}"
+# which can be made more complex with the following lines.
+#
+#        pattern: '(?=^.{8,}$)(?=.*\d)(?=.*[^a-zA-Z0-9]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$'
+#        information_translation_key: app.password_information
