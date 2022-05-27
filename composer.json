@@ -26,12 +26,6 @@
         "docs": "https://docs.sulu.io/",
         "chat": "https://sulu.io/services-and-support#chat"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:alexander-schranz/sulu.git"
-        }
-    ],
     "require": {
         "php": "^8.0 || ^8.1",
         "ext-ctype": "*",
@@ -42,7 +36,7 @@
         "friendsofsymfony/http-cache-bundle": "^2.10.1",
         "handcraftedinthealps/zendsearch": "^2.1",
         "jackalope/jackalope-doctrine-dbal": "^1.7",
-        "sulu/sulu": "dev-feature/symfony-6-support as 2.5.0",
+        "sulu/sulu": "~2.5.0@dev",
         "symfony/config": "^6.0",
         "symfony/dotenv": "^6.0",
         "symfony/flex": "^1.17 || ^2.0",
