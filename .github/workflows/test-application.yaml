@@ -15,11 +15,14 @@ jobs:
 
         runs-on: ubuntu-latest
 
+        env:
+            COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
         strategy:
             fail-fast: false
             matrix:
                 include:
-                    - php-version: '8.0'
+                    - php-version: '8.1'
                       node-version: '12'
                       mysql-version: '5.7'
                       create-project: false
@@ -172,6 +175,7 @@ jobs:
             MAILER_URL: null://localhost
             SULU_ADMIN_EMAIL:
             DATABASE_URL: mysql://root:root@127.0.0.1:3306/sulu_test?serverVersion=${{ matrix.mysql-version }}
+            COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         strategy:
             fail-fast: false
