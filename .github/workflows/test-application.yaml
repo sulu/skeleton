@@ -22,7 +22,7 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - php-version: '8.0'
+                    - php-version: '8.1'
                       node-version: '12'
                       mysql-version: '5.7'
                       create-project: false

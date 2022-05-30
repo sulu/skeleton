@@ -27,7 +27,7 @@
         "chat": "https://sulu.io/services-and-support#chat"
     },
     "require": {
-        "php": "^8.0 || ^8.1",
+        "php": "^8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "dantleech/phpcr-migrations-bundle": "^1.3",
