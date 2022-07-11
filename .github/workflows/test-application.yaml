@@ -224,7 +224,7 @@ jobs:
             - name: Lint Code
               # lint code but without code style as windows clones with false line endings
               run: |
-                  php -r 'file_put_contents("composer.json", str_replace("\"php-cs-fix", "\"deactivate-php-cs-fix", file_get_contents("composer.json")));'
+                  php -r 'file_put_contents(\'composer.json\', str_replace(\'"php-cs-fix\', \'\"deactivate-php-cs-fix\', file_get_contents(\'composer.json\')));'
                   composer lint
 
             - name: Bootstrap tests
