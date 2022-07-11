@@ -117,33 +117,20 @@ jobs:
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
-            - name: Lint container
-              run: |
-                  bin/adminconsole lint:container --env dev
-                  bin/websiteconsole lint:container --env dev
-                  bin/adminconsole lint:container --env test
-                  bin/websiteconsole lint:container --env test
-                  bin/adminconsole lint:container --env stage
-                  bin/websiteconsole lint:container --env stage
-                  bin/adminconsole lint:container --env prod
-                  bin/websiteconsole lint:container --env prod
+            - name: Lint Code
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
+              run: composer lint
 
-            - name: Lint code
-              run: |
-                  ${{ matrix.create-project }} || composer validate --strict
-                  bin/adminconsole doctrine:ensure-production-settings --env prod
-                  bin/adminconsole doctrine:schema:validate
-                  bin/adminconsole lint:twig templates
-                  bin/adminconsole lint:yaml config
+            - name: Bootstrap tests
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
+              run: composer bootstrap-test-environment
 
             - name: Execute test cases
-              run: bin/phpunit
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
+              run: composer test
 
             - name: Test download-language script
               run: bin/adminconsole sulu:admin:download-language nl
@@ -234,27 +221,14 @@ jobs:
                   bin/adminconsole cache:clear --env prod
                   bin/websiteconsole cache:clear --env prod
 
-            - name: Lint container
-              run: |
-                  bin/adminconsole lint:container --env dev
-                  bin/websiteconsole lint:container --env dev
-                  bin/adminconsole lint:container --env test
-                  bin/websiteconsole lint:container --env test
-                  bin/adminconsole lint:container --env stage
-                  bin/websiteconsole lint:container --env stage
-                  bin/adminconsole lint:container --env prod
-                  bin/websiteconsole lint:container --env prod
+            - name: Lint Code
+              run: composer lint
 
-            - name: Lint code
-              run: |
-                  composer validate --strict
-                  bin/adminconsole doctrine:ensure-production-settings --env prod
-                  bin/adminconsole doctrine:schema:validate
-                  bin/adminconsole lint:twig templates
-                  bin/adminconsole lint:yaml config
+            - name: Bootstrap tests
+              run: composer bootstrap-test-environment
 
             - name: Execute test cases
-              run: bin/phpunit
+              run: composer test
 
             - name: Test download-language script
               run: bin/adminconsole sulu:admin:download-language nl
