@@ -22,6 +22,7 @@ security:
         - { path: ^/admin/login$, roles: PUBLIC_ACCESS }
         - { path: ^/admin/2fa, role: PUBLIC_ACCESS }
         - { path: ^/admin/_wdt, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/_profiler, roles: PUBLIC_ACCESS }
         - { path: ^/admin/translations, roles: PUBLIC_ACCESS }
         - { path: ^/admin$, roles: PUBLIC_ACCESS }
         - { path: ^/admin/$, roles: PUBLIC_ACCESS }
