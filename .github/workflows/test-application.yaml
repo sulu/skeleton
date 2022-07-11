@@ -23,7 +23,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.1'
-                      node-version: '12'
+                      node-version: '14'
                       mysql-version: '5.7'
                       create-project: false
                       create-database: false
@@ -39,7 +39,8 @@ jobs:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7"
 
                     - php-version: '8.1'
-                      node-version: '14'
+                      node-version: '16'
+                      npm-version: '6'
                       mysql-version: '8.0'
                       create-project: true
                       create-database: true
@@ -154,6 +155,10 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
 
+            - name: Install npm
+              if: ${{ matrix.npm-version }}
+              run: npm install --global npm@${{ matrix.npm-version }}
+
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
               with:
@@ -182,7 +187,8 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.1'
-                      node-version: '14'
+                      node-version: '16'
+                      npm-version: '6'
                       mysql-version: '8.0'
                       php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
                       tools: 'composer:v2'
@@ -257,6 +263,10 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
+
+            - name: Install npm
+              if: ${{ matrix.npm-version }}
+              run: npm install --global npm@${{ matrix.npm-version }}
 
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
