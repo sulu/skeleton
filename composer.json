@@ -144,12 +144,12 @@
         "rector": [
             "@php vendor/bin/rector process"
         ],
-        "lint-rector": [
+        "deactivate-lint-rector": [
             "@php bin/websiteconsole cache:warmup --env=dev",
             "@php vendor/bin/rector process --dry-run"
         ],
         "php-cs-fix": "@php vendor/bin/php-cs-fixer fix",
-        "lint-php-cs": "@php vendor/bin/php-cs-fixer fix --verbose --diff --dry-run",
+        "deactivate-lint-php-cs-fix": "@php vendor/bin/php-cs-fixer fix --verbose --diff --dry-run",
         "lint-composer": "@composer validate --no-check-publish --strict",
         "lint-twig": "@php bin/console lint:twig templates/",
         "lint-yaml": "@php bin/console lint:yaml config/ --parse-tags",
