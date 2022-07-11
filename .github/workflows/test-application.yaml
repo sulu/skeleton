@@ -192,6 +192,11 @@ jobs:
                   tools: ${{ matrix.tools }}
                   ini-values: 'memory_limit=-1'
 
+            # Github clones with false line endings on Windows make php-cs-fix fail
+            # Rector seems to fail on Windows with child processes
+            - name: Disable php-cs and rector
+              run: ./.github/disable-windows-scripts.sh
+
             - name: Install and configure MySQL
               uses: shogo82148/actions-setup-mysql@v1.0.1
               with:
@@ -200,11 +205,6 @@ jobs:
                   my-cnf: |
                       [mysqld]
                       default-authentication-plugin=mysql_native_password
-
-            # Github clones with false line endings on Windows make php-cs-fix fail
-            # Rector seems to fail on Windows with child processes
-            - name: Disable php-cs and rector
-              run: ./.github/disable-windows-scripts.sh
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
