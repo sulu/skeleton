@@ -222,7 +222,10 @@ jobs:
                   bin/websiteconsole cache:clear --env prod
 
             - name: Lint Code
-              run: composer lint
+              # lint code but without code style as windows clones with false line endings
+              run: |
+                  php -r 'file_put_contents("composer.json", str_replace("\"php-cs-fix", "\"deactivate-php-cs-fix", file_get_contents("composer.json")));'
+                  composer lint
 
             - name: Bootstrap tests
               run: composer bootstrap-test-environment
