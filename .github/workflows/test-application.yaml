@@ -266,7 +266,7 @@ jobs:
 
             - name: Install npm
               if: ${{ matrix.npm-version }}
-              run: npm install -g npm@${{ matrix.npm-version }}
+              run: npm install --global npm@${{ matrix.npm-version }}
 
             - name: Install npm dependencies
               uses: bahmutov/npm-install@v1
