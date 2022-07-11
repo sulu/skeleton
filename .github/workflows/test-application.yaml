@@ -195,10 +195,8 @@ jobs:
             # Github clones with false line endings on Windows make php-cs-fix fail
             # Rector seems to fail on Windows with child processes
             - name: Disable php-cs and rector
-              env:
-                  DISABLE_SCRIPT: '<?php file_put_contents("composer.json", str_replace("\"lint-php-cs", "\"deactivate-lint-php-cs-fix", file_get_contents("composer.json"))); file_put_contents("composer.json", str_replace("\"lint-rector", "\"deactivate-lint-rector", file_get_contents("composer.json")));'
               run: |
-                  echo $DISABLE_SCRIPT > disable.php
+                  echo '<?php file_put_contents("composer.json", str_replace("\"lint-php-cs", "\"deactivate-lint-php-cs-fix", file_get_contents("composer.json"))); file_put_contents("composer.json", str_replace("\"lint-rector", "\"deactivate-lint-rector", file_get_contents("composer.json")));' > disable.php
                   cat disable.php
                   php disable.php
                   cat composer.json
