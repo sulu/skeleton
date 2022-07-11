@@ -1,10 +1,10 @@
-<?php
+<?php declare(strict_types=1);
 // default locale for maintenance translations
-define('DEFAULT_LOCALE', 'en');
+\define('DEFAULT_LOCALE', 'en');
 
 // allow acces for following ips
 $allowedIPs = [
-  '127.0.0.1',
+    '127.0.0.1',
 ];
 
 // translations for maintenance
@@ -22,18 +22,18 @@ $translations = [
 ];
 
 // check if ip is within allowed range
-if (in_array($_SERVER['REMOTE_ADDR'], $allowedIPs)) {
+if (\in_array($_SERVER['REMOTE_ADDR'], $allowedIPs, true)) {
     return false;
 }
 
 // get language
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$lang = \substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 // chose locale
-$locale = array_key_exists($lang, $translations) ? $lang : DEFAULT_LOCALE;
+$locale = \array_key_exists($lang, $translations) ? $lang : DEFAULT_LOCALE;
 
-header('Content-Type: text/html; charset=utf-8');
-http_response_code(503);
+\header('Content-Type: text/html; charset=utf-8');
+\http_response_code(503);
 
 ?><!doctype html>
 <html lang="<?php echo $locale; ?>">
