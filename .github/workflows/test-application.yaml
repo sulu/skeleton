@@ -201,6 +201,11 @@ jobs:
                       [mysqld]
                       default-authentication-plugin=mysql_native_password
 
+            # Github clones with false line endings on Windows make php-cs-fix fail
+            # Rector seems to fail on Windows with child processes
+            - name: Disable php-cs and rector
+              run: ./.github/disable-windows-scripts.sh
+
             - name: Install composer dependencies
               uses: ramsey/composer-install@v1
               with:
@@ -220,10 +225,6 @@ jobs:
                   bin/websiteconsole cache:clear --env stage
                   bin/adminconsole cache:clear --env prod
                   bin/websiteconsole cache:clear --env prod
-
-            - name: Fix Code Style
-              # fix code as windows clones with false line endings which makes composer lint failing
-              run: composer php-cs-fix
 
             - name: Lint Code
               run: |
