@@ -221,10 +221,12 @@ jobs:
                   bin/adminconsole cache:clear --env prod
                   bin/websiteconsole cache:clear --env prod
 
+            - name: Fix Code Style
+              # fix code as windows clones with false line endings which makes composer lint failing
+              run: composer php-cs-fix
+
             - name: Lint Code
-              # lint code but without code style as windows clones with false line endings
               run: |
-                  php -r 'file_put_contents(\'composer.json\', str_replace(\'"php-cs-fix\', \'\"deactivate-php-cs-fix\', file_get_contents(\'composer.json\')));'
                   composer lint
 
             - name: Bootstrap tests
