@@ -1,0 +1,12 @@
+2fa_login_check_admin:
+    path: /admin/2fa_check
+
+# Activate the following routes to use 2fa on your website application:
+#
+# 2fa_login:
+#     path: /2fa
+#     defaults:
+#         _controller: "scheb_two_factor.form_controller::form"
+#
+# 2fa_login_check:
+#     path: /2fa_check
