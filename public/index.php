@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of Sulu.
  *
@@ -22,7 +24,7 @@ if (SULU_MAINTENANCE) {
     $maintenanceFilePath = __DIR__ . '/maintenance.php';
     // show maintenance mode and exit if no allowed IP is met
     if (require $maintenanceFilePath) {
-        exit();
+        exit;
     }
 }
 

@@ -1,0 +1,11 @@
+parameters:
+    paths:
+        - src
+        - tests
+        - config
+    level: max
+    doctrine:
+        objectManagerLoader: tests/phpstan/object-manager.php
+    symfony:
+        container_xml_path: %currentWorkingDirectory%/var/cache/website/dev/App_KernelDevDebugContainer.xml
+        console_application_loader: tests/phpstan/console-application.php
