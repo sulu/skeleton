@@ -1,0 +1,3 @@
+sulu_markup:
+    link_tag:
+        provider_attribute: 'data-provider'
