@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 // Workaround https://bugs.php.net/64566
 $autoPrependFile = \ini_get('auto_prepend_file');
-
 if (false !== (bool) $autoPrependFile && !\in_array(\realpath($autoPrependFile), \get_included_files(), true)) {
     require \ini_get('auto_prepend_file');
 }
