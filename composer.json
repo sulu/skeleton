@@ -74,6 +74,9 @@
         "symfony/web-profiler-bundle": "^6.0",
         "thecodingmachine/phpstan-strict-rules": "^1.0"
     },
+    "conflict": {
+        "rector/rector": "0.13.9"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
