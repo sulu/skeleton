@@ -103,6 +103,9 @@ when@test:
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
 
+        access_decision_manager:
+            strategy: affirmative
+
         providers:
             sulu:
                 id: test_user_provider
