@@ -63,8 +63,8 @@
         "phpstan/phpstan-symfony": "^1.1",
         "phpstan/phpstan-webmozart-assert": "^1.0",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.13.8",
-        "sulu/sulu-rector": "^0.1.1",
+        "rector/rector": "^0.14.0",
+        "sulu/sulu-rector": "^0.1.2",
         "symfony/browser-kit": "^6.0",
         "symfony/css-selector": "^6.0",
         "symfony/debug-bundle": "^6.0",
@@ -73,9 +73,6 @@
         "symfony/thanks": "^1.2",
         "symfony/web-profiler-bundle": "^6.0",
         "thecodingmachine/phpstan-strict-rules": "^1.0"
-    },
-    "conflict": {
-        "rector/rector": "0.13.9"
     },
     "autoload": {
         "psr-4": {
