@@ -20,7 +20,7 @@ security:
         - { path: ^/admin/reset, roles: PUBLIC_ACCESS }
         - { path: ^/admin/security/reset, roles: PUBLIC_ACCESS }
         - { path: ^/admin/login$, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/2fa, role: PUBLIC_ACCESS }
+        - { path: ^/admin/2fa, roles: PUBLIC_ACCESS }
         - { path: ^/admin/_wdt, roles: PUBLIC_ACCESS }
         - { path: ^/admin/_profiler, roles: PUBLIC_ACCESS }
         - { path: ^/admin/translations, roles: PUBLIC_ACCESS }
