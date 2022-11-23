@@ -43,5 +43,6 @@ return (new PhpCsFixer\Config())
             'ignored_tags' => ['todo', 'var'],
         ],
         'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments', 'parameters']],
+        'global_namespace_import' => ['import_classes' => false, 'import_constants' => false, 'import_functions' => false],
     ])
     ->setFinder($finder);
