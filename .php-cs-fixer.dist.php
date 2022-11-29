@@ -18,7 +18,7 @@ return (new PhpCsFixer\Config())
         'phpdoc_align' => ['align' => 'left'],
         'class_definition' => [
             'multi_line_extends_each_single_line' => true,
-        ] ,
+        ],
         'linebreak_after_opening_tag' => true,
         'declare_strict_types' => true,
         'method_argument_space' => ['on_multiline' => 'ensure_fully_multiline'],
@@ -43,5 +43,6 @@ return (new PhpCsFixer\Config())
             'ignored_tags' => ['todo', 'var'],
         ],
         'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments', 'parameters']],
+        'global_namespace_import' => ['import_classes' => false, 'import_constants' => false, 'import_functions' => false],
     ])
     ->setFinder($finder);
