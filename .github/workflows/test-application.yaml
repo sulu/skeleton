@@ -223,7 +223,7 @@ jobs:
                   ini-values: 'memory_limit=-1'
 
             - name: Install and configure MySQL
-              uses: shogo82148/actions-setup-mysql@v1.0.1
+              uses: shogo82148/actions-setup-mysql@v1.14.1
               with:
                   mysql-version: ${{ matrix.mysql-version }}
                   root-password: 'root'
