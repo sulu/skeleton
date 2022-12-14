@@ -36,6 +36,7 @@
         "friendsofsymfony/http-cache-bundle": "^2.10.1",
         "handcraftedinthealps/zendsearch": "^2.1",
         "jackalope/jackalope-doctrine-dbal": "^1.7",
+        "phpcr/phpcr-shell": "^1.4",
         "scheb/2fa-bundle": "^6.1",
         "scheb/2fa-email": "^6.1",
         "scheb/2fa-trusted-device": "^6.1",
@@ -54,7 +55,6 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.9",
         "jangregor/phpstan-prophecy": "^1.0",
-        "phpcr/phpcr-shell": "^1.4",
         "phpspec/prophecy-phpunit": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^1.4",
