@@ -12,13 +12,15 @@ jms_serializer:
 #                namespace_prefix: "My\\BarBundle"
 #                path: "@MyBarBundle/Resources/config/serializer"
 
-when@prod:
+when@prod: &prod
     jms_serializer:
         visitors:
             json_serialization:
                 options:
                     - JSON_UNESCAPED_SLASHES
                     - JSON_PRESERVE_ZERO_FRACTION
+
+when@stage: *prod
 
 when@dev:
     jms_serializer:
