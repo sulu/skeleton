@@ -21,7 +21,7 @@ if (!\is_file(\dirname(__DIR__) . '/vendor/autoload_runtime.php')) {
 require_once \dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
 if (!isset($suluContext)) {
-    $suluContext = Kernel::CONTEXT_ADMIN;
+    $suluContext = \getenv('SULU_CONTEXT') ?: Kernel::CONTEXT_ADMIN;
 }
 
 return function (array $context) use ($suluContext) {
