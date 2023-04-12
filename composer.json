@@ -39,7 +39,7 @@
         "scheb/2fa-bundle": "^6.1",
         "scheb/2fa-email": "^6.1",
         "scheb/2fa-trusted-device": "^6.1",
-        "sulu/sulu": "~2.5.8",
+        "sulu/sulu": "~2.5.9",
         "symfony/config": "^6.2",
         "symfony/dotenv": "^6.2",
         "symfony/flex": "^1.17 || ^2.0",
