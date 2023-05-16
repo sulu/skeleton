@@ -33,7 +33,7 @@ class Kernel extends SuluKernel implements HttpCacheProvider
 
     public function getHttpCache(): HttpKernelInterface
     {
-        if (null === $this->httpCache) {
+        if (!$this->httpCache instanceof HttpKernelInterface) {
             $this->httpCache = new SuluHttpCache($this);
             // Activate the following for user based caching see also:
             // https://foshttpcachebundle.readthedocs.io/en/latest/features/user-context.html
