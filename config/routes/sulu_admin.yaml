@@ -107,3 +107,8 @@ sulu_trash_api:
     resource: "@SuluTrashBundle/Resources/config/routing_api.yml"
     type: rest
     prefix: /admin/api
+
+sulu_reference_api:
+    resource: "@SuluReferenceBundle/Resources/config/routing_api.yml"
+    type: rest
+    prefix: /admin/api
