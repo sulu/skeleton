@@ -185,7 +185,8 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": true
+            "allow-contrib": true,
+            "require": "6.3.*"
         }
     }
 }
