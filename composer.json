@@ -118,6 +118,10 @@
             "@php -r \"file_put_contents('.gitignore', str_replace(['composer.lock' . PHP_EOL, 'symfony.lock' . PHP_EOL, 'package-lock.json' . PHP_EOL], ['', '', ''], file_get_contents('.gitignore')));\"",
             "@php bin/adminconsole sulu:admin:info --ansi"
         ],
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php -S 127.0.0.1:8000 -t public config/router.php"
+        ],
         "bootstrap-test-environment": [
             "@php bin/adminconsole doctrine:database:drop --if-exists --force --env test",
             "@php bin/adminconsole doctrine:database:create --env test",
