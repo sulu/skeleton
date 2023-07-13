@@ -168,6 +168,7 @@ jobs:
             SULU_ADMIN_EMAIL:
             DATABASE_URL: mysql://root:root@127.0.0.1:3306/sulu_test?serverVersion=${{ matrix.mysql-version }}
             COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            LOCK_DSN: flock
 
         strategy:
             fail-fast: false
