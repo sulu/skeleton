@@ -14,7 +14,7 @@
         <img src="https://img.shields.io/github/tag/sulu/skeleton.svg" alt="GitHub tag (latest SemVer)">
     </a>
     <a href="https://github.com/sulu/skeleton/actions" target="_blank">
-        <img src="https://img.shields.io/github/workflow/status/sulu/skeleton/Test%20application.svg?label=test-workflow" alt="Test workflow status">
+        <img src="https://img.shields.io/github/actions/workflow/status/sulu/skeleton/test-application.yaml" alt="Test workflow status">
     </a>
 </p>
 <br/>
