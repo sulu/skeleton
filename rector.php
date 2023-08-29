@@ -15,7 +15,12 @@ use Sulu\Rector\Set\SuluLevelSetList;
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests']);
 
-    $rectorConfig->phpstanConfig(__DIR__ . '/phpstan.neon');
+    $rectorConfig->phpstanConfigs([
+        __DIR__ . '/phpstan.neon',
+        // rector does not load phpstan extension automatically so require them manually here:
+        __DIR__ . '/vendor/phpstan/phpstan-doctrine/extension.neon',
+        __DIR__ . '/vendor/phpstan/phpstan-symfony/extension.neon',
+    ]);
 
     // basic rules
     $rectorConfig->importNames();
