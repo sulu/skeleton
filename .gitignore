@@ -48,3 +48,7 @@ node_modules
 
 # System files
 .DS_Store
+
+###> phpstan/phpstan ###
+phpstan.neon
+###< phpstan/phpstan ###
