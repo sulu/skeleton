@@ -16,7 +16,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests']);
 
     $rectorConfig->phpstanConfigs([
-        __DIR__ . '/phpstan.neon',
+        __DIR__ . '/phpstan.dist.neon',
         // rector does not load phpstan extension automatically so require them manually here:
         __DIR__ . '/vendor/phpstan/phpstan-doctrine/extension.neon',
         __DIR__ . '/vendor/phpstan/phpstan-symfony/extension.neon',
