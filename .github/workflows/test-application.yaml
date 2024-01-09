@@ -55,6 +55,23 @@ jobs:
                           SULU_ADMIN_EMAIL:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.0"
 
+                    - php-version: '8.3'
+                      node-version: '16'
+                      npm-version: '6'
+                      mysql-version: '8.0'
+                      create-project: true
+                      create-database: true
+                      checkout-directory: 'project'
+                      working-directory: 'create-project-test'
+                      php-extensions: 'ctype, iconv, mysql, gd'
+                      tools: 'composer:v2'
+                      env:
+                          APP_ENV: test
+                          APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
+                          MAILER_URL: null://localhost
+                          SULU_ADMIN_EMAIL:
+                          DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.0"
+
         services:
             mysql:
                 image: mysql:${{ matrix.mysql-version }}
