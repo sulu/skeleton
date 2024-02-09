@@ -37,7 +37,8 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->sets([
         SymfonySetList::SYMFONY_CODE_QUALITY,
         SymfonySetList::SYMFONY_CONSTRUCTOR_INJECTION,
-        SymfonyLevelSetList::UP_TO_SYMFONY_60,
+        // activate when doing updates:
+        // SymfonyLevelSetList::UP_TO_SYMFONY_63,
     ]);
 
     // doctrine rules
@@ -47,12 +48,14 @@ return static function (RectorConfig $rectorConfig): void {
 
     // phpunit rules
     $rectorConfig->sets([
-        PHPUnitLevelSetList::UP_TO_PHPUNIT_90,
-        PHPUnitSetList::PHPUNIT_91,
+        // activate when doing updates:
+        // PHPUnitLevelSetList::UP_TO_PHPUNIT_90,
+        // PHPUnitSetList::PHPUNIT_91,
     ]);
 
     // sulu rules
     $rectorConfig->sets([
-        SuluLevelSetList::UP_TO_SULU_25,
+        // activate for updates when doing updates:
+        // SuluLevelSetList::UP_TO_SULU_25,
     ]);
 };
