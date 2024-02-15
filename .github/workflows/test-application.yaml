@@ -22,7 +22,8 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.1'
-                      node-version: '14'
+                      node-version: '16'
+                      npm-version: '8'
                       mysql-version: '5.7'
                       create-project: false
                       create-database: false
@@ -38,8 +39,8 @@ jobs:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7"
 
                     - php-version: '8.2'
-                      node-version: '16'
-                      npm-version: '6'
+                      node-version: '18'
+                      npm-version: '9'
                       mysql-version: '8.0'
                       create-project: true
                       create-database: true
@@ -55,8 +56,8 @@ jobs:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.0"
 
                     - php-version: '8.3'
-                      node-version: '16'
-                      npm-version: '6'
+                      node-version: '20'
+                      npm-version: '10'
                       mysql-version: '8.0'
                       create-project: true
                       create-database: true
@@ -189,8 +190,8 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.1'
-                      node-version: '16'
-                      npm-version: '6'
+                      node-version: '20'
+                      npm-version: '10'
                       mysql-version: '8.0'
                       php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick'
                       tools: 'composer:v2'
