@@ -34,7 +34,11 @@ symfony.lock
 
 # npm
 package-lock.json
+pnpm-lock.yaml
+bun.lockb
+yarn.lock
 node_modules
+.yarn
 
 # phpcs
 .php_cs.cache
