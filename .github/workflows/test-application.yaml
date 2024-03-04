@@ -12,7 +12,6 @@ on:
 jobs:
     test:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
-
         runs-on: ubuntu-latest
 
         env:
@@ -175,9 +174,7 @@ jobs:
 
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
-
         runs-on: windows-latest
-
         env:
             APP_ENV: test
             APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
