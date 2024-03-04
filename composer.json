@@ -40,7 +40,7 @@
         "scheb/2fa-email": "^6.1",
         "scheb/2fa-trusted-device": "^6.1",
         "stof/doctrine-extensions-bundle": "^1.8",
-        "sulu/sulu": "~2.5.12",
+        "sulu/sulu": "~2.5.13",
         "symfony/config": "^6.3",
         "symfony/dotenv": "^6.3",
         "symfony/flex": "^1.17 || ^2.0",
