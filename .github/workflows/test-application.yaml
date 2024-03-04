@@ -12,8 +12,10 @@ on:
 jobs:
     test:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
-
         runs-on: ubuntu-latest
+
+        env:
+            COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         strategy:
             fail-fast: false
@@ -190,15 +192,14 @@ jobs:
 
     php-windows:
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
-
         runs-on: windows-latest
-
         env:
             APP_ENV: test
             APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
             MAILER_URL: null://localhost
             SULU_ADMIN_EMAIL:
             DATABASE_URL: mysql://root:root@127.0.0.1:3306/sulu_test?serverVersion=${{ matrix.mysql-version }}
+            COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         strategy:
             fail-fast: false
