@@ -193,7 +193,7 @@ jobs:
                       node-version: '20'
                       npm-version: '10'
                       mysql-version: '8.0'
-                      php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, imagick, sodium'
+                      php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, gd, sodium'
                       tools: 'composer:v2'
 
         steps:
