@@ -21,7 +21,7 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - php-version: '8.1'
+                    - php-version: '8.2'
                       node-version: '16'
                       npm-version: '8'
                       mysql-version: '5.7'
@@ -38,7 +38,7 @@ jobs:
                           SULU_ADMIN_EMAIL:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7"
 
-                    - php-version: '8.2'
+                    - php-version: '8.3'
                       node-version: '18'
                       npm-version: '9'
                       mysql-version: '8.0'
@@ -189,7 +189,7 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - php-version: '8.1'
+                    - php-version: '8.3'
                       node-version: '20'
                       npm-version: '10'
                       mysql-version: '8.0'
