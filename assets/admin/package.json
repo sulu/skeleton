@@ -9,10 +9,10 @@
         "watch": "webpack --mode development --watch"
     },
     "dependencies": {
-        "mobx": "^4.15.7",
-        "mobx-react": "^5.4.4",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
+        "mobx": "^4.0.0",
+        "mobx-react": "^5.0.0",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
         "sulu-admin-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/AdminBundle/Resources/js",
         "sulu-audience-targeting-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/AudienceTargetingBundle/Resources/js",
         "sulu-category-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/CategoryBundle/Resources/js",
