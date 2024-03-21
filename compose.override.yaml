@@ -3,8 +3,13 @@ version: '3'
 services:
 ###> symfony/mailer ###
   mailer:
-    image: schickling/mailcatcher
-    ports: [1025, 1080]
+    image: axllent/mailpit
+    ports:
+      - "1025"
+      - "8025"
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
 ###< symfony/mailer ###
 
 ###> doctrine/doctrine-bundle ###

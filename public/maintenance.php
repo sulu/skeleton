@@ -1,4 +1,7 @@
 <?php declare(strict_types=1);
+
+// the maintenance.php file should be free of any library usage, as it should work without having dependencies installed
+
 // default locale for maintenance translations
 \define('DEFAULT_LOCALE', 'en');
 
