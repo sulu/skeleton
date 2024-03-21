@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<!-- https://phpunit.readthedocs.io/en/latest/configuration.html -->
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          backupGlobals="false"
          colors="true"
          bootstrap="tests/bootstrap.php"
+         convertDeprecationsToExceptions="false"
 >
     <php>
+        <ini name="display_errors" value="1" />
         <ini name="error_reporting" value="-1" />
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
-        <!-- See: https://symfony.com/doc/current/components/phpunit_bridge.html#modified-phpunit-script -->
-        <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak"/>
-        <!-- Set "SYMFONY_PHPUNIT_VERSION" to use fixed phpunit version: https://symfony.com/doc/current/components/phpunit_bridge.html#modified-phpunit-script -->
-        <!-- <server name="SYMFONY_PHPUNIT_VERSION" value="8.5" /> -->
-        <!-- Set "SYMFONY_PHPUNIT_REMOVE" to "symfony/yaml" to install "prophecy": https://symfony.com/doc/current/components/phpunit_bridge.html#modified-phpunit-script -->
-        <server name="SYMFONY_PHPUNIT_REMOVE" value="symfony/yaml"/>
+        <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
+        <server name="SYMFONY_PHPUNIT_VERSION" value="9.5" />
     </php>
 
     <testsuites>
@@ -35,10 +33,6 @@
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
     </listeners>
 
-    <!-- Run `composer require symfony/panther` before enabling this extension -->
-    <!--
     <extensions>
-        <extension class="Symfony\Component\Panther\ServerExtension" />
     </extensions>
-    -->
 </phpunit>
