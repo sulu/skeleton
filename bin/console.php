@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 $vendorDir = exec('composer config vendor-dir');
 
 if (!\is_dir($vendorDir)) {
-    throw new \LogicException('Dependencies are missing. Try running "composer install".');
+    throw new \LogicException('Dependencies are missing from vendor directory "'.$vendorDir.'". Try running "composer install".');
 }
 
 if (!\is_file($vendorDir.'/autoload_runtime.php')) {
