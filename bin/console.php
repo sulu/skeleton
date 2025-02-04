@@ -14,15 +14,17 @@ declare(strict_types=1);
 use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 
-if (!\is_dir(\dirname(__DIR__) . '/vendor')) {
+$vendorDir = exec('composer config vendor-dir');
+
+if (!\is_dir($vendorDir)) {
     throw new \LogicException('Dependencies are missing. Try running "composer install".');
 }
 
-if (!\is_file(\dirname(__DIR__) . '/vendor/autoload_runtime.php')) {
+if (!\is_file($vendorDir.'/autoload_runtime.php')) {
     throw new \LogicException('Symfony Runtime is missing. Try running "composer require symfony/runtime".');
 }
 
-require_once \dirname(__DIR__) . '/vendor/autoload_runtime.php';
+require_once $vendorDir.'/autoload_runtime.php';
 
 if (!isset($suluContext)) {
     $suluContext = Kernel::CONTEXT_ADMIN;
