@@ -359,12 +359,12 @@
         ]
     },
     "vincentlanglet/twig-cs-fixer": {
-        "version": "3.0",
+        "version": "3.5",
         "recipe": {
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
-            "version": "0.6",
-            "ref": "e4da12a48e8138479bd24a675321bcfd84950266"
+            "version": "3.0",
+            "ref": "d42582ae1bce86fd43491d6264c738b0867f8ffe"
         }
     }
 }
