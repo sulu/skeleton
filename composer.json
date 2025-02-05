@@ -41,16 +41,16 @@
         "scheb/2fa-trusted-device": "^6.1",
         "stof/doctrine-extensions-bundle": "^1.8",
         "sulu/sulu": "~2.5.22",
-        "symfony/config": "^6.3",
-        "symfony/dotenv": "^6.3",
+        "symfony/config": "^6.4",
+        "symfony/dotenv": "^6.4",
         "symfony/flex": "^1.17 || ^2.0",
-        "symfony/framework-bundle": "^6.3",
-        "symfony/mailer": "^6.3",
-        "symfony/monolog-bridge": "^6.3",
+        "symfony/framework-bundle": "^6.4",
+        "symfony/mailer": "^6.4",
+        "symfony/monolog-bridge": "^6.4",
         "symfony/monolog-bundle": "^3.4",
-        "symfony/runtime": "^6.3",
-        "symfony/security-bundle": "^6.3",
-        "symfony/twig-bundle": "^6.3"
+        "symfony/runtime": "^6.4",
+        "symfony/security-bundle": "^6.4",
+        "symfony/twig-bundle": "^6.4"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.41",
@@ -66,13 +66,13 @@
         "phpunit/phpunit": "^9.6",
         "rector/rector": "^1.0",
         "sulu/sulu-rector": "^1.0",
-        "symfony/browser-kit": "^6.3",
-        "symfony/css-selector": "^6.3",
-        "symfony/debug-bundle": "^6.3",
-        "symfony/error-handler": "^6.3",
-        "symfony/phpunit-bridge": "^6.3",
+        "symfony/browser-kit": "^6.4",
+        "symfony/css-selector": "^6.4",
+        "symfony/debug-bundle": "^6.4",
+        "symfony/error-handler": "^6.4",
+        "symfony/phpunit-bridge": "^6.4",
         "symfony/thanks": "^1.2",
-        "symfony/web-profiler-bundle": "^6.3",
+        "symfony/web-profiler-bundle": "^6.4",
         "thecodingmachine/phpstan-strict-rules": "^1.0"
     },
     "autoload": {
@@ -183,7 +183,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "6.3.*"
+            "require": "6.4.*"
         }
     }
 }
