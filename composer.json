@@ -26,12 +26,6 @@
         "docs": "https://docs.sulu.io/",
         "chat": "https://sulu.io/services-and-support#chat"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:alexander-schranz/sulu.git"
-        }
-    ],
     "require": {
         "php": "^8.2",
         "ext-ctype": "*",
@@ -47,7 +41,7 @@
         "scheb/2fa-email": "^7.2",
         "scheb/2fa-trusted-device": "^7.2",
         "stof/doctrine-extensions-bundle": "^1.11",
-        "sulu/sulu": "dev-feature/route-handling-content-integration as 3.0.0-alpha-1",
+        "sulu/sulu": "^3.0.x-dev",
         "symfony/config": "^7.2",
         "symfony/dotenv": "^7.2",
         "symfony/flex": "^1.17 || ^2.0",
