@@ -27,7 +27,7 @@
             <tag name="sulu.rlp.part"/>
         </property>
 
-        <property name="url" type="route">
+        <property name="url" type="route" mandatory="true">
             <meta>
                 <title lang="en">Resourcelocator</title>
                 <title lang="de">Adresse</title>
@@ -36,107 +36,11 @@
             <tag name="sulu.rlp"/>
         </property>
 
-        <property name="editor" type="text_editor">
+        <property name="article" type="text_editor">
             <meta>
                 <title lang="en">Article</title>
                 <title lang="de">Artikel</title>
             </meta>
         </property>
-
-        <property name="date" type="date">
-            <meta>
-                <title lang="en">Date</title>
-                <title lang="de">Datum</title>
-            </meta>
-        </property>
-
-        <property name="datetime" type="datetime">
-            <meta>
-                <title lang="en">Datetime</title>
-                <title lang="de">Datum und Uhrzeit</title>
-            </meta>
-        </property>
-
-        <property name="snippet" type="single_snippet_selection">
-            <meta>
-                <title lang="en">Snippet</title>
-                <title lang="de">Schnipsel</title>
-            </meta>
-        </property>
-
-        <property name="snippets" type="snippet_selection">
-            <meta>
-                <title lang="en">Snippets</title>
-                <title lang="de">Schnipsel</title>
-            </meta>
-        </property>
-
-        <property name="page" type="single_page_selection">
-            <meta>
-                <title lang="en">Page</title>
-                <title lang="de">Seite</title>
-            </meta>
-        </property>
-
-        <property name="pages" type="page_selection">
-            <meta>
-                <title lang="en">Page</title>
-                <title lang="de">Seite</title>
-            </meta>
-        </property>
-
-        <property name="location" type="location">
-            <meta>
-                <title lang="en">Location</title>
-                <title lang="de">Ort</title>
-            </meta>
-        </property>
-
-        <block name="blocks" default-type="editor" minOccurs="1" maxOccurs="1">
-            <meta>
-                <title lang="en">Content</title>
-                <title lang="de">Inhalte</title>
-            </meta>
-
-            <types>
-                <type name="editor">
-                    <meta>
-                        <title lang="en">Editor</title>
-                        <title lang="de">Editor</title>
-                    </meta>
-                    <properties>
-                        <property name="text_editor" type="text_editor">
-                            <meta>
-                                <title lang="en">Text Editor</title>
-                                <title lang="de">Texteditor</title>
-                            </meta>
-                        </property>
-                    </properties>
-                </type>
-                <type name="media">
-                    <meta>
-                        <title lang="de">Media</title>
-                        <title lang="en">Media</title>
-                    </meta>
-                    <properties>
-                        <property name="media_selection" type="media_selection">
-                            <meta>
-                                <title lang="en">Media Selection</title>
-                                <title lang="de">Medienauswahl</title>
-                            </meta>
-                            <params>
-                                <param name="types" value="image,video"/>
-                                <param name="displayOptions" type="collection">
-                                    <param name="leftTop" value="true"/>
-                                    <param name="top" value="true"/>
-                                </param>
-
-                                <param name="defaultDisplayOption" value="left"/>
-                            </params>
-                        </property>
-                    </properties>
-                </type>
-            </types>
-        </block>
     </properties>
 </template>
