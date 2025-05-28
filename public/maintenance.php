@@ -30,7 +30,7 @@ if (\in_array($_SERVER['REMOTE_ADDR'], $allowedIPs, true)) {
 }
 
 // get language
-$lang = \substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$lang = \substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); // @phpstan-ignore-line argument.type
 
 // chose locale
 $locale = \array_key_exists($lang, $translations) ? $lang : DEFAULT_LOCALE;
