@@ -2,13 +2,16 @@
 
 declare(strict_types=1);
 
-$finder = (new PhpCsFixer\Finder())
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$finder = (new Finder())
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->exclude('var')
     ->notName('bundles.php');
 
-return (new PhpCsFixer\Config())
+return (new Config())
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,

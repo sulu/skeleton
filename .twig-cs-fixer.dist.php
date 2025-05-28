@@ -2,13 +2,18 @@
 
 declare(strict_types=1);
 
-$ruleset = new TwigCsFixer\Ruleset\Ruleset();
-$ruleset->addStandard(new TwigCsFixer\Standard\TwigCsFixer());
+use TwigCsFixer\Config\Config;
+use TwigCsFixer\File\Finder;
+use TwigCsFixer\Ruleset\Ruleset;
+use TwigCsFixer\Standard\TwigCsFixer;
 
-$finder = new TwigCsFixer\File\Finder();
+$ruleset = new Ruleset();
+$ruleset->addStandard(new TwigCsFixer());
+
+$finder = new Finder();
 $finder->in('templates/');
 
-$config = new TwigCsFixer\Config\Config();
+$config = new Config();
 $config->allowNonFixableRules();
 $config->setRuleset($ruleset);
 $config->setFinder($finder);
