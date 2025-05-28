@@ -22,7 +22,8 @@ return RectorConfig::configure()
     ->withPhpSets()
 
     // symfony rules
-    ->withSymfonyContainerPhp(__DIR__ . '/var/cache/website/dev/App_KernelDevDebugContainer.xml')
+    ->withSymfonyContainerXml(__DIR__ . '/var/cache/website/dev/App_KernelDevDebugContainer.xml')
+    ->withSymfonyContainerPhp(__DIR__ . '/tests/rector/symfony-container.php')
     ->withSets([
         SymfonySetList::SYMFONY_CODE_QUALITY,
         SymfonySetList::SYMFONY_CONSTRUCTOR_INJECTION,
