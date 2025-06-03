@@ -31,7 +31,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.13",
-        "doctrine/doctrine-fixtures-bundle": "^3.6",
+        "doctrine/doctrine-fixtures-bundle": "^3.6 || ^4.0",
         "friendsofsymfony/http-cache-bundle": "^3.0",
         "handcraftedinthealps/zendsearch": "^2.1",
         "jackalope/jackalope-doctrine-dbal": "^1.10 || ^2.0",
