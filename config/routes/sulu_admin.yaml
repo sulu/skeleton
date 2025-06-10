@@ -97,6 +97,7 @@ sulu_reference_api:
     resource: "@SuluReferenceBundle/Resources/config/routing_api.yaml"
     prefix: /admin/api
 
+# to enable audience targeting see: https://docs.sulu.io/en/2.6/bundles/audience_targeting.html
 #sulu_audience_targeting_api:
 #    resource: "@SuluAudienceTargetingBundle/Resources/config/routing_api.yaml"
 #    prefix: /admin/api
