@@ -27,7 +27,7 @@
         "chat": "https://sulu.io/services-and-support#chat"
     },
     "require": {
-        "php": "^8.2",
+        "php": ">=8.4.8",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.13",
@@ -37,6 +37,7 @@
         "jackalope/jackalope-doctrine-dbal": "^1.10 || ^2.0",
         "phpcr/phpcr-migrations-bundle": "^1.6",
         "phpcr/phpcr-shell": "^1.6",
+        "runtime/frankenphp-symfony": "^0.2.0",
         "scheb/2fa-bundle": "^7.3",
         "scheb/2fa-email": "^7.3",
         "scheb/2fa-trusted-device": "^7.3",
@@ -49,7 +50,7 @@
         "symfony/mailer": "^7.3",
         "symfony/monolog-bridge": "^7.3",
         "symfony/monolog-bundle": "^3.4",
-        "symfony/runtime": "^7.3",
+        "symfony/runtime": "7.3.*",
         "symfony/security-bundle": "^7.3",
         "symfony/twig-bundle": "^7.3"
     },
@@ -201,7 +202,11 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "7.3.*"
+            "require": "7.3.*",
+            "docker": true
+        },
+        "runtime": {
+            "class": "Runtime\\FrankenPhpSymfony\\Runtime"
         }
     }
 }
