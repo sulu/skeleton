@@ -240,7 +240,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "7.3",
-            "ref": "a64726446f6dcf3721f192c1df35418d69b3ba92"
+            "ref": "5a1497d539f691b96afd45ae397ce5fe30beb4b9"
         },
         "files": [
             ".editorconfig",
