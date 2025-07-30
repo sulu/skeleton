@@ -110,9 +110,6 @@
     "massive/build-bundle": {
         "version": "0.5.7"
     },
-    "massive/search-bundle": {
-        "version": "2.9.1"
-    },
     "php-cs-fixer/shim": {
         "version": "3.60",
         "recipe": {
