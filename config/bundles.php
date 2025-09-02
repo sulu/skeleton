@@ -24,7 +24,6 @@ return [
     Sulu\Bundle\HttpCacheBundle\SuluHttpCacheBundle::class => ['all' => true],
     Sulu\Bundle\DocumentManagerBundle\SuluDocumentManagerBundle::class => ['all' => true],
     Sulu\Bundle\HashBundle\SuluHashBundle::class => ['all' => true],
-    Sulu\Bundle\RouteBundle\SuluRouteBundle::class => ['all' => true],
     Sulu\Bundle\MarkupBundle\SuluMarkupBundle::class => ['all' => true],
     PHPCR\PhpcrMigrationsBundle\PhpcrMigrationsBundle::class => ['all' => true],
     Massive\Bundle\BuildBundle\MassiveBuildBundle::class => ['all' => true],
