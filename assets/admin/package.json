@@ -22,7 +22,7 @@
         "sulu-media-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/MediaBundle/Resources/js",
         "sulu-page-bundle": "file:../../vendor/sulu/sulu/packages/page/assets/js",
         "sulu-preview-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/PreviewBundle/Resources/js",
-        "sulu-route-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/RouteBundle/Resources/js",
+        "sulu-route-bundle": "file:../../vendor/sulu/sulu/packages/route/assets/js",
         "sulu-search-bundle": "file:../../vendor/sulu/sulu/packages/search/assets/js",
         "sulu-security-bundle": "file:../../vendor/sulu/sulu/src/Sulu/Bundle/SecurityBundle/Resources/js",
         "sulu-snippet-bundle": "file:../../vendor/sulu/sulu/packages/snippet/assets/js",
