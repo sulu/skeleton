@@ -123,13 +123,6 @@ jobs:
               env: ${{ matrix.env }}
               working-directory: ${{ matrix.working-directory }}
 
-            - name: Test phpcr
-              run: |
-                  bin/console doctrine:phpcr:node:dump "/cmf/website/contents" --env dev --no-interaction
-                  bin/console doctrine:phpcr:node:dump "/cmf/website/contents" --env prod --no-interaction
-              env: ${{ matrix.env }}
-              working-directory: ${{ matrix.working-directory }}
-
             - name: Build container
               run: |
                   bin/adminconsole cache:clear --env dev
@@ -244,11 +237,6 @@ jobs:
 
             - name: Build sulu
               run: php bin/adminconsole sulu:build dev --env dev --no-interaction
-
-            - name: Test phpcr
-              run: |
-                  php bin/console doctrine:phpcr:node:dump "/cmf/website/contents" --env dev --no-interaction
-                  php bin/console doctrine:phpcr:node:dump "/cmf/website/contents" --env prod --no-interaction
 
             - name: Build container
               run: |
