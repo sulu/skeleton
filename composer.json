@@ -26,6 +26,12 @@
         "docs": "https://docs.sulu.io/",
         "chat": "https://sulu.io/services-and-support#chat"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/alexander-schranz/sulu.git"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "ext-ctype": "*",
@@ -40,7 +46,7 @@
         "scheb/2fa-email": "^7.3",
         "scheb/2fa-trusted-device": "^7.3",
         "stof/doctrine-extensions-bundle": "^1.11",
-        "sulu/sulu": "^3.0@dev",
+        "sulu/sulu": "dev-enhancement/remove-phpcr-document-manager-based-test-references",
         "symfony/config": "^7.3",
         "symfony/dotenv": "^7.3",
         "symfony/flex": "^1.17 || ^2.0",
