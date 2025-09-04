@@ -11,9 +11,6 @@ on:
 
 jobs:
     test:
-        permissions:
-            repository-projects: read
-
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }}"
         runs-on: ubuntu-latest
 
@@ -179,9 +176,6 @@ jobs:
               working-directory: ${{ matrix.working-directory }}/assets/admin
 
     php-windows:
-        permissions:
-            repository-projects: read
-
         name: "PHP ${{ matrix.php-version }} and Node.js ${{ matrix.node-version }} on Windows"
         runs-on: windows-latest
         env:
