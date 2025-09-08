@@ -1,7 +1,1 @@
 sulu_article: {}
-
-sulu_core:
-    content:
-        structure:
-            default_type:
-                article: 'article'
