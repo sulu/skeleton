@@ -30,6 +30,7 @@
         "php": "^8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "cmsig/seal-loupe-adapter": "^0.12.2",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-fixtures-bundle": "^3.6 || ^4.0",
         "friendsofsymfony/http-cache-bundle": "^3.0",
@@ -37,7 +38,7 @@
         "scheb/2fa-email": "^7.3",
         "scheb/2fa-trusted-device": "^7.3",
         "stof/doctrine-extensions-bundle": "^1.11",
-        "sulu/sulu": "3.0.0-beta1",
+        "sulu/sulu": "^3.0.0@dev",
         "symfony/config": "^7.3",
         "symfony/dotenv": "^7.3",
         "symfony/flex": "^1.17 || ^2.0",
@@ -50,6 +51,7 @@
         "symfony/twig-bundle": "^7.3"
     },
     "require-dev": {
+        "cmsig/seal-memory-adapter": "^0.12.2",
         "jangregor/phpstan-prophecy": "^2.0",
         "php-cs-fixer/shim": "^3.58",
         "phpspec/prophecy-phpunit": "^2.1",

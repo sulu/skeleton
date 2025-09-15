@@ -1,4 +1,17 @@
 {
+    "cmsig/seal-symfony-bundle": {
+        "version": "0.12",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.8",
+            "ref": "458145ff09fdee9eb7ac74dfaf02aab3cf12621a"
+        },
+        "files": [
+            "config/packages/cmsig_seal.yaml",
+            "config/schemas/.gitignore"
+        ]
+    },
     "doctrine/annotations": {
         "version": "2.0",
         "recipe": {
@@ -212,18 +225,6 @@
         "files": [
             ".env",
             ".env.dev"
-        ]
-    },
-    "symfony/form": {
-        "version": "7.2",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "7.2",
-            "ref": "7d86a6723f4a623f59e2bf966b6aad2fc461d36b"
-        },
-        "files": [
-            "config/packages/csrf.yaml"
         ]
     },
     "symfony/framework-bundle": {
