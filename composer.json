@@ -41,7 +41,7 @@
         "scheb/2fa-email": "^7.3",
         "scheb/2fa-trusted-device": "^7.3",
         "stof/doctrine-extensions-bundle": "^1.11",
-        "sulu/sulu": "~2.6.12",
+        "sulu/sulu": "2.6.*@dev",
         "symfony/config": "^7.3",
         "symfony/dotenv": "^7.3",
         "symfony/flex": "^1.17 || ^2.0",
@@ -142,6 +142,7 @@
             "@lint-twig-cs",
             "@lint-yaml",
             "@lint-xliff",
+            "@lint-admin-build",
             "@lint-translations",
             "@lint-container",
             "@lint-composer",
@@ -170,6 +171,7 @@
         "lint-composer": "@composer validate --no-check-publish --strict",
         "lint-twig": "@php bin/console lint:twig templates/",
         "lint-xliff": "@php bin/console lint:xliff translations/",
+        "lint-admin-build": "@php bin/console sulu:admin:validate-build",
         "lint-translations": [
             "@php bin/console debug:translation en --only-missing"
         ],
