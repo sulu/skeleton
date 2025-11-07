@@ -39,7 +39,7 @@ $locale = \array_key_exists($lang, $translations) ? $lang : DEFAULT_LOCALE;
 \header('Content-Language: ' . $locale);
 
 if (isset($_SERVER['HTTP_ACCEPT'])
-    && 1 === \preg_match('#^application/(.+\+)?json$#', $_SERVER['HTTP_ACCEPT'])
+    && 1 === \preg_match('#^application/(.+\+)?json$#', $_SERVER['HTTP_ACCEPT']) // @phpstan-ignore-line argument.type
 ) {
     \header('Content-Type: application/problem+json; charset=utf-8');
     \http_response_code(503);
