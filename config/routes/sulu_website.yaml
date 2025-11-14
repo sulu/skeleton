@@ -4,6 +4,10 @@ sulu_media:
 sulu_website:
     resource: "@SuluWebsiteBundle/Resources/config/routing_website.yaml"
 
+sulu_search:
+    type: portal
+    resource: "@SuluSearchBundle/config/routing_website.yaml"
+
 # to enable audience targeting see: https://docs.sulu.io/en/2.6/bundles/audience_targeting.html
 #sulu_audience_targeting:
 #    resource: "@SuluAudienceTargetingBundle/Resources/config/routing_website.yaml"
