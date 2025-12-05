@@ -17,7 +17,7 @@
         <default-template type="home">homepage</default-template>
     </default-templates>
 
-    <!-- See: https://docs.sulu.io/en/latest/book/webspaces.html#excluded-templates-optional
+    <!-- See: https://docs.sulu.io/en/2.6/book/webspaces.html#excluded-templates-optional
     <excluded-templates>
         <excluded-template>other</excluded-template>
     </excluded-templates>

@@ -1,5 +1,5 @@
 // This file should only be changed by the `bin/console sulu:admin:update-build` command:
-// See https://docs.sulu.io/en/latest/upgrades/upgrade-2.x.html
+// See https://docs.sulu.io/en/2.6/upgrades/upgrade-2.x.html
 
 // Sulu Core Bundles
 import {startAdmin} from 'sulu-admin-bundle';
