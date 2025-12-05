@@ -1,16 +1,17 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+# yaml-language-server: $schema=../vendor/symfony/routing/Loader/schema/routing.schema.json
 
-#static:
-#    path: /static-route
-#    controller: App\Controller\DefaultController::index
+# This file is the entry point to configure the routes of your app.
+# Methods with the #[Route] attribute are automatically imported.
+# See also https://symfony.com/doc/current/routing.html
+
+# To list all registered routes, run the following command:
+#   bin/console debug:router
+
+controllers:
+    resource: routing.controllers
 
 # If you have a simple login on your website activate the following routes
-# If you need registration or profile edit have a look at the:
-# https://github.com/sulu/SuluCommunityBundle
+# See also: https://docs.sulu.io/en/2.6/cookbook/user-context-caching.html
 #
 #login:
 #    path: /login
