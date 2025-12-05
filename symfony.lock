@@ -143,18 +143,18 @@
         ]
     },
     "phpunit/phpunit": {
-        "version": "12.3",
+        "version": "11.5",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "11.1",
-            "ref": "c6658a60fc9d594805370eacdf542c3d6b5c0869"
+            "ref": "1117deb12541f35793eec9fff7494d7aa12283fc"
         },
         "files": [
             ".env.test",
+            "bin/phpunit",
             "phpunit.dist.xml",
-            "tests/bootstrap.php",
-            "bin/phpunit"
+            "tests/bootstrap.php"
         ]
     },
     "scheb/2fa-bundle": {
