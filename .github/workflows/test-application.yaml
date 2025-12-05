@@ -87,7 +87,7 @@ jobs:
                           APP_SECRET: a448d1dfcaa563fce56c2fd9981f662b
                           MAILER_URL: null://localhost
                           SULU_ADMIN_EMAIL:
-                          DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.4"
+                          DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=8.4.7"
 
         services:
             mysql:
