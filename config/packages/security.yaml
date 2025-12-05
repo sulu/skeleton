@@ -2,31 +2,20 @@ security:
     access_decision_manager:
         strategy: unanimous
         allow_if_all_abstain: true
+
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         sulu:
             id: sulu_security.user_provider
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
-    access_control:
-        - { path: ^/admin/reset, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/security/reset, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/login$, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/2fa, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/_wdt, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/_profiler, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/translations, roles: PUBLIC_ACCESS }
-        - { path: ^/admin$, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/$, roles: PUBLIC_ACCESS }
-        - { path: ^/admin/p/, roles: PUBLIC_ACCESS }
-        - { path: ^/admin, roles: ROLE_USER }
 
     firewalls:
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            # Ensure dev tools and static assets are always allowed
+            pattern: ^/(_profiler|_wdt|assets|build)/
             security: false
         admin:
             pattern: ^/admin(\/|$)
@@ -67,19 +56,31 @@ security:
        #        lifetime: 604800 # 1 week in seconds
        #        path:     /
        #
-       #    # activate different ways to authenticate
+       #    # Activate different ways to authenticate:
        #    # https://symfony.com/doc/current/security.html#the-firewall
        #
        #    # https://symfony.com/doc/current/security/impersonating_user.html
        #    # switch_user: true
 
+    # Note: Only the *first* matching rule is applied
+    access_control:
+        - { path: ^/admin/reset, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/security/reset, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/login$, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/2fa, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/_wdt, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/_profiler, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/translations, roles: PUBLIC_ACCESS }
+        - { path: ^/admin$, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/$, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/p/, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_USER }
+
 when@test:
     security:
         password_hashers:
-            # By default, password hashers are resource intensive and take time. This is
-            # important to generate secure password hashes. In tests however, secure hashes
-            # are not important, waste resources and increase test times. The following
-            # reduces the work factor to the lowest possible values.
+            # Password hashers are resource-intensive by design to ensure security.
+            # In tests, it's safe to reduce their cost to improve performance.
             Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
                 algorithm: auto
                 cost: 4 # Lowest possible value for bcrypt
