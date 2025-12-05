@@ -37,21 +37,21 @@
         "jackalope/jackalope-doctrine-dbal": "^1.10 || ^2.0",
         "phpcr/phpcr-migrations-bundle": "^1.6",
         "phpcr/phpcr-shell": "^1.6",
-        "scheb/2fa-bundle": "^7.3",
-        "scheb/2fa-email": "^7.3",
-        "scheb/2fa-trusted-device": "^7.3",
+        "scheb/2fa-bundle": "^7.4",
+        "scheb/2fa-email": "^7.4",
+        "scheb/2fa-trusted-device": "^7.4",
         "stof/doctrine-extensions-bundle": "^1.11",
         "sulu/sulu": "~2.6.17",
-        "symfony/config": "^7.3",
-        "symfony/dotenv": "^7.3",
+        "symfony/config": "^7.4",
+        "symfony/dotenv": "^7.4",
         "symfony/flex": "^1.17 || ^2.0",
-        "symfony/framework-bundle": "^7.3",
-        "symfony/mailer": "^7.3",
-        "symfony/monolog-bridge": "^7.3",
+        "symfony/framework-bundle": "^7.4",
+        "symfony/mailer": "^7.4",
+        "symfony/monolog-bridge": "^7.4",
         "symfony/monolog-bundle": "^3.4",
-        "symfony/runtime": "^7.3",
-        "symfony/security-bundle": "^7.3",
-        "symfony/twig-bundle": "^7.3"
+        "symfony/runtime": "^7.4",
+        "symfony/security-bundle": "^7.4",
+        "symfony/twig-bundle": "^7.4"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^2.0",
@@ -66,12 +66,12 @@
         "phpunit/phpunit": "^11.5 || ^12.1",
         "rector/rector": "^2.0",
         "sulu/sulu-rector": "^2.0",
-        "symfony/browser-kit": "^7.3",
-        "symfony/css-selector": "^7.3",
-        "symfony/debug-bundle": "^7.3",
-        "symfony/error-handler": "^7.3",
+        "symfony/browser-kit": "^7.4",
+        "symfony/css-selector": "^7.4",
+        "symfony/debug-bundle": "^7.4",
+        "symfony/error-handler": "^7.4",
         "symfony/thanks": "^1.2",
-        "symfony/web-profiler-bundle": "^7.3",
+        "symfony/web-profiler-bundle": "^7.4",
         "vincentlanglet/twig-cs-fixer": "^3.0"
     },
     "conflict": {
@@ -203,7 +203,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "7.3.*"
+            "require": "7.4.*"
         }
     }
 }
