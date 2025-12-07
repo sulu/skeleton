@@ -249,7 +249,7 @@ jobs:
                   dependency-versions: 'highest'
 
             - name: Build sulu
-              run: php bin/adminconsole sulu:build dev --env dev --no-interaction
+              run: php bin/adminconsole sulu:build dev --env dev --no-interaction -vvv
 
             - name: Build container
               run: |
