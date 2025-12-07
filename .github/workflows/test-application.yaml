@@ -207,11 +207,11 @@ jobs:
             fail-fast: false
             matrix:
                 include:
-                    - php-version: '8.3'
-                      node-version: '20'
-                      npm-version: '10'
-                      mysql-version: '8.0'
-                      php-extensions: 'ctype, iconv, intl, mysql, pdo_mysql, php_fileinfo, gd, sodium, zip'
+                    - php-version: '8.5'
+                      node-version: '24'
+                      npm-version: '11'
+                      mysql-version: '8.4'
+                      php-extensions: 'ctype, iconv, intl, mysql, pdo, pdo_mysql, php_fileinfo, gd, sodium, zip'
                       tools: 'composer:v2'
 
         steps:
@@ -237,13 +237,10 @@ jobs:
                   rm disable.php
 
             - name: Install and configure MySQL
-              uses: shogo82148/actions-setup-mysql@v1.14.1
+              uses: shogo82148/actions-setup-mysql@v1.47.0
               with:
                   mysql-version: ${{ matrix.mysql-version }}
                   root-password: 'root'
-                  my-cnf: |
-                      [mysqld]
-                      default-authentication-plugin=mysql_native_password
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v3
