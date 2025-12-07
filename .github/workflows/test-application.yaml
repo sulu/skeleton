@@ -211,7 +211,7 @@ jobs:
                       node-version: '24'
                       npm-version: '11'
                       mysql-version: '8.4'
-                      php-extensions: 'ctype, iconv, intl, mysql, pdo, pdo_mysql, php_fileinfo, gd, sodium, zip'
+                      php-extensions: 'ctype, iconv, intl, mysql, pdo, pdo_mysql, pdo_sqlite, php_fileinfo, gd, sodium, zip'
                       tools: 'composer:v2'
 
         steps:
@@ -249,7 +249,7 @@ jobs:
                   dependency-versions: 'highest'
 
             - name: Build sulu
-              run: php bin/adminconsole sulu:build dev --env dev --no-interaction -vvv
+              run: php bin/adminconsole sulu:build dev --env dev --no-interaction
 
             - name: Build container
               run: |
