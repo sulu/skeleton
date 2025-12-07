@@ -248,6 +248,12 @@ jobs:
                   composer-options: '--no-cache'
                   dependency-versions: 'highest'
 
+            - name: Composer Infos
+              run: composer show --platform
+
+            - name: Check Loupe
+              run: composer why-not loupe/loupe 0.13.2
+
             - name: Build sulu
               run: php bin/adminconsole sulu:build dev --env dev --no-interaction
 
