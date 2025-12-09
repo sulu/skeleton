@@ -48,7 +48,7 @@
         "symfony/framework-bundle": "^7.4",
         "symfony/mailer": "^7.4",
         "symfony/monolog-bridge": "^7.4",
-        "symfony/monolog-bundle": "^3.4",
+        "symfony/monolog-bundle": "^4.0",
         "symfony/runtime": "^7.4",
         "symfony/security-bundle": "^7.4",
         "symfony/twig-bundle": "^7.4"
