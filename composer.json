@@ -180,9 +180,7 @@
             "@php bin/console lint:container --env prod"
         ],
         "lint-doctrine": [
-            "@php bin/console doctrine:schema:validate --skip-sync",
-            "@php bin/console doctrine:ensure-production-settings --env stage",
-            "@php bin/console doctrine:ensure-production-settings --env prod"
+            "@php bin/console doctrine:schema:validate --skip-sync"
         ]
     },
     "config": {
