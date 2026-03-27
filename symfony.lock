@@ -109,7 +109,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "3.0",
-            "ref": "16422bf8eac6c3be42afe07d37e2abc89d2bdf6b"
+            "ref": "6cf95ac1baa3d6f5816dd4db7281997912f239a6"
         },
         "files": [
             ".php-cs-fixer.dist.php"

@@ -9,7 +9,10 @@ $finder = (new Finder())
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->exclude('var')
-    ->notName('bundles.php');
+    ->notPath([
+        'config/bundles.php',
+        'config/reference.php',
+    ]);
 
 return (new Config())
     ->setRiskyAllowed(true)
