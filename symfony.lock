@@ -108,7 +108,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "3.0",
-            "ref": "16422bf8eac6c3be42afe07d37e2abc89d2bdf6b"
+            "ref": "6cf95ac1baa3d6f5816dd4db7281997912f239a6"
         },
         "files": [
             ".php-cs-fixer.dist.php"
@@ -343,7 +343,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "6.4",
-            "ref": "cab5fd2a13a45c266d45a7d9337e28dee6272877"
+            "ref": "f250159ebe99153d0c640a3e7742876fc7453f2c"
         },
         "files": [
             "config/packages/twig.yaml",
