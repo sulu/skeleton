@@ -1,0 +1,1851 @@
+{
+    ".container.known_envs": [
+        "dev",
+        "test",
+        "prod",
+        "stage"
+    ],
+    ".form.type_extension.csrf.token_id": null,
+    ".security.authentication.expose_security_errors": "Symfony\\Component\\Security\\Http\\Authentication\\ExposeSecurityLevel::None",
+    ".serializer.named_serializers": [],
+    "app.version": null,
+    "asset.request_context.base_path": null,
+    "asset.request_context.secure": null,
+    "cache.prefix.seed": "_\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost.App_KernelProdContainer",
+    "console.command.ids": [
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceQueryCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\MigratorMigrateCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeDumpCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeMoveCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeRemoveCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodesUpdateCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeTouchCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeTypeListCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\NodeTypeRegisterCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\PhpcrShellCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\RepositoryInitCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceCreateCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceDeleteCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceExportCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceImportCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspaceListCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\Command\\WorkspacePurgeCommand",
+        "console.command.public_alias.Doctrine\\Bundle\\PHPCRBundle\\OptionalCommand\\Jackalope\\InitDoctrineDbalCommand",
+        "console.command.public_alias.handcraftedinthealps_rest_routing.command",
+        "console.command.public_alias.massive_search.command.init",
+        "console.command.public_alias.massive_search.command.status",
+        "console.command.public_alias.massive_search.command.optimize",
+        "console.command.public_alias.massive_search.command.query",
+        "console.command.public_alias.massive_search.command.reindex",
+        "console.command.public_alias.massive_search.command.index_rebuild_deprecated",
+        "console.command.public_alias.massive_search.command.purge",
+        "console.command.public_alias.sulu_page.command.workspace_import",
+        "phpcr_migrations.command.status",
+        "phpcr_migrations.command.migrate",
+        "phpcr_migrations.command.initialize"
+    ],
+    "container.dumper.inline_class_loader": true,
+    "data_collector.templates": [],
+    "debug.error_handler.throw_at": 0,
+    "debug.file_link_format": null,
+    "default_locale": "en",
+    "doctrine.class": "Doctrine\\Bundle\\DoctrineBundle\\Registry",
+    "doctrine.connections": {
+        "default": "doctrine.dbal.default_connection"
+    },
+    "doctrine.data_collector.class": "Doctrine\\Bundle\\DoctrineBundle\\DataCollector\\DoctrineDataCollector",
+    "doctrine.dbal.configuration.class": "Doctrine\\DBAL\\Configuration",
+    "doctrine.dbal.connection.event_manager.class": "Symfony\\Bridge\\Doctrine\\ContainerAwareEventManager",
+    "doctrine.dbal.connection_factory.class": "Doctrine\\Bundle\\DoctrineBundle\\ConnectionFactory",
+    "doctrine.dbal.connection_factory.types": {
+        "date_point": {
+            "class": "Symfony\\Bridge\\Doctrine\\Types\\DatePointType"
+        },
+        "day_point": {
+            "class": "Symfony\\Bridge\\Doctrine\\Types\\DayPointType"
+        },
+        "time_point": {
+            "class": "Symfony\\Bridge\\Doctrine\\Types\\TimePointType"
+        }
+    },
+    "doctrine.dbal.events.mysql_session_init.class": "Doctrine\\DBAL\\Event\\Listeners\\MysqlSessionInit",
+    "doctrine.dbal.events.oracle_session_init.class": "Doctrine\\DBAL\\Event\\Listeners\\OracleSessionInit",
+    "doctrine.default_connection": "default",
+    "doctrine.default_entity_manager": "default",
+    "doctrine.entity_managers": {
+        "default": "doctrine.orm.default_entity_manager"
+    },
+    "doctrine.orm.auto_generate_proxy_classes": false,
+    "doctrine.orm.cache.apc.class": "Doctrine\\Common\\Cache\\ApcCache",
+    "doctrine.orm.cache.array.class": "Doctrine\\Common\\Cache\\ArrayCache",
+    "doctrine.orm.cache.memcache.class": "Doctrine\\Common\\Cache\\MemcacheCache",
+    "doctrine.orm.cache.memcache_host": "localhost",
+    "doctrine.orm.cache.memcache_instance.class": "Memcache",
+    "doctrine.orm.cache.memcache_port": 11211,
+    "doctrine.orm.cache.memcached.class": "Doctrine\\Common\\Cache\\MemcachedCache",
+    "doctrine.orm.cache.memcached_host": "localhost",
+    "doctrine.orm.cache.memcached_instance.class": "Memcached",
+    "doctrine.orm.cache.memcached_port": 11211,
+    "doctrine.orm.cache.redis.class": "Doctrine\\Common\\Cache\\RedisCache",
+    "doctrine.orm.cache.redis_host": "localhost",
+    "doctrine.orm.cache.redis_instance.class": "Redis",
+    "doctrine.orm.cache.redis_port": 6379,
+    "doctrine.orm.cache.wincache.class": "Doctrine\\Common\\Cache\\WinCacheCache",
+    "doctrine.orm.cache.xcache.class": "Doctrine\\Common\\Cache\\XcacheCache",
+    "doctrine.orm.cache.zenddata.class": "Doctrine\\Common\\Cache\\ZendDataCache",
+    "doctrine.orm.configuration.class": "Doctrine\\ORM\\Configuration",
+    "doctrine.orm.enable_lazy_ghost_objects": true,
+    "doctrine.orm.enable_native_lazy_objects": false,
+    "doctrine.orm.entity_listener_resolver.class": "Doctrine\\Bundle\\DoctrineBundle\\Mapping\\ContainerEntityListenerResolver",
+    "doctrine.orm.entity_manager.class": "Doctrine\\ORM\\EntityManager",
+    "doctrine.orm.listeners.attach_entity_listeners.class": "Doctrine\\ORM\\Tools\\AttachEntityListenersListener",
+    "doctrine.orm.listeners.resolve_target_entity.class": "Doctrine\\ORM\\Tools\\ResolveTargetEntityListener",
+    "doctrine.orm.manager_configurator.class": "Doctrine\\Bundle\\DoctrineBundle\\ManagerConfigurator",
+    "doctrine.orm.metadata.annotation.class": "Doctrine\\ORM\\Mapping\\Driver\\AnnotationDriver",
+    "doctrine.orm.metadata.attribute.class": "Doctrine\\ORM\\Mapping\\Driver\\AttributeDriver",
+    "doctrine.orm.metadata.driver_chain.class": "Doctrine\\Persistence\\Mapping\\Driver\\MappingDriverChain",
+    "doctrine.orm.metadata.php.class": "Doctrine\\Persistence\\Mapping\\Driver\\PHPDriver",
+    "doctrine.orm.metadata.staticphp.class": "Doctrine\\Persistence\\Mapping\\Driver\\StaticPHPDriver",
+    "doctrine.orm.metadata.xml.class": "Doctrine\\ORM\\Mapping\\Driver\\SimplifiedXmlDriver",
+    "doctrine.orm.metadata.yml.class": "Doctrine\\ORM\\Mapping\\Driver\\SimplifiedYamlDriver",
+    "doctrine.orm.naming_strategy.default.class": "Doctrine\\ORM\\Mapping\\DefaultNamingStrategy",
+    "doctrine.orm.naming_strategy.underscore.class": "Doctrine\\ORM\\Mapping\\UnderscoreNamingStrategy",
+    "doctrine.orm.proxy_cache_warmer.class": "Symfony\\Bridge\\Doctrine\\CacheWarmer\\ProxyCacheWarmer",
+    "doctrine.orm.proxy_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/doctrine\/orm\/Proxies",
+    "doctrine.orm.proxy_namespace": "Proxies",
+    "doctrine.orm.quote_strategy.ansi.class": "Doctrine\\ORM\\Mapping\\AnsiQuoteStrategy",
+    "doctrine.orm.quote_strategy.default.class": "Doctrine\\ORM\\Mapping\\DefaultQuoteStrategy",
+    "doctrine.orm.second_level_cache.cache_configuration.class": "Doctrine\\ORM\\Cache\\CacheConfiguration",
+    "doctrine.orm.second_level_cache.default_cache_factory.class": "Doctrine\\ORM\\Cache\\DefaultCacheFactory",
+    "doctrine.orm.second_level_cache.default_region.class": "Doctrine\\ORM\\Cache\\Region\\DefaultRegion",
+    "doctrine.orm.second_level_cache.filelock_region.class": "Doctrine\\ORM\\Cache\\Region\\FileLockRegion",
+    "doctrine.orm.second_level_cache.logger_chain.class": "Doctrine\\ORM\\Cache\\Logging\\CacheLoggerChain",
+    "doctrine.orm.second_level_cache.logger_statistics.class": "Doctrine\\ORM\\Cache\\Logging\\StatisticsCacheLogger",
+    "doctrine.orm.second_level_cache.regions_configuration.class": "Doctrine\\ORM\\Cache\\RegionsConfiguration",
+    "doctrine.orm.security.user.provider.class": "Symfony\\Bridge\\Doctrine\\Security\\User\\EntityUserProvider",
+    "doctrine.orm.typed_field_mapper.default.class": "Doctrine\\ORM\\Mapping\\DefaultTypedFieldMapper",
+    "doctrine.orm.validator.unique.class": "Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator",
+    "doctrine.orm.validator_initializer.class": "Symfony\\Bridge\\Doctrine\\Validator\\DoctrineInitializer",
+    "doctrine_phpcr.default_session": "default",
+    "doctrine_phpcr.dump_max_line_length": 120,
+    "doctrine_phpcr.form.type_guess": [],
+    "doctrine_phpcr.jackrabbit_jar": null,
+    "doctrine_phpcr.migrate.migrators": [],
+    "doctrine_phpcr.odm.default_document_manager": "",
+    "doctrine_phpcr.odm.document_managers": [],
+    "doctrine_phpcr.sessions": {
+        "default": "doctrine_phpcr.default_session",
+        "live": "doctrine_phpcr.live_session"
+    },
+    "doctrine_phpcr.workspace_dir": null,
+    "env(MASSIVE_SEARCH_PREFIX)": "massive",
+    "env(PHPCR_WORKSPACE)": "default",
+    "event_dispatcher.event_aliases": {
+        "Symfony\\Component\\Console\\Event\\ConsoleCommandEvent": "console.command",
+        "Symfony\\Component\\Console\\Event\\ConsoleErrorEvent": "console.error",
+        "Symfony\\Component\\Console\\Event\\ConsoleSignalEvent": "console.signal",
+        "Symfony\\Component\\Console\\Event\\ConsoleTerminateEvent": "console.terminate",
+        "Symfony\\Component\\Form\\Event\\PreSubmitEvent": "form.pre_submit",
+        "Symfony\\Component\\Form\\Event\\SubmitEvent": "form.submit",
+        "Symfony\\Component\\Form\\Event\\PostSubmitEvent": "form.post_submit",
+        "Symfony\\Component\\Form\\Event\\PreSetDataEvent": "form.pre_set_data",
+        "Symfony\\Component\\Form\\Event\\PostSetDataEvent": "form.post_set_data",
+        "Symfony\\Component\\HttpKernel\\Event\\ControllerArgumentsEvent": "kernel.controller_arguments",
+        "Symfony\\Component\\HttpKernel\\Event\\ControllerEvent": "kernel.controller",
+        "Symfony\\Component\\HttpKernel\\Event\\ResponseEvent": "kernel.response",
+        "Symfony\\Component\\HttpKernel\\Event\\FinishRequestEvent": "kernel.finish_request",
+        "Symfony\\Component\\HttpKernel\\Event\\RequestEvent": "kernel.request",
+        "Symfony\\Component\\HttpKernel\\Event\\ViewEvent": "kernel.view",
+        "Symfony\\Component\\HttpKernel\\Event\\ExceptionEvent": "kernel.exception",
+        "Symfony\\Component\\HttpKernel\\Event\\TerminateEvent": "kernel.terminate",
+        "Symfony\\Component\\Security\\Core\\Event\\AuthenticationSuccessEvent": "security.authentication.success",
+        "Symfony\\Component\\Security\\Http\\Event\\InteractiveLoginEvent": "security.interactive_login",
+        "Symfony\\Component\\Security\\Http\\Event\\SwitchUserEvent": "security.switch_user"
+    },
+    "form.type_extension.csrf.enabled": true,
+    "form.type_extension.csrf.field_attr": {
+        "data-controller": "csrf-protection"
+    },
+    "form.type_extension.csrf.field_name": "_token",
+    "form.type_guesser.doctrine.class": "Symfony\\Bridge\\Doctrine\\Form\\DoctrineOrmTypeGuesser",
+    "fos_http_cache.cache_manager.generate_url_type": 0,
+    "fos_http_cache.cacheable.response.additional_status": [],
+    "fos_http_cache.invalidation.generate_url_type": 1,
+    "fos_http_cache.proxy_client.symfony.options": {
+        "tags_header": "X-Cache-Tags",
+        "tags_method": "PURGETAGS",
+        "purge_method": "PURGE"
+    },
+    "fos_http_cache.tag_handler.response_header": "X-Cache-Tags",
+    "fos_http_cache.tag_handler.separator": ",",
+    "fos_http_cache.tag_handler.strict": false,
+    "fos_js_routing.cache_control": {
+        "enabled": false
+    },
+    "fos_js_routing.controller.class": "FOS\\JsRoutingBundle\\Controller\\Controller",
+    "fos_js_routing.denormalizer.route_collection.class": "FOS\\JsRoutingBundle\\Serializer\\Denormalizer\\RouteCollectionDenormalizer",
+    "fos_js_routing.extractor.class": "FOS\\JsRoutingBundle\\Extractor\\ExposedRoutesExtractor",
+    "fos_js_routing.normalizer.route_collection.class": "FOS\\JsRoutingBundle\\Serializer\\Normalizer\\RouteCollectionNormalizer",
+    "fos_js_routing.normalizer.routes_response.class": "FOS\\JsRoutingBundle\\Serializer\\Normalizer\\RoutesResponseNormalizer",
+    "fos_js_routing.request_context_base_url": null,
+    "fos_js_routing.routes_response.class": "FOS\\JsRoutingBundle\\Response\\RoutesResponse",
+    "fragment.path": "\/admin\/_fragments",
+    "fragment.renderer.hinclude.global_template": null,
+    "jms_serializer.twig_enabled": "default",
+    "kernel.allowed_http_method_override": null,
+    "kernel.build_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod",
+    "kernel.bundles": {
+        "FrameworkBundle": "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle",
+        "TwigBundle": "Symfony\\Bundle\\TwigBundle\\TwigBundle",
+        "MonologBundle": "Symfony\\Bundle\\MonologBundle\\MonologBundle",
+        "SuluCoreBundle": "Sulu\\Bundle\\CoreBundle\\SuluCoreBundle",
+        "DoctrineBundle": "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle",
+        "DoctrineFixturesBundle": "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle",
+        "DoctrinePHPCRBundle": "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle",
+        "FOSRestBundle": "FOS\\RestBundle\\FOSRestBundle",
+        "RestRoutingBundle": "HandcraftedInTheAlps\\RestRoutingBundle\\RestRoutingBundle",
+        "JMSSerializerBundle": "JMS\\SerializerBundle\\JMSSerializerBundle",
+        "MassiveSearchBundle": "Massive\\Bundle\\SearchBundle\\MassiveSearchBundle",
+        "FOSHttpCacheBundle": "FOS\\HttpCacheBundle\\FOSHttpCacheBundle",
+        "SuluAdminBundle": "Sulu\\Bundle\\AdminBundle\\SuluAdminBundle",
+        "SuluSearchBundle": "Sulu\\Bundle\\SearchBundle\\SuluSearchBundle",
+        "SuluPersistenceBundle": "Sulu\\Bundle\\PersistenceBundle\\SuluPersistenceBundle",
+        "SuluContactBundle": "Sulu\\Bundle\\ContactBundle\\SuluContactBundle",
+        "SuluMediaBundle": "Sulu\\Bundle\\MediaBundle\\SuluMediaBundle",
+        "SuluSecurityBundle": "Sulu\\Bundle\\SecurityBundle\\SuluSecurityBundle",
+        "SuluCategoryBundle": "Sulu\\Bundle\\CategoryBundle\\SuluCategoryBundle",
+        "SuluSnippetBundle": "Sulu\\Bundle\\SnippetBundle\\SuluSnippetBundle",
+        "SuluPageBundle": "Sulu\\Bundle\\PageBundle\\SuluPageBundle",
+        "SuluTagBundle": "Sulu\\Bundle\\TagBundle\\SuluTagBundle",
+        "SuluWebsiteBundle": "Sulu\\Bundle\\WebsiteBundle\\SuluWebsiteBundle",
+        "SuluLocationBundle": "Sulu\\Bundle\\LocationBundle\\SuluLocationBundle",
+        "SuluHttpCacheBundle": "Sulu\\Bundle\\HttpCacheBundle\\SuluHttpCacheBundle",
+        "SuluDocumentManagerBundle": "Sulu\\Bundle\\DocumentManagerBundle\\SuluDocumentManagerBundle",
+        "SuluHashBundle": "Sulu\\Bundle\\HashBundle\\SuluHashBundle",
+        "SuluCustomUrlBundle": "Sulu\\Bundle\\CustomUrlBundle\\SuluCustomUrlBundle",
+        "SuluRouteBundle": "Sulu\\Bundle\\RouteBundle\\SuluRouteBundle",
+        "SuluMarkupBundle": "Sulu\\Bundle\\MarkupBundle\\SuluMarkupBundle",
+        "PhpcrMigrationsBundle": "PHPCR\\PhpcrMigrationsBundle\\PhpcrMigrationsBundle",
+        "MassiveBuildBundle": "Massive\\Bundle\\BuildBundle\\MassiveBuildBundle",
+        "SecurityBundle": "Symfony\\Bundle\\SecurityBundle\\SecurityBundle",
+        "SuluPreviewBundle": "Sulu\\Bundle\\PreviewBundle\\SuluPreviewBundle",
+        "FOSJsRoutingBundle": "FOS\\JsRoutingBundle\\FOSJsRoutingBundle",
+        "StofDoctrineExtensionsBundle": "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle",
+        "SuluActivityBundle": "Sulu\\Bundle\\ActivityBundle\\SuluActivityBundle",
+        "SuluTrashBundle": "Sulu\\Bundle\\TrashBundle\\SuluTrashBundle",
+        "SuluReferenceBundle": "Sulu\\Bundle\\ReferenceBundle\\SuluReferenceBundle",
+        "SchebTwoFactorBundle": "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle"
+    },
+    "kernel.bundles_metadata": {
+        "FrameworkBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/symfony\/framework-bundle",
+            "namespace": "Symfony\\Bundle\\FrameworkBundle"
+        },
+        "TwigBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/symfony\/twig-bundle",
+            "namespace": "Symfony\\Bundle\\TwigBundle"
+        },
+        "MonologBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/symfony\/monolog-bundle\/src",
+            "namespace": "Symfony\\Bundle\\MonologBundle"
+        },
+        "SuluCoreBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CoreBundle",
+            "namespace": "Sulu\\Bundle\\CoreBundle"
+        },
+        "DoctrineBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/doctrine\/doctrine-bundle",
+            "namespace": "Doctrine\\Bundle\\DoctrineBundle"
+        },
+        "DoctrineFixturesBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/doctrine\/doctrine-fixtures-bundle",
+            "namespace": "Doctrine\\Bundle\\FixturesBundle"
+        },
+        "DoctrinePHPCRBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/doctrine\/phpcr-bundle\/src",
+            "namespace": "Doctrine\\Bundle\\PHPCRBundle"
+        },
+        "FOSRestBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/friendsofsymfony\/rest-bundle",
+            "namespace": "FOS\\RestBundle"
+        },
+        "RestRoutingBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/handcraftedinthealps\/rest-routing-bundle",
+            "namespace": "HandcraftedInTheAlps\\RestRoutingBundle"
+        },
+        "JMSSerializerBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/jms\/serializer-bundle",
+            "namespace": "JMS\\SerializerBundle"
+        },
+        "MassiveSearchBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/massive\/search-bundle",
+            "namespace": "Massive\\Bundle\\SearchBundle"
+        },
+        "FOSHttpCacheBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/friendsofsymfony\/http-cache-bundle\/src",
+            "namespace": "FOS\\HttpCacheBundle"
+        },
+        "SuluAdminBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/AdminBundle",
+            "namespace": "Sulu\\Bundle\\AdminBundle"
+        },
+        "SuluSearchBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SearchBundle",
+            "namespace": "Sulu\\Bundle\\SearchBundle"
+        },
+        "SuluPersistenceBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PersistenceBundle",
+            "namespace": "Sulu\\Bundle\\PersistenceBundle"
+        },
+        "SuluContactBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ContactBundle",
+            "namespace": "Sulu\\Bundle\\ContactBundle"
+        },
+        "SuluMediaBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/MediaBundle",
+            "namespace": "Sulu\\Bundle\\MediaBundle"
+        },
+        "SuluSecurityBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SecurityBundle",
+            "namespace": "Sulu\\Bundle\\SecurityBundle"
+        },
+        "SuluCategoryBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CategoryBundle",
+            "namespace": "Sulu\\Bundle\\CategoryBundle"
+        },
+        "SuluSnippetBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SnippetBundle",
+            "namespace": "Sulu\\Bundle\\SnippetBundle"
+        },
+        "SuluPageBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PageBundle",
+            "namespace": "Sulu\\Bundle\\PageBundle"
+        },
+        "SuluTagBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/TagBundle",
+            "namespace": "Sulu\\Bundle\\TagBundle"
+        },
+        "SuluWebsiteBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/WebsiteBundle",
+            "namespace": "Sulu\\Bundle\\WebsiteBundle"
+        },
+        "SuluLocationBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/LocationBundle",
+            "namespace": "Sulu\\Bundle\\LocationBundle"
+        },
+        "SuluHttpCacheBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/HttpCacheBundle",
+            "namespace": "Sulu\\Bundle\\HttpCacheBundle"
+        },
+        "SuluDocumentManagerBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/DocumentManagerBundle",
+            "namespace": "Sulu\\Bundle\\DocumentManagerBundle"
+        },
+        "SuluHashBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/HashBundle",
+            "namespace": "Sulu\\Bundle\\HashBundle"
+        },
+        "SuluCustomUrlBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CustomUrlBundle",
+            "namespace": "Sulu\\Bundle\\CustomUrlBundle"
+        },
+        "SuluRouteBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/RouteBundle",
+            "namespace": "Sulu\\Bundle\\RouteBundle"
+        },
+        "SuluMarkupBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/MarkupBundle",
+            "namespace": "Sulu\\Bundle\\MarkupBundle"
+        },
+        "PhpcrMigrationsBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/phpcr\/phpcr-migrations-bundle\/src",
+            "namespace": "PHPCR\\PhpcrMigrationsBundle"
+        },
+        "MassiveBuildBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/massive\/build-bundle",
+            "namespace": "Massive\\Bundle\\BuildBundle"
+        },
+        "SecurityBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/symfony\/security-bundle",
+            "namespace": "Symfony\\Bundle\\SecurityBundle"
+        },
+        "SuluPreviewBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PreviewBundle",
+            "namespace": "Sulu\\Bundle\\PreviewBundle"
+        },
+        "FOSJsRoutingBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/friendsofsymfony\/jsrouting-bundle",
+            "namespace": "FOS\\JsRoutingBundle"
+        },
+        "StofDoctrineExtensionsBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/stof\/doctrine-extensions-bundle\/src",
+            "namespace": "Stof\\DoctrineExtensionsBundle"
+        },
+        "SuluActivityBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ActivityBundle",
+            "namespace": "Sulu\\Bundle\\ActivityBundle"
+        },
+        "SuluTrashBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/TrashBundle",
+            "namespace": "Sulu\\Bundle\\TrashBundle"
+        },
+        "SuluReferenceBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ReferenceBundle",
+            "namespace": "Sulu\\Bundle\\ReferenceBundle"
+        },
+        "SchebTwoFactorBundle": {
+            "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/scheb\/2fa-bundle",
+            "namespace": "Scheb\\TwoFactorBundle"
+        }
+    },
+    "kernel.cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod",
+    "kernel.charset": "UTF-8",
+    "kernel.container_class": "App_KernelProdContainer",
+    "kernel.debug": false,
+    "kernel.default_locale": "en",
+    "kernel.enabled_locales": [],
+    "kernel.environment": "prod",
+    "kernel.error_controller": "error_controller",
+    "kernel.http_method_override": true,
+    "kernel.logs_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/log\/admin",
+    "kernel.project_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost",
+    "kernel.runtime_environment": "%env(default:kernel.environment:APP_RUNTIME_ENV)%",
+    "kernel.runtime_mode": "%env(query_string:default:container.runtime_mode:APP_RUNTIME_MODE)%",
+    "kernel.runtime_mode.cli": "%env(not:default:kernel.runtime_mode.web:)%",
+    "kernel.runtime_mode.web": "%env(bool:default::key:web:default:kernel.runtime_mode:)%",
+    "kernel.runtime_mode.worker": "%env(bool:default::key:worker:default:kernel.runtime_mode:)%",
+    "kernel.secret": "%env(APP_SECRET)%",
+    "kernel.share_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod",
+    "kernel.trust_x_sendfile_type_header": "%env(bool:default::SYMFONY_TRUST_X_SENDFILE_TYPE_HEADER)%",
+    "kernel.trusted_headers": "%env(default::SYMFONY_TRUSTED_HEADERS)%",
+    "kernel.trusted_hosts": "%env(default::SYMFONY_TRUSTED_HOSTS)%",
+    "kernel.trusted_proxies": "%env(default::SYMFONY_TRUSTED_PROXIES)%",
+    "massive_build.build.registry.class": "Massive\\Bundle\\BuildBundle\\Build\\BuildRegistry",
+    "massive_build.command.build.class": "Sulu\\Bundle\\CoreBundle\\CommandOptional\\SuluBuildCommand",
+    "massive_search.adapter.zend_lucene.basepath": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/indexes",
+    "massive_search.adapter.zend_lucene.encoding": "UTF-8",
+    "massive_search.adapter.zend_lucene.hide_index_exception": false,
+    "massive_search.controller.rest.class": "Massive\\Bundle\\SearchBundle\\Controller\\SearchController",
+    "massive_search.events.deindex": "massive_search.deindex",
+    "massive_search.events.index": "massive_search.index",
+    "massive_search.expression_language.class": "Massive\\Bundle\\SearchBundle\\Search\\ExpressionLanguage\\MassiveSearchExpressionLanguage",
+    "massive_search.factory_default.class": "Massive\\Bundle\\SearchBundle\\Search\\Factory",
+    "massive_search.metadata.cache.file_cache.class": "Metadata\\Cache\\FileCache",
+    "massive_search.metadata.cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/massive-search",
+    "massive_search.metadata.debug": false,
+    "massive_search.metadata.driver.annotation.class": "Symfony\\Cmf\\Bundle\\TreeUiBundle\\Tree\\Metadata\\Driver\\AnnotationDriver",
+    "massive_search.metadata.driver.chain.class": "Metadata\\Driver\\DriverChain",
+    "massive_search.metadata.driver.xml.class": "Massive\\Bundle\\SearchBundle\\Search\\Metadata\\Driver\\XmlDriver",
+    "massive_search.metadata.factory.class": "Metadata\\MetadataFactory",
+    "massive_search.metadata.field_evaluator.class": "Massive\\Bundle\\SearchBundle\\Search\\Metadata\\FieldEvaluator",
+    "massive_search.metadata.file_locator.class": "Metadata\\Driver\\FileLocator",
+    "massive_search.metadata.prefix": "%env(resolve:MASSIVE_SEARCH_PREFIX)%",
+    "massive_search.metadata.provider.chain.class": "Massive\\Bundle\\SearchBundle\\Search\\Metadata\\Provider\\ChainProvider",
+    "massive_search.metadata.provider.default.class": "Massive\\Bundle\\SearchBundle\\Search\\Metadata\\Provider\\DefaultProvider",
+    "massive_search.object_to_document_converter.class": "Massive\\Bundle\\SearchBundle\\Search\\ObjectToDocumentConverter",
+    "massive_search.search.adapter.test.class": "Massive\\Bundle\\SearchBundle\\Search\\Adapter\\TestAdapter",
+    "massive_search.search.adapter.zend_lucene.class": "Massive\\Bundle\\SearchBundle\\Search\\Adapter\\ZendLuceneAdapter",
+    "massive_search.search_manager.class": "Massive\\Bundle\\SearchBundle\\Search\\SearchManager",
+    "monolog.handlers_to_channels": {
+        "monolog.handler.console": {
+            "type": "exclusive",
+            "elements": [
+                "event",
+                "doctrine"
+            ]
+        },
+        "monolog.handler.main": {
+            "type": "exclusive",
+            "elements": [
+                "deprecation"
+            ]
+        }
+    },
+    "monolog.use_microseconds": true,
+    "permissions": {
+        "view": 64,
+        "add": 32,
+        "edit": 16,
+        "delete": 8,
+        "archive": 4,
+        "live": 2,
+        "security": 1
+    },
+    "phpcr_migrations.paths": [
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PageBundle\/Resources\/phpcr-migrations",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CustomUrlBundle\/Resources\/phpcr-migrations"
+    ],
+    "phpcr_migrations.version_node_name": "jcr:versions",
+    "request_listener.http_port": 80,
+    "request_listener.https_port": 443,
+    "router.cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod",
+    "router.request_context.base_url": "%env(DEFAULT_URI)%",
+    "router.request_context.host": "localhost",
+    "router.request_context.scheme": "http",
+    "router.resource": "kernel::loadRoutes",
+    "scheb_two_factor.code_reuse_cache_duration": 60,
+    "scheb_two_factor.email.digits": 4,
+    "scheb_two_factor.email.sender_email": null,
+    "scheb_two_factor.email.sender_name": null,
+    "scheb_two_factor.email.template": "@SchebTwoFactor\/Authentication\/form.html.twig",
+    "scheb_two_factor.ip_whitelist": [],
+    "scheb_two_factor.model_manager_name": null,
+    "scheb_two_factor.security_tokens": [
+        "Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken",
+        "Symfony\\Component\\Security\\Http\\Authenticator\\Token\\PostAuthenticationToken"
+    ],
+    "scheb_two_factor.trusted_device.cookie_domain": null,
+    "scheb_two_factor.trusted_device.cookie_name": "trusted_device",
+    "scheb_two_factor.trusted_device.cookie_path": "\/",
+    "scheb_two_factor.trusted_device.cookie_same_site": "lax",
+    "scheb_two_factor.trusted_device.cookie_secure": null,
+    "scheb_two_factor.trusted_device.enabled": true,
+    "scheb_two_factor.trusted_device.extend_lifetime": false,
+    "scheb_two_factor.trusted_device.lifetime": 5184000,
+    "security.access.denied_url": null,
+    "security.authentication.hide_user_not_found": true,
+    "security.authentication.manager.erase_credentials": true,
+    "security.authentication.session_strategy.strategy": "migrate",
+    "security.firewalls": [
+        "dev",
+        "admin"
+    ],
+    "security.logout_uris": [],
+    "security.role_hierarchy.roles": [],
+    "serializer.mapping.cache.file": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/serialization.php",
+    "session.metadata.cookie_lifetime": null,
+    "session.metadata.storage_key": "_sf2_meta",
+    "session.metadata.update_threshold": 0,
+    "session.save_path": null,
+    "session.storage.options": {
+        "cache_limiter": "0",
+        "name": "SULUSESSID",
+        "cookie_path": "\/admin",
+        "cookie_secure": "auto",
+        "cookie_httponly": true,
+        "cookie_samesite": "lax"
+    },
+    "stof_doctrine_extensions.default_locale": "en",
+    "stof_doctrine_extensions.listener.blameable.class": "Gedmo\\Blameable\\BlameableListener",
+    "stof_doctrine_extensions.listener.loggable.class": "Gedmo\\Loggable\\LoggableListener",
+    "stof_doctrine_extensions.listener.reference_integrity.class": "Gedmo\\ReferenceIntegrity\\ReferenceIntegrityListener",
+    "stof_doctrine_extensions.listener.sluggable.class": "Gedmo\\Sluggable\\SluggableListener",
+    "stof_doctrine_extensions.listener.softdeleteable.class": "Gedmo\\SoftDeleteable\\SoftDeleteableListener",
+    "stof_doctrine_extensions.listener.sortable.class": "Gedmo\\Sortable\\SortableListener",
+    "stof_doctrine_extensions.listener.timestampable.class": "Gedmo\\Timestampable\\TimestampableListener",
+    "stof_doctrine_extensions.listener.translatable.class": "Gedmo\\Translatable\\TranslatableListener",
+    "stof_doctrine_extensions.listener.tree.class": "Gedmo\\Tree\\TreeListener",
+    "stof_doctrine_extensions.listener.uploadable.class": "Gedmo\\Uploadable\\UploadableListener",
+    "stof_doctrine_extensions.persist_default_translation": false,
+    "stof_doctrine_extensions.skip_translation_on_load": false,
+    "stof_doctrine_extensions.translation_fallback": false,
+    "sulu.cache.warmer.structure.class": "Sulu\\Bundle\\CoreBundle\\Cache\\StructureWarmer",
+    "sulu.cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/sulu",
+    "sulu.common_cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/common\/prod",
+    "sulu.content.internal_prefix": "",
+    "sulu.content.language.default": "en",
+    "sulu.content.language.namespace": "i18n",
+    "sulu.content.mapper.class": "Sulu\\Component\\Content\\Mapper\\ContentMapper",
+    "sulu.content.node_names.base": "cmf",
+    "sulu.content.node_names.content": "contents",
+    "sulu.content.node_names.route": "routes",
+    "sulu.content.node_names.snippet": "snippets",
+    "sulu.content.path_cleaner.class": "Sulu\\Component\\PHPCR\\PathCleanup",
+    "sulu.content.path_cleaner.replacer_loader.class": "Sulu\\Bundle\\CoreBundle\\DataFixtures\\ReplacerXmlLoader",
+    "sulu.content.path_cleaner.replacer_loader.file_locator.class": "Symfony\\Component\\Config\\FileLocator",
+    "sulu.content.query_executor.class": "Sulu\\Component\\Content\\Query\\ContentQueryExecutor",
+    "sulu.content.resource_locator.mapper.phpcr.class": "Sulu\\Component\\Content\\Types\\ResourceLocator\\Mapper\\PhpcrMapper",
+    "sulu.content.structure.default_type.snippet": "default",
+    "sulu.content.structure.default_types": {
+        "snippet": "default"
+    },
+    "sulu.content.structure.paths": {
+        "page": [
+            {
+                "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PageBundle\/DependencyInjection\/..\/Content\/templates",
+                "type": "page"
+            },
+            {
+                "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/templates\/pages",
+                "type": "page"
+            }
+        ],
+        "home": [
+            {
+                "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/templates\/pages",
+                "type": "home"
+            }
+        ],
+        "snippet": [
+            {
+                "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/templates\/snippets",
+                "type": "snippet"
+            }
+        ],
+        "block": [
+            {
+                "path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/templates\/blocks",
+                "type": "block"
+            }
+        ]
+    },
+    "sulu.content.structure.required_properties": {
+        "home": [
+            "title"
+        ],
+        "page": [
+            "title"
+        ],
+        "snippet": [
+            "title"
+        ]
+    },
+    "sulu.content.structure.required_tags": {
+        "home": [
+            "sulu.rlp"
+        ],
+        "page": [
+            "sulu.rlp"
+        ]
+    },
+    "sulu.content.structure.type_map": {
+        "page": "Sulu\\Component\\Content\\Compat\\Structure\\PageBridge",
+        "home": "Sulu\\Component\\Content\\Compat\\Structure\\PageBridge",
+        "snippet": "Sulu\\Component\\Content\\Compat\\Structure\\SnippetBridge"
+    },
+    "sulu.content.structure_manager.class": "Sulu\\Component\\Content\\Compat\\StructureManager",
+    "sulu.content.template_resolver.class": "Sulu\\Component\\Content\\Template\\TemplateResolver",
+    "sulu.content.type.block.class": "Sulu\\Component\\Content\\Types\\BlockContentType",
+    "sulu.content.type.link.class": "Sulu\\Component\\Content\\Types\\Link",
+    "sulu.content.type.number.class": "Sulu\\Component\\Content\\Types\\Number",
+    "sulu.content.type.resource_locator.class": "Sulu\\Component\\Content\\Types\\ResourceLocator",
+    "sulu.content.type.single_icon_selection.class": "Sulu\\Component\\Content\\Types\\SingleIconSelection",
+    "sulu.content.type.text_area.class": "Sulu\\Component\\Content\\Types\\TextArea",
+    "sulu.content.type.text_editor.class": "Sulu\\Component\\Content\\Types\\TextEditor",
+    "sulu.content.type.text_line.class": "Sulu\\Component\\Content\\Types\\TextLine",
+    "sulu.content.type_manager.class": "Sulu\\Component\\Content\\ContentTypeManager",
+    "sulu.content.webspace_structure_provider.class": "Sulu\\Component\\Webspace\\StructureProvider\\WebspaceStructureProvider",
+    "sulu.context": "admin",
+    "sulu.core.localization_manager.class": "Sulu\\Component\\Localization\\Manager\\LocalizationManager",
+    "sulu.core.localization_manager.core_provider.class": "Sulu\\Component\\Localization\\Provider\\LocalizationProvider",
+    "sulu.fields_defaults.translations": {
+        "id": "public.id",
+        "title": "public.title",
+        "name": "public.name",
+        "created": "public.created",
+        "changed": "public.changed"
+    },
+    "sulu.fields_defaults.widths": {
+        "id": "50px"
+    },
+    "sulu.model.access_control.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl",
+    "sulu.model.account.class": "Sulu\\Bundle\\ContactBundle\\Entity\\Account",
+    "sulu.model.activity.class": "Sulu\\Bundle\\ActivityBundle\\Domain\\Model\\Activity",
+    "sulu.model.analytics.class": "Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics",
+    "sulu.model.category.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\Category",
+    "sulu.model.category_meta.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryMeta",
+    "sulu.model.category_translation.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryTranslation",
+    "sulu.model.collection.class": "Sulu\\Bundle\\MediaBundle\\Entity\\Collection",
+    "sulu.model.contact.class": "Sulu\\Bundle\\ContactBundle\\Entity\\Contact",
+    "sulu.model.keyword.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\Keyword",
+    "sulu.model.media.class": "Sulu\\Bundle\\MediaBundle\\Entity\\Media",
+    "sulu.model.preview_link.class": "Sulu\\Bundle\\PreviewBundle\\Domain\\Model\\PreviewLink",
+    "sulu.model.reference.class": "Sulu\\Bundle\\ReferenceBundle\\Domain\\Model\\Reference",
+    "sulu.model.role.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\Role",
+    "sulu.model.role_setting.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleSetting",
+    "sulu.model.route.class": "Sulu\\Bundle\\RouteBundle\\Entity\\Route",
+    "sulu.model.tag.class": "Sulu\\Bundle\\TagBundle\\Entity\\Tag",
+    "sulu.model.trash_item.class": "Sulu\\Bundle\\TrashBundle\\Domain\\Model\\TrashItem",
+    "sulu.model.user.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\User",
+    "sulu.persistence.event_subscriber.orm.metadata.class": "Sulu\\Component\\Persistence\\EventSubscriber\\ORM\\MetadataSubscriber",
+    "sulu.persistence.event_subscriber.orm.timestampable.class": "Sulu\\Component\\Persistence\\EventSubscriber\\ORM\\TimestampableSubscriber",
+    "sulu.persistence.event_subscriber.orm.user_blame.class": "Sulu\\Component\\Persistence\\EventSubscriber\\ORM\\UserBlameSubscriber",
+    "sulu.persistence.objects": {
+        "sulu": {
+            "reference": {
+                "model": "Sulu\\Bundle\\ReferenceBundle\\Domain\\Model\\Reference"
+            },
+            "trash_item": {
+                "model": "Sulu\\Bundle\\TrashBundle\\Domain\\Model\\TrashItem"
+            },
+            "activity": {
+                "model": "Sulu\\Bundle\\ActivityBundle\\Domain\\Model\\Activity"
+            },
+            "preview_link": {
+                "model": "Sulu\\Bundle\\PreviewBundle\\Domain\\Model\\PreviewLink"
+            },
+            "route": {
+                "model": "Sulu\\Bundle\\RouteBundle\\Entity\\Route",
+                "repository": "Sulu\\Bundle\\RouteBundle\\Entity\\RouteRepository"
+            },
+            "analytics": {
+                "model": "Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics",
+                "repository": "Sulu\\Bundle\\WebsiteBundle\\Entity\\AnalyticsRepository"
+            },
+            "tag": {
+                "model": "Sulu\\Bundle\\TagBundle\\Entity\\Tag",
+                "repository": "Sulu\\Bundle\\TagBundle\\Entity\\TagRepository"
+            },
+            "category": {
+                "model": "Sulu\\Bundle\\CategoryBundle\\Entity\\Category",
+                "repository": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryRepository"
+            },
+            "category_meta": {
+                "model": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryMeta",
+                "repository": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryMetaRepository"
+            },
+            "category_translation": {
+                "model": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryTranslation",
+                "repository": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryTranslationRepository"
+            },
+            "keyword": {
+                "model": "Sulu\\Bundle\\CategoryBundle\\Entity\\Keyword",
+                "repository": "Sulu\\Bundle\\CategoryBundle\\Entity\\KeywordRepository"
+            },
+            "user": {
+                "model": "Sulu\\Bundle\\SecurityBundle\\Entity\\User",
+                "repository": "Sulu\\Bundle\\SecurityBundle\\Entity\\UserRepository"
+            },
+            "role": {
+                "model": "Sulu\\Bundle\\SecurityBundle\\Entity\\Role",
+                "repository": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleRepository"
+            },
+            "role_setting": {
+                "model": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleSetting",
+                "repository": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleSettingRepository"
+            },
+            "access_control": {
+                "model": "Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl",
+                "repository": "Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControlRepository"
+            },
+            "media": {
+                "model": "Sulu\\Bundle\\MediaBundle\\Entity\\Media",
+                "repository": "Sulu\\Bundle\\MediaBundle\\Entity\\MediaRepository"
+            },
+            "contact": {
+                "model": "Sulu\\Bundle\\ContactBundle\\Entity\\Contact",
+                "repository": "Sulu\\Bundle\\ContactBundle\\Entity\\ContactRepository"
+            },
+            "account": {
+                "model": "Sulu\\Bundle\\ContactBundle\\Entity\\Account",
+                "repository": "Sulu\\Bundle\\ContactBundle\\Entity\\AccountRepository"
+            }
+        }
+    },
+    "sulu.phpcr.session.class": "Sulu\\Component\\PHPCR\\SessionManager\\SessionManager",
+    "sulu.repository.access_control.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControlRepository",
+    "sulu.repository.account.class": "Sulu\\Bundle\\ContactBundle\\Entity\\AccountRepository",
+    "sulu.repository.analytics.class": "Sulu\\Bundle\\WebsiteBundle\\Entity\\AnalyticsRepository",
+    "sulu.repository.category.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryRepository",
+    "sulu.repository.category_meta.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryMetaRepository",
+    "sulu.repository.category_translation.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\CategoryTranslationRepository",
+    "sulu.repository.contact.class": "Sulu\\Bundle\\ContactBundle\\Entity\\ContactRepository",
+    "sulu.repository.keyword.class": "Sulu\\Bundle\\CategoryBundle\\Entity\\KeywordRepository",
+    "sulu.repository.media.class": "Sulu\\Bundle\\MediaBundle\\Entity\\MediaRepository",
+    "sulu.repository.role.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleRepository",
+    "sulu.repository.role_setting.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\RoleSettingRepository",
+    "sulu.repository.route.class": "Sulu\\Bundle\\RouteBundle\\Entity\\RouteRepository",
+    "sulu.repository.tag.class": "Sulu\\Bundle\\TagBundle\\Entity\\TagRepository",
+    "sulu.repository.user.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\UserRepository",
+    "sulu.util.node_helper.class": "Sulu\\Component\\Util\\SuluNodeHelper",
+    "sulu.version": "2.6.22",
+    "sulu_activity.storage.adapter": "doctrine",
+    "sulu_activity.storage.persist_payload": false,
+    "sulu_admin.admin_controller.class": "Sulu\\Bundle\\AdminBundle\\Controller\\AdminController",
+    "sulu_admin.admin_pool.class": "Sulu\\Bundle\\AdminBundle\\Admin\\AdminPool",
+    "sulu_admin.collaboration_enabled": true,
+    "sulu_admin.collaboration_interval": 20,
+    "sulu_admin.collaboration_threshold": 60,
+    "sulu_admin.email": "%env(SULU_ADMIN_EMAIL)%",
+    "sulu_admin.forms.directories": [
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CustomUrlBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/WebsiteBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/TagBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PageBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SnippetBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CategoryBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SecurityBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/MediaBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ContactBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/AdminBundle\/DependencyInjection\/..\/Resources\/config\/forms",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/forms"
+    ],
+    "sulu_admin.icon_sets": {
+        "sulu": "icomoon:\/\/\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/AdminBundle\/DependencyInjection\/..\/Resources\/js\/components\/Icon\/selection.json"
+    },
+    "sulu_admin.lists.directories": [
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ReferenceBundle\/Infrastructure\/Symfony\/DependencyInjection\/..\/..\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/TrashBundle\/Infrastructure\/Symfony\/DependencyInjection\/..\/..\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ActivityBundle\/Infrastructure\/Symfony\/DependencyInjection\/..\/..\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CustomUrlBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/WebsiteBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/TagBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/PageBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SnippetBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/CategoryBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SecurityBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/MediaBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/ContactBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/AdminBundle\/DependencyInjection\/..\/Resources\/config\/lists",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/lists"
+    ],
+    "sulu_admin.name": "Sulu Admin",
+    "sulu_admin.resources": {
+        "references": {
+            "routes": {
+                "list": "sulu_reference.get_references"
+            }
+        },
+        "trash_items": {
+            "routes": {
+                "list": "sulu_trash.get_trash-items",
+                "detail": "sulu_trash.get_trash-item"
+            }
+        },
+        "activities": {
+            "routes": {
+                "list": "sulu_activity.get_activities"
+            }
+        },
+        "preview_links": {
+            "routes": {
+                "detail": "sulu_preview.get_preview-link"
+            }
+        },
+        "routes": {
+            "routes": {
+                "list": "sulu_routes.get_routes"
+            }
+        },
+        "custom_urls": {
+            "routes": {
+                "list": "sulu_custom_url.cget_webspace_custom-urls",
+                "detail": "sulu_custom_url.get_webspace_custom-urls"
+            }
+        },
+        "custom_url_routes": {
+            "routes": {
+                "list": "sulu_custom_url.get_webspace_custom-urls_routes"
+            }
+        },
+        "geolocator_locations": {
+            "routes": {
+                "list": "sulu_location.geolocator_query"
+            }
+        },
+        "analytics": {
+            "routes": {
+                "list": "sulu_website.cget_webspace_analytics",
+                "detail": "sulu_website.get_webspace_analytics"
+            }
+        },
+        "tags": {
+            "routes": {
+                "list": "sulu_tag.get_tags",
+                "detail": "sulu_tag.get_tag"
+            }
+        },
+        "page_resourcelocators": {
+            "routes": {
+                "list": "sulu_page.get_page_resourcelocators"
+            }
+        },
+        "pages": {
+            "routes": {
+                "list": "sulu_page.get_pages",
+                "detail": "sulu_page.get_page"
+            },
+            "views": {
+                "list": "sulu_page.pages_list",
+                "detail": "sulu_page.page_edit_form"
+            },
+            "security_context": "sulu.webspaces.#webspace#",
+            "security_class": "Sulu\\Component\\Content\\Document\\Behavior\\SecurityBehavior"
+        },
+        "page_versions": {
+            "routes": {
+                "list": "sulu_page.get_page_versions",
+                "detail": "sulu_page.post_page_version_trigger"
+            }
+        },
+        "webspaces": {
+            "routes": {
+                "list": "sulu_page.get_webspaces",
+                "detail": "sulu_page.get_webspace"
+            }
+        },
+        "snippets": {
+            "routes": {
+                "list": "sulu_snippet.get_snippets",
+                "detail": "sulu_snippet.get_snippet"
+            },
+            "views": {
+                "list": "sulu_snippet.list",
+                "detail": "sulu_snippet.edit_form"
+            }
+        },
+        "snippet_areas": {
+            "routes": {
+                "list": "sulu_snippet.get_snippet-areas",
+                "detail": "sulu_snippet.put_snippet-area"
+            }
+        },
+        "categories": {
+            "routes": {
+                "list": "sulu_category.get_categories",
+                "detail": "sulu_category.get_category"
+            }
+        },
+        "category_keywords": {
+            "routes": {
+                "list": "sulu_category.get_category_keywords",
+                "detail": "sulu_category.get_category_keyword"
+            }
+        },
+        "permissions": {
+            "routes": {
+                "detail": "sulu_security.get_permissions"
+            }
+        },
+        "roles": {
+            "routes": {
+                "list": "sulu_security.get_roles",
+                "detail": "sulu_security.get_role"
+            }
+        },
+        "users": {
+            "routes": {
+                "list": "sulu_security.get_users",
+                "detail": "sulu_security.get_user"
+            }
+        },
+        "profile": {
+            "routes": {
+                "detail": "sulu_security.get_profile"
+            }
+        },
+        "media": {
+            "routes": {
+                "list": "sulu_media.cget_media",
+                "detail": "sulu_media.get_media"
+            },
+            "security_context": "sulu.media.collections",
+            "security_class": "Sulu\\Bundle\\MediaBundle\\Entity\\Collection"
+        },
+        "media_preview": {
+            "routes": {
+                "detail": "sulu_media.post_media_preview"
+            }
+        },
+        "media_formats": {
+            "routes": {
+                "list": "sulu_media.get_media_formats",
+                "detail": "sulu_media.put_media_format"
+            }
+        },
+        "media_versions": {
+            "routes": {
+                "detail": "sulu_media.delete_media_version"
+            }
+        },
+        "collections": {
+            "routes": {
+                "list": "sulu_media.get_collections",
+                "detail": "sulu_media.get_collection"
+            }
+        },
+        "formats": {
+            "routes": {
+                "list": "sulu_media.get_formats",
+                "detail": "sulu_media.get_format"
+            }
+        },
+        "contacts": {
+            "routes": {
+                "list": "sulu_contact.get_contacts",
+                "detail": "sulu_contact.get_contact"
+            }
+        },
+        "contact_titles": {
+            "routes": {
+                "list": "sulu_contact.get_contact-titles"
+            }
+        },
+        "contact_positions": {
+            "routes": {
+                "list": "sulu_contact.get_contact-positions"
+            }
+        },
+        "contact_media": {
+            "routes": {
+                "list": "sulu_contact.cget_contact_medias",
+                "detail": "sulu_contact.delete_contact_medias"
+            }
+        },
+        "accounts": {
+            "routes": {
+                "list": "sulu_contact.get_accounts",
+                "detail": "sulu_contact.get_account"
+            }
+        },
+        "account_media": {
+            "routes": {
+                "list": "sulu_contact.cget_account_medias",
+                "detail": "sulu_contact.delete_account_medias"
+            }
+        },
+        "account_contacts": {
+            "routes": {
+                "list": "sulu_contact.get_account_contacts",
+                "detail": "sulu_contact.delete_account_contacts"
+            }
+        },
+        "search": {
+            "routes": {
+                "list": "sulu_search_search"
+            }
+        },
+        "search_indexes": {
+            "routes": {
+                "list": "sulu_search_indexes"
+            }
+        },
+        "collaborations": {
+            "routes": {
+                "detail": "sulu_admin.put_collaborations"
+            }
+        },
+        "localizations": {
+            "routes": {
+                "list": "sulu_core.get_localizations"
+            }
+        },
+        "teasers": {
+            "routes": {
+                "list": "sulu_page.get_teasers"
+            }
+        },
+        "icons": {
+            "routes": {
+                "list": "sulu_admin.get_icons"
+            }
+        }
+    },
+    "sulu_admin.user_data_service": "sulu_security.user_manager",
+    "sulu_category.entity.category": "Sulu\\Bundle\\CategoryBundle\\Entity\\Category",
+    "sulu_category.entity.keyword": "Sulu\\Bundle\\CategoryBundle\\Entity\\Keyword",
+    "sulu_contact.account_form.category_root": null,
+    "sulu_contact.contact_form.category_root": null,
+    "sulu_contact.contact_title.entity": "Sulu\\Bundle\\ContactBundle\\Entity\\ContactTitle",
+    "sulu_contact.defaults": {
+        "phoneType": "1",
+        "phoneTypeMobile": "3",
+        "phoneTypeIsdn": "1",
+        "emailType": "1",
+        "addressType": "1",
+        "urlType": "1",
+        "faxType": "1",
+        "socialMediaProfileType": "1",
+        "country": "AT"
+    },
+    "sulu_contact.form_of_address": {
+        "male": {
+            "id": 0,
+            "name": "male",
+            "translation": "contact.contacts.formOfAddress.male"
+        },
+        "female": {
+            "id": 1,
+            "name": "female",
+            "translation": "contact.contacts.formOfAddress.female"
+        }
+    },
+    "sulu_contact.position.entity": "Sulu\\Bundle\\ContactBundle\\Entity\\Position",
+    "sulu_core.build.builder.database.class": "Sulu\\Bundle\\CoreBundle\\Build\\DatabaseBuilder",
+    "sulu_core.build.builder.fixtures.class": "Sulu\\Bundle\\CoreBundle\\Build\\FixturesBuilder",
+    "sulu_core.build.builder.phpcr.class": "Sulu\\Bundle\\CoreBundle\\Build\\PhpcrBuilder",
+    "sulu_core.build.builder.phpcr_migrations.class": "Sulu\\Bundle\\CoreBundle\\Build\\PhpcrMigrationsBuilder",
+    "sulu_core.cache.memoize.default_lifetime": 1,
+    "sulu_core.fallback_locale": "en",
+    "sulu_core.locales": [
+        "de",
+        "en"
+    ],
+    "sulu_core.proxy_cache_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/sulu\/proxies",
+    "sulu_core.translated_locales": {
+        "de": "Deutsch",
+        "en": "English"
+    },
+    "sulu_core.translations": [
+        "de",
+        "en"
+    ],
+    "sulu_core.webspace.base_class": "WebspaceCollection",
+    "sulu_core.webspace.cache_class": "adminWebspaceCollectionCache",
+    "sulu_core.webspace.config_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/webspaces",
+    "sulu_custom_urls.uri_filter_regexp": "",
+    "sulu_document_manager.mapping": [
+        {
+            "alias": "custom_url",
+            "class": "Sulu\\Component\\CustomUrl\\Document\\CustomUrlDocument",
+            "phpcr_type": "sulu:custom_url",
+            "mapping": {
+                "published": {
+                    "property": "published",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                },
+                "baseDomain": {
+                    "property": "baseDomain",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                },
+                "domainParts": {
+                    "property": "domainParts",
+                    "type": "json_array",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                },
+                "canonical": {
+                    "property": "canonical",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                },
+                "redirect": {
+                    "property": "redirect",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                },
+                "targetLocale": {
+                    "property": "targetLocale",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                }
+            }
+        },
+        {
+            "alias": "custom_url_route",
+            "class": "Sulu\\Component\\CustomUrl\\Document\\RouteDocument",
+            "phpcr_type": "sulu:custom_url_route",
+            "mapping": {
+                "locale": {
+                    "property": "locale",
+                    "encoding": "content",
+                    "mapped": true,
+                    "multiple": false,
+                    "default": null
+                }
+            }
+        },
+        {
+            "alias": "page",
+            "class": "Sulu\\Bundle\\PageBundle\\Document\\PageDocument",
+            "phpcr_type": "sulu:page",
+            "form_type": "Sulu\\Bundle\\PageBundle\\Form\\Type\\PageDocumentType",
+            "set_default_author": true,
+            "mapping": []
+        },
+        {
+            "alias": "home",
+            "class": "Sulu\\Bundle\\PageBundle\\Document\\HomeDocument",
+            "phpcr_type": "sulu:home",
+            "form_type": "Sulu\\Bundle\\PageBundle\\Form\\Type\\HomeDocumentType",
+            "set_default_author": true,
+            "mapping": []
+        },
+        {
+            "alias": "route",
+            "class": "Sulu\\Bundle\\PageBundle\\Document\\RouteDocument",
+            "phpcr_type": "sulu:path",
+            "mapping": []
+        },
+        {
+            "alias": "snippet",
+            "class": "Sulu\\Bundle\\SnippetBundle\\Document\\SnippetDocument",
+            "phpcr_type": "sulu:snippet",
+            "form_type": "Sulu\\Bundle\\SnippetBundle\\Form\\SnippetType",
+            "mapping": []
+        }
+    ],
+    "sulu_document_manager.namespace_mapping": {
+        "extension_localized": "i18n",
+        "system": "sulu",
+        "system_localized": "i18n",
+        "content": null,
+        "content_localized": "i18n"
+    },
+    "sulu_document_manager.segments": {
+        "custom_urls": "custom-urls",
+        "custom_urls_items": "items",
+        "custom_urls_routes": "routes",
+        "base": "cmf",
+        "content": "contents",
+        "route": "routes",
+        "snippet": "snippets"
+    },
+    "sulu_document_manager.show_drafts": true,
+    "sulu_document_manager.slugifier": "Sulu\\Bundle\\DocumentManagerBundle\\Slugifier\\Urlizer::urlize",
+    "sulu_document_manager.versioning.enabled": false,
+    "sulu_http_cache.cache.max_age": 240,
+    "sulu_http_cache.cache.shared_max_age": 240,
+    "sulu_http_cache.tags.enabled": true,
+    "sulu_location.content.type.location.class": "Sulu\\Bundle\\LocationBundle\\Content\\Types\\LocationContentType",
+    "sulu_location.geolocator.google.class": "Sulu\\Bundle\\LocationBundle\\Geolocator\\Service\\GoogleGeolocator",
+    "sulu_location.geolocator.mapquest.class": "Sulu\\Bundle\\LocationBundle\\Geolocator\\Service\\MapquestGeolocator",
+    "sulu_location.geolocator.name": "nominatim",
+    "sulu_location.geolocator.nominatim.class": "Sulu\\Bundle\\LocationBundle\\Geolocator\\Service\\NominatimGeolocator",
+    "sulu_location.geolocator.service.google.api_key": "",
+    "sulu_location.geolocator.service.mapquest.api_key": "",
+    "sulu_location.geolocator.service.mapquest.endpoint": "https:\/\/www.mapquestapi.com\/geocoding\/v1\/address",
+    "sulu_location.geolocator.service.nominatim.api_key": "",
+    "sulu_location.geolocator.service.nominatim.endpoint": "https:\/\/nominatim.openstreetmap.org\/search",
+    "sulu_markup.link_tag.provider_attribute": "data-provider",
+    "sulu_media.admin.class": "Sulu\\Bundle\\MediaBundle\\Admin\\MediaAdmin",
+    "sulu_media.adobe_creative_key": null,
+    "sulu_media.collection.previews.format": "sulu-50x50",
+    "sulu_media.collection.type.default": {
+        "id": 1
+    },
+    "sulu_media.collection_entity": "Sulu\\Bundle\\MediaBundle\\Entity\\Collection",
+    "sulu_media.collection_manager.class": "Sulu\\Bundle\\MediaBundle\\Collection\\Manager\\CollectionManager",
+    "sulu_media.collection_repository.class": "Sulu\\Bundle\\MediaBundle\\Entity\\CollectionRepository",
+    "sulu_media.disposition_type.default": "attachment",
+    "sulu_media.disposition_type.mime_types_attachment": [],
+    "sulu_media.disposition_type.mime_types_inline": [],
+    "sulu_media.entity.file_version_meta": "Sulu\\Bundle\\MediaBundle\\Entity\\FileVersionMeta",
+    "sulu_media.file_validator.class": "Sulu\\Bundle\\MediaBundle\\Media\\FileValidator\\FileValidator",
+    "sulu_media.format_cache.class": "Sulu\\Bundle\\MediaBundle\\Media\\FormatCache\\LocalFormatCache",
+    "sulu_media.format_cache.media_proxy_path": "\/uploads\/media\/{slug}",
+    "sulu_media.format_cache.path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/public\/uploads\/media",
+    "sulu_media.format_cache.save_image": true,
+    "sulu_media.format_cache.segments": 10,
+    "sulu_media.format_cache_clearer.class": "Sulu\\Bundle\\MediaBundle\\Media\\FormatCache\\FormatCacheClearer",
+    "sulu_media.format_manager.class": "Sulu\\Bundle\\MediaBundle\\Media\\FormatManager\\FormatManager",
+    "sulu_media.format_manager.default_imagine_options": {
+        "jpeg_quality": 90,
+        "webp_quality": 90,
+        "avif_quality": 90
+    },
+    "sulu_media.format_manager.mime_types": [
+        "image\/*",
+        "application\/pdf"
+    ],
+    "sulu_media.format_manager.response_headers": {
+        "Expires": "+1 month",
+        "Pragma": "public",
+        "Cache-Control": "public, immutable, max-age=31536000"
+    },
+    "sulu_media.format_options_entity": "Sulu\\Bundle\\MediaBundle\\Entity\\FormatOptions",
+    "sulu_media.format_options_manager.class": "Sulu\\Bundle\\MediaBundle\\Media\\FormatOptions\\FormatOptionsManager",
+    "sulu_media.ghost_script.path": "gs",
+    "sulu_media.image.converter.class": "Sulu\\Bundle\\MediaBundle\\Media\\ImageConverter\\ImagineImageConverter",
+    "sulu_media.image.cropper.class": "Sulu\\Bundle\\MediaBundle\\Media\\ImageConverter\\Cropper\\Cropper",
+    "sulu_media.image.formats": {
+        "sulu-400x400": {
+            "key": "sulu-400x400",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Contact avatar (Sulu)",
+                    "de": "Kontaktavatar (Sulu)",
+                    "fr": "Avatar du contact (Sulu)",
+                    "nl": "Contact avatar (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 400,
+                "y": 400,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-260x": {
+            "key": "sulu-260x",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Masonry preview (Sulu)",
+                    "de": "Masonry Vorschau (Sulu)",
+                    "fr": "Pr\u00e9visualisation ma\u00e7onnerie (Sulu)",
+                    "nl": "Masonry voorbeeld (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 260,
+                "y": null,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-170x170": {
+            "key": "sulu-170x170",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Search (Sulu)",
+                    "de": "Suche (Sulu)",
+                    "fr": "Recherche (Sulu)",
+                    "nl": "Zoeken (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 170,
+                "y": 170,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-100x100-inset": {
+            "key": "sulu-100x100-inset",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Organization card (Sulu)",
+                    "de": "Organisationskarte (Sulu)",
+                    "fr": "Carte d'organisation (Sulu)",
+                    "nl": "Organisatie kaart (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 100,
+                "y": 100,
+                "mode": 1,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-50x50": {
+            "key": "sulu-50x50",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Small thumbnail (Sulu)",
+                    "de": "Kleines Thumbnail (Sulu)",
+                    "fr": "Image miniature (Sulu)",
+                    "nl": "Kleine thumbnail (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 50,
+                "y": 50,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-25x25": {
+            "key": "sulu-25x25",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Micro thumbnail",
+                    "de": "Mikro Thumbnail",
+                    "fr": "Image micro",
+                    "nl": "Micro thumbnail"
+                }
+            },
+            "scale": {
+                "x": 25,
+                "y": 25,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-40x40": {
+            "key": "sulu-40x40",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Small thumbnail (Sulu)",
+                    "de": "Kleines Thumbnail (Sulu)",
+                    "fr": "Image miniature (Sulu)",
+                    "nl": "Kleine thumbnail (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 40,
+                "y": 40,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-240x": {
+            "key": "sulu-240x",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Masonry preview (Sulu)",
+                    "de": "Masonry Vorschau (Sulu)",
+                    "fr": "Pr\u00e9visualisation ma\u00e7onnerie (Sulu)",
+                    "nl": "Masonry voorbeeld (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 240,
+                "y": null,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-400x400-inset": {
+            "key": "sulu-400x400-inset",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Organization logo (Sulu)",
+                    "de": "Organisationslogo (Sulu)",
+                    "fr": "Logo d'organisation (Sulu)",
+                    "nl": "Organisatie logo (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 400,
+                "y": 400,
+                "mode": 1,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        },
+        "sulu-100x100": {
+            "key": "sulu-100x100",
+            "internal": true,
+            "meta": {
+                "title": {
+                    "en": "Contact card (Sulu)",
+                    "de": "Personenkarte (Sulu)",
+                    "fr": "Carte personnelle (Sulu)",
+                    "nl": "Contact kaart (Sulu)"
+                }
+            },
+            "scale": {
+                "x": 100,
+                "y": 100,
+                "mode": 2,
+                "retina": false,
+                "forceRatio": true
+            },
+            "transformations": [],
+            "options": {
+                "jpeg_quality": 90,
+                "webp_quality": 90,
+                "avif_quality": 90
+            }
+        }
+    },
+    "sulu_media.image.scaler.class": "Sulu\\Bundle\\MediaBundle\\Media\\ImageConverter\\Scaler\\Scaler",
+    "sulu_media.image.transformation.crop.class": "Sulu\\Bundle\\MediaBundle\\Media\\ImageConverter\\Transformation\\CropTransformation",
+    "sulu_media.image.transformation_pool.class": "Sulu\\Bundle\\MediaBundle\\Media\\ImageConverter\\TransformationPool",
+    "sulu_media.image_format_files": [
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/MediaBundle\/DependencyInjection\/..\/Resources\/config\/image-formats.xml",
+        "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/config\/image-formats.xml"
+    ],
+    "sulu_media.media.blocked_file_types": [],
+    "sulu_media.media.max_file_size": "256MB",
+    "sulu_media.media.storage": "local",
+    "sulu_media.media.storage.local.path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/uploads\/media",
+    "sulu_media.media.storage.local.segments": 10,
+    "sulu_media.media.types": [
+        {
+            "type": "document",
+            "mimeTypes": [
+                "*"
+            ]
+        },
+        {
+            "type": "image",
+            "mimeTypes": [
+                "image\/*"
+            ]
+        },
+        {
+            "type": "video",
+            "mimeTypes": [
+                "video\/*"
+            ]
+        },
+        {
+            "type": "audio",
+            "mimeTypes": [
+                "audio\/*"
+            ]
+        }
+    ],
+    "sulu_media.media_manager.class": "Sulu\\Bundle\\MediaBundle\\Media\\Manager\\MediaManager",
+    "sulu_media.media_manager.media_download_path": "\/media\/{id}\/download\/{slug}",
+    "sulu_media.media_manager.media_download_path_admin": "\/admin\/media\/{id}\/download\/{slug}",
+    "sulu_media.media_selection.class": "Sulu\\Bundle\\MediaBundle\\Content\\Types\\MediaSelectionContentType",
+    "sulu_media.search.default_image_format": "sulu-100x100",
+    "sulu_media.search.subscriber.media.class": "Sulu\\Bundle\\MediaBundle\\Search\\Subscriber\\MediaSearchSubscriber",
+    "sulu_media.search.subscriber.structure_media.class": "Sulu\\Bundle\\MediaBundle\\Search\\Subscriber\\StructureMediaSearchSubscriber",
+    "sulu_media.system_collections": {
+        "sulu_media": {
+            "meta_title": {
+                "en": "Sulu media",
+                "de": "Sulu Medien"
+            },
+            "collections": {
+                "preview_image": {
+                    "meta_title": {
+                        "en": "Preview images",
+                        "de": "Vorschaubilder"
+                    }
+                }
+            }
+        },
+        "sulu_contact": {
+            "meta_title": {
+                "en": "Sulu contacts",
+                "de": "Sulu Kontakte"
+            },
+            "collections": {
+                "contact": {
+                    "meta_title": {
+                        "en": "People",
+                        "de": "Personen"
+                    }
+                },
+                "account": {
+                    "meta_title": {
+                        "en": "Organizations",
+                        "de": "Organisationen"
+                    }
+                }
+            }
+        }
+    },
+    "sulu_media.twig_extension.disposition_type.class": "Sulu\\Bundle\\MediaBundle\\Twig\\DispositionTypeTwigExtension",
+    "sulu_media.twig_extension.media.class": "Sulu\\Bundle\\MediaBundle\\Twig\\MediaTwigExtension",
+    "sulu_media.type_manager.class": "Sulu\\Bundle\\MediaBundle\\Media\\TypeManager\\TypeManager",
+    "sulu_media.upload.max_filesize": 256,
+    "sulu_media.video_thumbnail_generator.class": "Sulu\\Bundle\\MediaBundle\\Media\\Video\\VideoThumbnailService",
+    "sulu_page.admin.class": "Sulu\\Bundle\\PageBundle\\Admin\\PageAdmin",
+    "sulu_page.default_author": true,
+    "sulu_page.export.webspace.formats": {
+        "1.2.xliff": "@SuluPage\/Export\/Webspace\/1.2.xliff.twig"
+    },
+    "sulu_page.extension.excerpt.class": "Sulu\\Bundle\\PageBundle\\Content\\Structure\\ExcerptStructureExtension",
+    "sulu_page.extension.manager.class": "Sulu\\Component\\Content\\Extension\\ExtensionManager",
+    "sulu_page.extension.seo.class": "Sulu\\Bundle\\PageBundle\\Content\\Structure\\SeoStructureExtension",
+    "sulu_page.node_repository.class": "Sulu\\Bundle\\PageBundle\\Repository\\NodeRepository",
+    "sulu_page.rl_repository.class": "Sulu\\Bundle\\PageBundle\\Repository\\ResourceLocatorRepository",
+    "sulu_page.search.event_subscriber.blame_timestamp.class": "Sulu\\Bundle\\PageBundle\\Search\\EventSubscriber\\BlameTimestampSubscriber",
+    "sulu_page.search.event_subscriber.structure.class": "Sulu\\Bundle\\PageBundle\\Search\\EventSubscriber\\StructureSubscriber",
+    "sulu_page.search.mapping": {
+        "Sulu\\Bundle\\PageBundle\\Document\\PageDocument": {
+            "index": "page",
+            "decorate_index": true
+        },
+        "Sulu\\Bundle\\PageBundle\\Document\\HomeDocument": {
+            "index": "page",
+            "decorate_index": true
+        },
+        "Sulu\\Bundle\\SnippetBundle\\Document\\SnippetDocument": {
+            "index": "snippet",
+            "decorate_index": false
+        }
+    },
+    "sulu_page.search.metadata.provider.structure.class": "Sulu\\Bundle\\PageBundle\\Search\\Metadata\\StructureProvider",
+    "sulu_page.seo": {
+        "max_title_length": 70,
+        "max_description_length": 160,
+        "max_keywords": 5,
+        "keywords_separator": ",",
+        "url_prefix": "www.yoursite.com\/{locale}"
+    },
+    "sulu_page.smart_content.content_type.class": "Sulu\\Component\\SmartContent\\ContentType",
+    "sulu_page.smart_content.data_provider.content.proxy_factory.class": "ProxyManager\\Factory\\LazyLoadingValueHolderFactory",
+    "sulu_page.smart_content.data_provider.content.query_builder.class": "Sulu\\Component\\Content\\SmartContent\\QueryBuilder",
+    "sulu_page.smart_content.data_provider.page.class": "Sulu\\Component\\Content\\SmartContent\\PageDataProvider",
+    "sulu_page.smart_content.data_provider_pool.class": "Sulu\\Component\\SmartContent\\DataProviderPool",
+    "sulu_preview.delay": 500,
+    "sulu_preview.events.pre-render": "sulu.preview.pre-render",
+    "sulu_preview.mode": "auto",
+    "sulu_route.mappings": [],
+    "sulu_route.resource_key_mappings": [],
+    "sulu_route.routing.uri_filter_regexp": "",
+    "sulu_search.build.index.class": "Sulu\\Bundle\\SearchBundle\\Build\\IndexBuilder",
+    "sulu_search.build.init.class": "Sulu\\Bundle\\SearchBundle\\Build\\InitBuilder",
+    "sulu_search.controller.search.class": "Sulu\\Bundle\\SearchBundle\\Controller\\SearchController",
+    "sulu_search.event_listener.hit.class": "Sulu\\Bundle\\PageBundle\\Search\\EventListener\\HitListener",
+    "sulu_search.indexes": {
+        "snippet": {
+            "name": "sulu_snippet.snippets",
+            "icon": "su-snippet",
+            "view": {
+                "name": "sulu_snippet.edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale"
+                }
+            },
+            "security_context": "sulu.global.snippets",
+            "contexts": []
+        },
+        "category": {
+            "name": "sulu_category.categories",
+            "icon": "su-tag",
+            "view": {
+                "name": "sulu_category.edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale"
+                }
+            },
+            "security_context": "sulu.settings.categories",
+            "contexts": []
+        },
+        "media": {
+            "name": "sulu_media.media",
+            "icon": "su-image",
+            "view": {
+                "name": "sulu_media.form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale"
+                }
+            },
+            "security_context": "sulu.media.collections",
+            "contexts": []
+        },
+        "contact": {
+            "name": "sulu_contact.people",
+            "icon": "su-user",
+            "view": {
+                "name": "sulu_contact.contact_edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale"
+                }
+            },
+            "security_context": "sulu.contact.people",
+            "contexts": []
+        },
+        "account": {
+            "name": "sulu_contact.organizations",
+            "icon": "su-house",
+            "view": {
+                "name": "sulu_contact.account_edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale"
+                }
+            },
+            "security_context": "sulu.contact.organizations",
+            "contexts": []
+        },
+        "page_website": {
+            "name": "Website",
+            "icon": "su-document",
+            "view": {
+                "name": "sulu_page.page_edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale",
+                    "properties\/webspace_key": "webspace"
+                }
+            },
+            "security_context": "sulu.webspaces.website"
+        },
+        "page_website_published": {
+            "name": "Website",
+            "icon": "su-document",
+            "view": {
+                "name": "sulu_page.page_edit_form",
+                "result_to_view": {
+                    "id": "id",
+                    "locale": "locale",
+                    "properties\/webspace_key": "webspace"
+                }
+            },
+            "security_context": "sulu.webspaces.website",
+            "contexts": [
+                "website"
+            ]
+        }
+    },
+    "sulu_search.search.factory.class": "Sulu\\Bundle\\SearchBundle\\Search\\Factory",
+    "sulu_search.website.indexes": [
+        "page_#webspace#_published"
+    ],
+    "sulu_security.access_control_manager.class": "Sulu\\Component\\Security\\Authorization\\AccessControl\\AccessControlManager",
+    "sulu_security.admin.class": "Sulu\\Bundle\\SecurityBundle\\Admin\\SecurityAdmin",
+    "sulu_security.authentication_entry_point.class": "Sulu\\Bundle\\SecurityBundle\\Security\\AuthenticationEntryPoint",
+    "sulu_security.authentication_handler.class": "Sulu\\Bundle\\SecurityBundle\\Security\\AuthenticationHandler",
+    "sulu_security.build.user.class": "Sulu\\Bundle\\SecurityBundle\\Build\\UserBuilder",
+    "sulu_security.doctrine_access_control_provider.class": "Sulu\\Component\\Security\\Authorization\\AccessControl\\DoctrineAccessControlProvider",
+    "sulu_security.entity.group": "Sulu\\Bundle\\SecurityBundle\\Entity\\Group",
+    "sulu_security.entity.role": "Sulu\\Bundle\\SecurityBundle\\Entity\\Role",
+    "sulu_security.entity.user_setting": "Sulu\\Bundle\\SecurityBundle\\Entity\\UserSetting",
+    "sulu_security.group_repository.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\GroupRepository",
+    "sulu_security.has_single_sign_on_providers": false,
+    "sulu_security.mask_converter.class": "Sulu\\Component\\Security\\Authorization\\MaskConverter",
+    "sulu_security.password_policy_info_translation_key": "sulu_security.password_policy_information",
+    "sulu_security.password_policy_pattern": ".{8,}",
+    "sulu_security.permission_controller.class": "Sulu\\Bundle\\SecurityBundle\\Controller\\PermissionController",
+    "sulu_security.permissions": {
+        "view": 64,
+        "add": 32,
+        "edit": 16,
+        "delete": 8,
+        "archive": 4,
+        "live": 2,
+        "security": 1
+    },
+    "sulu_security.phpcr_access_control_provider.class": "Sulu\\Component\\Security\\Authorization\\AccessControl\\PhpcrAccessControlProvider",
+    "sulu_security.profile_controller.class": "Sulu\\Bundle\\SecurityBundle\\Controller\\ProfileController",
+    "sulu_security.reset_password.mail.sender": "",
+    "sulu_security.reset_password.mail.subject": "sulu_security.reset_mail_subject",
+    "sulu_security.reset_password.mail.template": "@SuluSecurity\/mail_templates\/reset_password.html.twig",
+    "sulu_security.reset_password.mail.token_send_limit": 3,
+    "sulu_security.reset_password.mail.translation_domain": "admin",
+    "sulu_security.salt_generator.class": "Sulu\\Component\\Security\\Authentication\\SaltGenerator",
+    "sulu_security.security_context_voter.class": "Sulu\\Component\\Security\\Authorization\\SecurityContextVoter",
+    "sulu_security.security_types.fixture": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/vendor\/sulu\/sulu\/src\/Sulu\/Bundle\/SecurityBundle\/DependencyInjection\/..\/DataFixtures\/security-types.xml",
+    "sulu_security.system": "Sulu",
+    "sulu_security.token_generator.class": "Sulu\\Bundle\\SecurityBundle\\Util\\TokenGenerator",
+    "sulu_security.two_factor_email_template": "@SuluSecurity\/mail_templates\/two_factor",
+    "sulu_security.two_factor_force_pattern": null,
+    "sulu_security.two_factor_methods": [
+        "email",
+        "trusted_devices"
+    ],
+    "sulu_security.user_repository.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\UserRepository",
+    "sulu_security.user_repository_factory.class": "Sulu\\Component\\Security\\Authentication\\UserRepositoryFactory",
+    "sulu_security.user_setting_repository.class": "Sulu\\Bundle\\SecurityBundle\\Entity\\UserSettingRepository",
+    "sulu_snippet.areas": {
+        "default": {
+            "key": "default",
+            "template": "default",
+            "title": {
+                "de": "Standard",
+                "en": "Default"
+            },
+            "cache-invalidation": "false"
+        }
+    },
+    "sulu_snippet.content-type.default_enabled": true,
+    "sulu_snippet.controller.snippet.class": "Sulu\\Bundle\\SnippetBundle\\Controller\\SnippetController",
+    "sulu_snippet.document.snippet_initializer.class": "Sulu\\Bundle\\SnippetBundle\\Document\\SnippetInitializer",
+    "sulu_snippet.export.snippet.formats": {
+        "1.2.xliff": "@SuluPage\/Export\/Snippet\/1.2.xliff.twig"
+    },
+    "sulu_snippet.form.snippet.class": "Sulu\\Bundle\\SnippetBundle\\Form\\SnippetType",
+    "sulu_snippet.repository.class": "Sulu\\Bundle\\SnippetBundle\\Snippet\\SnippetRepository",
+    "sulu_snippet.twig.snippet.cache_lifetime": 1,
+    "sulu_snippet.twig.snippet.class": "Sulu\\Bundle\\SnippetBundle\\Twig\\SnippetTwigExtension",
+    "sulu_snippet.twig.snippet.memoized.class": "Sulu\\Bundle\\SnippetBundle\\Twig\\MemoizedSnippetTwigExtension",
+    "sulu_website.admin.class": "Sulu\\Bundle\\WebsiteBundle\\Admin\\WebsiteAdmin",
+    "sulu_website.content.cache.lifetime": 1,
+    "sulu_website.enabled_twig_attributes": {
+        "urls": false,
+        "path": false
+    },
+    "sulu_website.navigation.cache.lifetime": 1,
+    "sulu_website.navigation_mapper.class": "Sulu\\Bundle\\WebsiteBundle\\Navigation\\NavigationMapper",
+    "sulu_website.navigation_mapper.query_builder.class": "Sulu\\Bundle\\WebsiteBundle\\Navigation\\NavigationQueryBuilder",
+    "sulu_website.resolver.parameter.class": "Sulu\\Bundle\\WebsiteBundle\\Resolver\\ParameterResolver",
+    "sulu_website.resolver.request_analyzer.class": "Sulu\\Bundle\\WebsiteBundle\\Resolver\\RequestAnalyzerResolver",
+    "sulu_website.resolver.structure.class": "Sulu\\Bundle\\WebsiteBundle\\Resolver\\StructureResolver",
+    "sulu_website.routing.portal_loader.class": "Sulu\\Bundle\\WebsiteBundle\\Routing\\PortalLoader",
+    "sulu_website.segment_cookie_name": "_ss",
+    "sulu_website.segment_header": "X-Sulu-Segment",
+    "sulu_website.segment_switch_url": "\/_sulu_segment_switch",
+    "sulu_website.sitemap.cache.lifetime": 3600,
+    "sulu_website.sitemap.class": "Sulu\\Bundle\\WebsiteBundle\\Sitemap\\SitemapGenerator",
+    "sulu_website.sitemap.dump_dir": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/sulu\/sitemaps",
+    "sulu_website.sitemap.query_builder.class": "Sulu\\Bundle\\WebsiteBundle\\Sitemap\\SitemapContentQueryBuilder",
+    "sulu_website.twig.content.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Content\\ContentTwigExtension",
+    "sulu_website.twig.content.memoized.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Content\\MemoizedContentTwigExtension",
+    "sulu_website.twig.content_path.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Content\\ContentPathTwigExtension",
+    "sulu_website.twig.meta.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Meta\\MetaTwigExtension",
+    "sulu_website.twig.navigation.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Navigation\\NavigationTwigExtension",
+    "sulu_website.twig.navigation.memoized.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Navigation\\MemoizedNavigationTwigExtension",
+    "sulu_website.twig.seo.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Seo\\SeoTwigExtension",
+    "sulu_website.twig.sitemap.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Sitemap\\SitemapTwigExtension",
+    "sulu_website.twig.sitemap.memoized.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Sitemap\\MemoizedSitemapTwigExtension",
+    "sulu_website.twig.util.class": "Sulu\\Bundle\\WebsiteBundle\\Twig\\Core\\UtilTwigExtension",
+    "tmp": "Sulu\\Bundle\\MediaBundle\\Twig\\MediaTwigExtension",
+    "translator.default_path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/translations",
+    "translator.logging": false,
+    "twig.default_path": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/templates",
+    "twig.form.resources": [
+        "form_div_layout.html.twig"
+    ],
+    "validator.mapping.cache.file": "\/Users\/alexanderschranz\/Documents\/Projects\/sulu-develop.localhost\/var\/cache\/admin\/prod\/validation.php",
+    "validator.translation_domain": "validators",
+    "_deprecations": {
+        "security.authentication.hide_user_not_found": "Since symfony\/security-bundle 7.4: The parameter \"security.authentication.hide_user_not_found\" is deprecated."
+    }
+}
