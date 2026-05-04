@@ -248,9 +248,6 @@ jobs:
               with:
                   mysql-version: ${{ matrix.mysql-version }}
                   root-password: 'root'
-                  my-cnf: |
-                      [mysqld]
-                      default-authentication-plugin=mysql_native_password
 
             - name: Install composer dependencies
               uses: ramsey/composer-install@v3
