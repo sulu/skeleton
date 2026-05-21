@@ -36,8 +36,6 @@
         "@babel/plugin-transform-flow-strip-types": "^7.4.4",
         "@babel/preset-env": "^7.5.5",
         "@babel/preset-react": "^7.0.0",
-        "@ckeditor/ckeditor5-dev-utils": "^47.0.0",
-        "@ckeditor/ckeditor5-theme-lark": "^47.0.0",
         "autoprefixer": "^10.4.7",
         "babel-loader": "^9.1.0",
         "core-js": "^3.18.0",

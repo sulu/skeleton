@@ -13,8 +13,6 @@ object-assign
 
 /* istanbul ignore else: This is always true because otherwise it would not register a reducer callback. -- @preserve */
 
-/* istanbul ignore file -- @preserve */
-
 /* istanbul ignore if -- @preserve */
 
 /* istanbul ignore if: paranoid check -- @preserve */
