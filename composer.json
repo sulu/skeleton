@@ -33,6 +33,7 @@
         "cmsig/seal-loupe-adapter": "^0.12.2",
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-fixtures-bundle": "^3.6 || ^4.0",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
         "friendsofsymfony/http-cache-bundle": "^3.0",
         "scheb/2fa-bundle": "^7.3",
         "scheb/2fa-email": "^7.3",

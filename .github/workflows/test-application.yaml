@@ -22,7 +22,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.2'
-                      node-version: '18'
+                      node-version: '20'
                       npm-version: '8'
                       mysql-version: '5.7'
                       create-project: false
@@ -39,7 +39,7 @@ jobs:
                           DATABASE_URL: "mysql://root:@127.0.0.1:3306/sulu_test?serverVersion=5.7"
 
                     - php-version: '8.3'
-                      node-version: '20'
+                      node-version: '22'
                       npm-version: '9'
                       mysql-version: '8.0'
                       create-project: true
@@ -237,7 +237,7 @@ jobs:
                   rm disable.php
 
             - name: Install and configure MySQL
-              uses: shogo82148/actions-setup-mysql@v1.47.0
+              uses: shogo82148/actions-setup-mysql@v1.50.0
               with:
                   mysql-version: ${{ matrix.mysql-version }}
                   root-password: 'root'
