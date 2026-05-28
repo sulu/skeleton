@@ -40,7 +40,7 @@
         "babel-loader": "^9.1.0",
         "core-js": "^3.18.0",
         "css-loader": "^6.10.0",
-        "css-minimizer-webpack-plugin": "^6.0.0",
+        "css-minimizer-webpack-plugin": "^8.0",
         "glob": "^10.3.10",
         "mini-css-extract-plugin": "^2.7.1",
         "postcss": "^8.4.14",
