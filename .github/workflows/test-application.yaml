@@ -23,7 +23,7 @@ jobs:
                 include:
                     - php-version: '8.2'
                       node-version: '20'
-                      npm-version: '8'
+                      npm-version: '10'
                       mysql-version: '5.7'
                       create-project: false
                       create-database: false

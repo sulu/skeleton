@@ -11,15 +11,29 @@ object-assign
 
 /* istanbul ignore else -- @preserve */
 
-/* istanbul ignore else: This is always true because otherwise it would not register a reducer callback. -- @preserve */
+/* istanbul ignore file -- @preserve */
 
 /* istanbul ignore if -- @preserve */
+
+/* istanbul ignore if: defensive guard for the `ModelRange | null` return type -- @preserve */
 
 /* istanbul ignore if: paranoid check -- @preserve */
 
 /* istanbul ignore next -- @preserve */
 
 /* istanbul ignore next: static function definition -- @preserve */
+
+/* v8 ignore else -- @preserve */
+
+/* v8 ignore next -- @preserve */
+
+/* v8 ignore next 3 -- @preserve */
+
+/* v8 ignore next 6 -- @preserve */
+
+/* v8 ignore start -- @preserve */
+
+/* v8 ignore stop -- @preserve */
 
 /*!
 	Copyright (c) 2018 Jed Watson.
@@ -118,6 +132,11 @@ and limitations under the License.
  * @license Copyright (c) 2003-2026, CKSource Holding sp. z o.o. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
+
+/**
+* @license Copyright (c) 2003-2026, CKSource Holding sp. z o.o. All rights reserved.
+* For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
+*/
 
 /** @license React v0.20.2
  * scheduler.production.min.js
