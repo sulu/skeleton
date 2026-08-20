@@ -9,11 +9,7 @@ object-assign
  * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
-/* istanbul ignore else -- @preserve */
-
 /* istanbul ignore file -- @preserve */
-
-/* istanbul ignore if -- @preserve */
 
 /* istanbul ignore if: defensive guard for the `ModelRange | null` return type -- @preserve */
 
@@ -25,9 +21,9 @@ object-assign
 
 /* v8 ignore else -- @preserve */
 
-/* v8 ignore next -- @preserve */
+/* v8 ignore if -- @preserve */
 
-/* v8 ignore next 3 -- @preserve */
+/* v8 ignore next -- @preserve */
 
 /* v8 ignore next 6 -- @preserve */
 
