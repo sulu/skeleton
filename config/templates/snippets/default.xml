@@ -4,6 +4,7 @@
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
     <key>default</key>
+    <group>default</group>
 
     <meta>
         <title lang="en">Default</title>
