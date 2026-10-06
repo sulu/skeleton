@@ -8,7 +8,7 @@ use Doctrine\ORM\Events;
 use Doctrine\ORM\Tools\ResolveTargetEntityListener;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-require \dirname(__DIR__) . '/bootstrap.php';
+require __DIR__ . '/../bootstrap.php';
 
 $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']); // @phpstan-ignore-line argument.type
 $kernel->boot();

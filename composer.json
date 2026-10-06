@@ -62,7 +62,7 @@
         "phpstan/phpstan-phpunit": "^2.0",
         "phpstan/phpstan-symfony": "^2.0",
         "phpstan/phpstan-webmozart-assert": "^2.0",
-        "phpunit/phpunit": "^11.5 || ^12.1",
+        "phpunit/phpunit": "^11.5 || ^12.1 || ^13.0",
         "rector/rector": "^2.0",
         "sulu/sulu-rector": "^2.0",
         "symfony/browser-kit": "^7.4",
@@ -71,7 +71,7 @@
         "symfony/error-handler": "^7.4",
         "symfony/thanks": "^1.2",
         "symfony/web-profiler-bundle": "^7.4",
-        "vincentlanglet/twig-cs-fixer": "^3.0"
+        "vincentlanglet/twig-cs-fixer": "^3.0 || ^4.0"
     },
     "conflict": {
         "symfony/symfony": "*"
