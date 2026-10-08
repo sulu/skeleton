@@ -28,6 +28,7 @@ security:
                 failure_handler: sulu_security.authentication_handler
             logout:
                 path: sulu_admin.logout
+                # invalidate_session: false # If you have multiple firewalls, you might want to set this to false to only logout of the current firewall
             two_factor:
                 prepare_on_login: true
                 prepare_on_access_denied: true
@@ -51,6 +52,7 @@ security:
        #    logout:
        #        path: logout
        #        target: /
+       #        # invalidate_session: false # If you have multiple firewalls, you might want to set this to false to only logout of the current firewall
        #    remember_me:
        #        secret:   "%kernel.secret%"
        #        lifetime: 604800 # 1 week in seconds
