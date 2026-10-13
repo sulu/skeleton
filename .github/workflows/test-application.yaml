@@ -22,7 +22,7 @@ jobs:
             matrix:
                 include:
                     - php-version: '8.4'
-                      node-version: '22'
+                      node-version: '20'
                       npm-version: '10'
                       mysql-version: '8.0'
                       create-project: true
