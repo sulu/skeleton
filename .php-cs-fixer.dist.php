@@ -5,7 +5,7 @@ declare(strict_types=1);
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
-$finder = (new Finder())
+$finder = new Finder()
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->exclude('var')
@@ -14,7 +14,7 @@ $finder = (new Finder())
         'config/reference.php',
     ]);
 
-return (new Config())
+return new Config()
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,
