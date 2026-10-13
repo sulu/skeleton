@@ -58,25 +58,6 @@ new route.
 Custom entities go in `src/Entity/`. Their admin lists and forms are XML in
 `config/lists/` and `config/forms/`, registered through an Admin class.
 
-## Admin JavaScript build
-
-The admin interface is a React app that is built with webpack in `assets/admin/`.
-The built files in `public/build/` are generated. Never edit them by hand.
-
-- Run `composer install` first. The npm scripts read from `vendor/sulu/sulu/`.
-- Then run `npm install` and `npm run build` in `assets/admin/`. Use
-  `npm run watch` while developing.
-- Put project JavaScript, such as custom field types or views and imports of
-  additional bundles, in `assets/admin/app.js`.
-- Don't edit `assets/admin/index.js`. Only `bin/console sulu:admin:update-build`
-  changes it. Run that command after you add a bundle with admin JavaScript or
-  upgrade Sulu.
-- Rebuild after every change in `assets/admin/` and after every Sulu or bundle
-  upgrade. Templates, Twig files and PHP code need no rebuild.
-- `composer lint-admin-build` runs `sulu:admin:validate-build` and fails when
-  `index.js` and the installed bundles are out of sync.
-
-The skeleton has no JavaScript build for the website. Ask before adding one.
 
 ## Adding features: Flex, not hand-wiring
 
