@@ -3,7 +3,7 @@
 This is a Sulu project. Sulu is a content management system built on Symfony, so
 every Symfony convention applies too. Check `composer.json` for the exact Sulu,
 Symfony and PHP versions, and read `symfony.lock` to see which recipes ran. Don't
-assume packages that aren't listed there, such as API Platform or Messenger.
+assume packages that aren't listed there, such as API Platform.
 
 ## Ask before generating
 
@@ -90,7 +90,8 @@ Symfony:
   `compose.yaml`, and `DATABASE_URL` in `.env` points to it.
 - Run the app with `composer serve`, or `symfony serve -d` if the Symfony CLI is
   installed.
-- When something fails, read `var/log/dev.log` and the web profiler
+- When something fails, read `var/log/admin/dev.log` or `var/log/website/dev.log`
+  and the web profiler
   (`/_profiler`) before changing code.
 - Schema changes go through migrations in `migrations/`, never
   `doctrine:schema:update` or hand-written SQL.
