@@ -11,16 +11,18 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-use App\Kernel;
-use Sulu\Component\HttpKernel\SuluKernel;
-use Symfony\Component\Dotenv\Dotenv;
-use Symfony\Component\ErrorHandler\Debug;
+use App\DualKernel;
 use Symfony\Component\HttpFoundation\Request;
 
 \defined('SULU_MAINTENANCE') || \define('SULU_MAINTENANCE', \getenv('SULU_MAINTENANCE') ?: false);
 
 // maintenance mode
 if (SULU_MAINTENANCE) {
+    // the maintenance page is decided per request by the client ip, which a FrankenPHP worker does not know while booting
+    if (\filter_var($_SERVER['FRANKENPHP_WORKER'] ?? false, \FILTER_VALIDATE_BOOL)) {
+        throw new \LogicException('SULU_MAINTENANCE is not supported in FrankenPHP worker mode, show the maintenance page with the web server instead.');
+    }
+
     $maintenanceFilePath = __DIR__ . '/maintenance.php';
     // show maintenance mode and exit if no allowed IP is met
     if (require $maintenanceFilePath) {
@@ -28,44 +30,21 @@ if (SULU_MAINTENANCE) {
     }
 }
 
-require \dirname(__DIR__) . '/vendor/autoload.php';
-
-(new Dotenv())->bootEnv(\dirname(__DIR__) . '/.env');
-
-if ($_SERVER['APP_DEBUG']) {
-    \umask(0000);
-
-    Debug::enable();
-}
-
-if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
-    Request::setTrustedProxies(\explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO); // @phpstan-ignore-line argument.type
-}
-
-if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
-    Request::setTrustedHosts([$trustedHosts]);
-}
-
-$suluContext = SuluKernel::CONTEXT_WEBSITE;
-
-if (\preg_match('/^\/admin(\/|$)/', $_SERVER['REQUEST_URI'])) {  // @phpstan-ignore-line argument.type
-    $suluContext = SuluKernel::CONTEXT_ADMIN;
-}
-
-$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG'], $suluContext); // @phpstan-ignore-line argument.type
-
-// Comment this line if you want to use the "varnish" http
-// caching strategy. See http://sulu.readthedocs.org/en/latest/cookbook/caching-with-varnish.html
-if ('dev' !== $_SERVER['APP_ENV'] && SuluKernel::CONTEXT_WEBSITE === $suluContext) {
-    /** @var Sulu\Bundle\HttpCacheBundle\Cache\SuluHttpCache $kernel */
-    $kernel = $kernel->getHttpCache();
-}
+require_once \dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
 // When using the HttpCache, you need to call the method in your front controller
 // instead of relying on the configuration parameter
 // https://symfony.com/doc/6.4/reference/configuration/framework.html#http-method-override
 Request::enableHttpMethodParameterOverride();
-$request = Request::createFromGlobals();
-$response = $kernel->handle($request);
-$response->send();
-$kernel->terminate($request, $response);
+
+return static function (array $context): DualKernel {
+    if ($trustedProxies = $context['TRUSTED_PROXIES'] ?? false) {
+        Request::setTrustedProxies(\explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO); // @phpstan-ignore-line argument.type
+    }
+
+    if ($trustedHosts = $context['TRUSTED_HOSTS'] ?? false) {
+        Request::setTrustedHosts([$trustedHosts]);
+    }
+
+    return new DualKernel($context['APP_ENV'], (bool) $context['APP_DEBUG']); // @phpstan-ignore-line argument.type
+};
