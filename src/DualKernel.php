@@ -27,15 +27,20 @@ use Symfony\Component\HttpKernel\TerminableInterface;
  */
 class DualKernel implements HttpKernelInterface, TerminableInterface
 {
-    private HttpKernelInterface $adminKernel;
+    private Kernel $adminKernel;
 
-    private HttpKernelInterface $websiteKernel;
+    private Kernel $websiteKernel;
 
-    public function __construct(
-        private readonly string $environment,
-        private readonly bool $debug,
-    ) {
-        $this->createKernels();
+    private readonly bool $useHttpCache;
+
+    public function __construct(string $environment, bool $debug)
+    {
+        $this->adminKernel = new Kernel($environment, $debug, SuluKernel::CONTEXT_ADMIN);
+        $this->websiteKernel = new Kernel($environment, $debug, SuluKernel::CONTEXT_WEBSITE);
+
+        // Set this to false if you want to use the "varnish" http
+        // caching strategy. See http://sulu.readthedocs.org/en/latest/cookbook/caching-with-varnish.html
+        $this->useHttpCache = 'dev' !== $environment;
     }
 
     public function handle(Request $request, int $type = self::MAIN_REQUEST, bool $catch = true): Response
@@ -57,7 +62,8 @@ class DualKernel implements HttpKernelInterface, TerminableInterface
      */
     public function __clone()
     {
-        $this->createKernels();
+        $this->adminKernel = clone $this->adminKernel;
+        $this->websiteKernel = clone $this->websiteKernel;
     }
 
     private function getKernel(Request $request): HttpKernelInterface
@@ -66,21 +72,6 @@ class DualKernel implements HttpKernelInterface, TerminableInterface
             return $this->adminKernel;
         }
 
-        return $this->websiteKernel;
-    }
-
-    private function createKernels(): void
-    {
-        $this->adminKernel = new Kernel($this->environment, $this->debug, SuluKernel::CONTEXT_ADMIN);
-
-        $websiteKernel = new Kernel($this->environment, $this->debug, SuluKernel::CONTEXT_WEBSITE);
-
-        // Comment this line if you want to use the "varnish" http
-        // caching strategy. See http://sulu.readthedocs.org/en/latest/cookbook/caching-with-varnish.html
-        if ('dev' !== $this->environment) {
-            $websiteKernel = $websiteKernel->getHttpCache();
-        }
-
-        $this->websiteKernel = $websiteKernel;
+        return $this->useHttpCache ? $this->websiteKernel->getHttpCache() : $this->websiteKernel;
     }
 }

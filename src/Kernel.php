@@ -24,6 +24,14 @@ class Kernel extends SuluKernel implements HttpCacheProvider
 {
     private ?HttpKernelInterface $httpCache = null;
 
+    public function __clone()
+    {
+        parent::__clone();
+
+        // the cache of the original wraps the original kernel, a clone needs its own
+        $this->httpCache = null;
+    }
+
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
         $container->setParameter('container.dumper.inline_class_loader', true);
